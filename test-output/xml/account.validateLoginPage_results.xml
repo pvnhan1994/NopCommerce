@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.640">
+  <properties />
+  
+  
+            <testcase name="TC02_InvalidEmail" time="0.572" classname="account.validateLoginPage" />
+                <testcase name="TC03_EmailUnregister" time="1.264" classname="account.validateLoginPage" />
+                <testcase name="TC05_EmailRegisteredAndCorrectPassword" time="2.740" classname="account.validateLoginPage" />
+                <testcase name="TC04_EmailRegisteredAndEmptyPassword" time="2.132" classname="account.validateLoginPage" />
+                <testcase name="TC01_EmptyData" time="0.463" classname="account.validateLoginPage" />
+                <testcase name="TC04_EmailRegisteredAndIncorrectPassword" time="2.469" classname="account.validateLoginPage" />
+      
+</testsuite>

@@ -1,21 +1,17 @@
 package PageObjects;
 
 import commons.AbstractPage;
-import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.HomePageUI;
+import pageUIs.HomePageUIs;
 
 public class HomePageObject extends AbstractPage {
     WebDriver driver;
-
-    public HomePageObject(WebDriver mappingDriver) {
+    public HomePageObject(WebDriver mappingDriver){
         driver = mappingDriver;
     }
 
-    public RegisterPageObject clickRegisterItem() {
-        waitForElementVisible(driver, HomePageUI.REGISTER_BTN);
-        clickToElement(driver, HomePageUI.REGISTER_BTN);
-        return PageGeneratorManager.getRegisterPage(driver);
+    public boolean isMyAccountItemDisplayed() {
+        waitForElementVisible(driver, HomePageUIs.MY_ACCOUNT_ITEM);
+        return isControlDisplayed(driver, HomePageUIs.MY_ACCOUNT_ITEM);
     }
-
 }

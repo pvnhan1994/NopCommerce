@@ -25,7 +25,13 @@
 		</layout>
 	</appender>
 
-	<category name="account.Login">
+	<category name="account.validateRegisterPage">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="testng" />
+	</category>
+	<category name="account.validateLoginPage">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />

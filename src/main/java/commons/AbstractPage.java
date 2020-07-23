@@ -72,8 +72,9 @@ public class AbstractPage extends AbstractTest {
     public void sendkeyElement(WebDriver driver, String locator, String value) {
         highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
-        element.sendKeys(Keys.chord(Keys.COMMAND, "a"));
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         element.sendKeys(Keys.DELETE);
+        element.clear();
         element.sendKeys(value);
     }
 
@@ -81,8 +82,9 @@ public class AbstractPage extends AbstractTest {
         locator = String.format(locator, (Object[]) values);
         highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
-        element.sendKeys(Keys.chord(Keys.COMMAND, "a"));
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         element.sendKeys(Keys.DELETE);
+        element.clear();
         element.sendKeys(sendKeysValue);
     }
 
@@ -347,6 +349,9 @@ public class AbstractPage extends AbstractTest {
     public void sendkeyToElementByJS(WebDriver driver, String locator, String value) {
         highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
+        element.clear();
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.DELETE);
         javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", element);
     }
@@ -355,6 +360,9 @@ public class AbstractPage extends AbstractTest {
         locator = String.format(locator, (Object[]) values);
         highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
+        element.clear();
+        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+        element.sendKeys(Keys.DELETE);
         javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", element);
     }
@@ -528,17 +536,21 @@ public class AbstractPage extends AbstractTest {
 
         return sortedList.equals(arrayList);
     }
-    public void inputIntoDynamicTextbox(WebDriver driver, String textboxNameID, String valueToSendKey){
+
+    public void inputIntoDynamicTextbox(WebDriver driver, String textboxNameID, String valueToSendKey) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, textboxNameID);
         sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
+//        sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
     }
-    public void clickIntoDynamicButton(WebDriver driver, String buttonNameID){
+
+    public void clickIntoDynamicButton(WebDriver driver, String buttonNameID) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON, buttonNameID);
         clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON, buttonNameID);
     }
-    public String getDynamicValidate(WebDriver driver, String validateID){
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID,validateID);
-        return getTextElement(driver,AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID,validateID);
+
+    public String getDynamicValidate(WebDriver driver, String validateID) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
+        return getTextElement(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
     }
 
 

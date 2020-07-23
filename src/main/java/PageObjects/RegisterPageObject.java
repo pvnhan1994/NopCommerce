@@ -16,4 +16,9 @@ public class RegisterPageObject extends AbstractPage {
         // clickToElement(driver, RegisterPageUI.REGISTER_BTN);
         clickToElementByJS(driver, RegisterPageUI.REGISTER_BTN);
     }
+
+    public boolean isMessageSuccessDisplayed(String value) {
+        waitForElementVisible(driver, RegisterPageUI.MESSAGE_SUCCESS);
+        return isControlDisplayed(driver, RegisterPageUI.MESSAGE_SUCCESS,value);
+    }
 }

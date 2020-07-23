@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.221">
+  <properties />
+  
+  
+            <testcase name="TC02_InvalidMail" time="0.802" classname="account.Register" />
+                <testcase name="TC01_EmptyData" time="1.404" classname="account.Register" />
+                <testcase name="TC04_PasswordLessThan6Chars" time="1.015" classname="account.Register" />
+      
+</testsuite>
