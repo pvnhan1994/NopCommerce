@@ -1,0 +1,26 @@
+2020-07-23 20:50:13,142 INFO  account.Login - Step 1: Click Register Button
+2020-07-23 20:50:13,402 INFO  account.Login - Step 2.1: Verify validate message First Name
+2020-07-23 20:50:13,631 INFO  account.Login - Actual = First name is required.
+2020-07-23 20:50:13,631 INFO  account.Login - Expected = First name is required.
+2020-07-23 20:50:13,631 INFO  account.Login - Compare value = true
+2020-07-23 20:50:13,631 INFO  account.Login - ===PASSED===
+2020-07-23 20:50:13,632 INFO  account.Login - Step 2.2: Verify validate message Last Name
+2020-07-23 20:50:13,901 INFO  account.Login - Actual = Last name is required.
+2020-07-23 20:50:13,903 INFO  account.Login - Expected = Last name is required.
+2020-07-23 20:50:13,903 INFO  account.Login - Compare value = true
+2020-07-23 20:50:13,903 INFO  account.Login - ===PASSED===
+2020-07-23 20:50:13,903 INFO  account.Login - Step 2.3: Verify validate message Email
+2020-07-23 20:50:14,186 INFO  account.Login - Actual = Email is required.
+2020-07-23 20:50:14,186 INFO  account.Login - Expected = Email is required.
+2020-07-23 20:50:14,186 INFO  account.Login - Compare value = true
+2020-07-23 20:50:14,186 INFO  account.Login - ===PASSED===
+2020-07-23 20:50:14,186 INFO  account.Login - Step 2.4: Verify validate message Password
+2020-07-23 20:50:14,447 INFO  account.Login - Actual = Password is required.
+2020-07-23 20:50:14,447 INFO  account.Login - Expected = Password is required.
+2020-07-23 20:50:14,447 INFO  account.Login - Compare value = true
+2020-07-23 20:50:14,447 INFO  account.Login - ===PASSED===
+2020-07-23 20:50:14,447 INFO  account.Login - Step 2.5: Verify validate message Confirm Password
+2020-07-23 20:50:14,697 INFO  account.Login - Actual = Password is required.
+2020-07-23 20:50:14,697 INFO  account.Login - Expected = Password is required.
+2020-07-23 20:50:14,697 INFO  account.Login - Compare value = true
+2020-07-23 20:50:14,697 INFO  account.Login - ===PASSED===

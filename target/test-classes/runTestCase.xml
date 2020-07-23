@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="NopCommencer" parallel="false">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+ 		<listener class-name="configReportHTML.ExtentReportListener" />
+ 		<listener class-name="configReportHTML.ReportNGListener" />
+<!--		<listener class-name="configReportHTML.ExtentTestListener" />-->
+	</listeners>
+	<test name="Run on Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="account.Login"/>
+
+		</classes>
+	</test>
+
+<!--	<test name="Run on CHROME">-->
+<!--		<parameter name="browser" value="chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="jobchat.account.Register_01_1_Validation_UserName_Password"/>-->
+
+<!--		</classes>-->
+<!--	</test>-->
+
+	<!-- <test name="Run on CHROME HEADLESS"> -->
+	<!-- <parameter name="browser" value="chromeheadless"></parameter> -->
+	<!-- <classes> -->
+	<!-- <class name="com.jobchat.account.Check_Environment_01"/> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+
+<!-- 	 <test name="Run on SAFARI"> -->
+<!-- 	 <parameter name="browser" value="safari"></parameter> -->
+<!-- 	 <classes> -->
+<!-- 	 <class name="jobchat.account.Register_01_1_Validation_UserName_Password"/> -->
+<!-- 	 </classes> -->
+<!-- 	 </test> -->
+</suite> 
