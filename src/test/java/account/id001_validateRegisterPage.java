@@ -8,7 +8,7 @@ import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
-public class validateRegisterPage extends AbstractTest {
+public class id001_validateRegisterPage extends AbstractTest {
     WebDriver driver;
     RegisterPageObject registerPage;
     MainPageObject mainPage;

@@ -5,6 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageUIs.CustomerInfoUIs;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -95,6 +96,28 @@ public class AbstractPage extends AbstractTest {
         select.selectByVisibleText(itemText);
     }
 
+    public void selectItemInDropDown(WebDriver driver, String locator, String itemText, String... values) {
+        locator = String.format(locator, (Object[]) values);
+        highlightElement(driver, locator);
+        element = driver.findElement(By.xpath(locator));
+        select = new Select(element);
+        select.selectByVisibleText(itemText);
+    }
+
+    public String getFirstSelectedDropdown(WebDriver driver, String locator) {
+        element = driver.findElement(By.xpath(locator));
+        select = new Select(element);
+        return select.getFirstSelectedOption().getText();
+    }
+
+    public String getFirstSelectedDropdown(WebDriver driver, String locator, String... values) {
+        locator = String.format(locator, (Object[]) values);
+        highlightElement(driver, locator);
+        element = driver.findElement(By.xpath(locator));
+        select = new Select(element);
+        return select.getFirstSelectedOption().getText();
+    }
+
     public String getSelectedItemInDropdown(WebDriver driver, String locator) {
         element = driver.findElement(By.xpath(locator));
         select = new Select(element);
@@ -169,6 +192,7 @@ public class AbstractPage extends AbstractTest {
         element = driver.findElement(By.xpath(locator));
         return element.getAttribute(attributeName);
     }
+
 
     public String getAttributeValue(WebDriver driver, String locator, String attributeName, String... values) {
         locator = String.format(locator, (Object[]) values);
@@ -247,6 +271,13 @@ public class AbstractPage extends AbstractTest {
     }
 
     public boolean isControlSelected(WebDriver driver, String locator) {
+        element = driver.findElement(By.xpath(locator));
+        return element.isSelected();
+    }
+
+    public boolean isControlSelected(WebDriver driver, String locator, String... values) {
+        locator = String.format(locator, (Object[]) values);
+        highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
         return element.isSelected();
     }
@@ -410,6 +441,13 @@ public class AbstractPage extends AbstractTest {
         waitExplicit.until(ExpectedConditions.presenceOfElementLocated(byLocator));
     }
 
+    public void waitForElementPresence(WebDriver driver, String locator, String... values) {
+        locator = String.format(locator, (Object[]) values);
+        waitExplicit = new WebDriverWait(driver, longTimeOut);
+        byLocator = By.xpath(locator);
+        waitExplicit.until(ExpectedConditions.presenceOfElementLocated(byLocator));
+    }
+
     public void waitForElementVisible(WebDriver driver, String locator) {
         waitExplicit = new WebDriverWait(driver, longTimeOut);
         byLocator = By.xpath(locator);
@@ -421,6 +459,12 @@ public class AbstractPage extends AbstractTest {
         waitExplicit = new WebDriverWait(driver, longTimeOut);
         byLocator = By.xpath(locator);
         waitExplicit.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(byLocator));
+    }
+
+    public void waitForElementInListLoading(WebDriver driver, String locator) {
+        waitExplicit = new WebDriverWait(driver, longTimeOut);
+        byLocator = By.xpath(locator);
+        waitExplicit.until(ExpectedConditions.presenceOfElementLocated(byLocator));
     }
 
     public void waitForElementClickable(WebDriver driver, String locator) {
@@ -551,6 +595,16 @@ public class AbstractPage extends AbstractTest {
     public String getDynamicValidate(WebDriver driver, String validateID) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
+    }
+
+    public void selectDynamicRadio(WebDriver driver, String nameID) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON, nameID);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON, nameID);
+    }
+
+    public void selectDynamicDropDown(WebDriver driver, String nameDropdown, String value) {
+        waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
+        selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
     }
 
 

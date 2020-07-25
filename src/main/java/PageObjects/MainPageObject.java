@@ -22,5 +22,6 @@ public class MainPageObject extends AbstractPage {
         waitForElementVisible(driver, MainPageUI.LOGIN_ITEM);
         clickToElement(driver, MainPageUI.LOGIN_ITEM);
         return PageGeneratorManager.getLoginPage(driver);
+
     }
 }

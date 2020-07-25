@@ -1,7 +1,7 @@
 package commons;
 
 public class Constants extends  AbstractTest {
-    public static final int LONG_TIMEOUT = 30;
+    public static final int LONG_TIMEOUT = 20;
     public static final int SHORT_TIMEOUT = 5;
     public static final String STAGING = "https://demo.nopcommerce.com/";
     public static final String HEADLESS_RESOLUTION = "1680x1050";

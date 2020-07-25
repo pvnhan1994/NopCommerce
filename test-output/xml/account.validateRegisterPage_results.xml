@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="7.819">
+  <properties />
+  
+  
+            <testcase name="TC02_InvalidMail" time="0.588" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC01_EmptyData" time="1.384" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC06_InputAllValidData" time="4.382" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC04_PasswordLessThan6Chars" time="0.603" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC05_ConfirmPasswordDoNotMatch" time="0.862" classname="account.id001_validateRegisterPage" />
+      
+</testsuite>

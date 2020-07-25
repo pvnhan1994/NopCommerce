@@ -10,8 +10,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import pageUIs.LoginPageUI;
 
-public class validateLoginPage extends AbstractTest {
+public class id002_validateLoginPage extends AbstractTest {
     WebDriver driver;
     MainPageObject mainPage;
     LoginPageObject loginPage;
@@ -31,22 +32,22 @@ public class validateLoginPage extends AbstractTest {
         loginPage.clickToLoginButton();
 
         log.info("Step 2: Verify error msg displayed");
-        verifyEquals("Please enter your email",loginPage.getDynamicValidate(driver,"Email-error"));
+        verifyEquals("Please enter your email",loginPage.getDynamicValidate(driver, LoginPageUI.VALIDATE_MSG_ID));
     }
 
     @Test
     public void TC02_InvalidEmail() {
         log.info("Step 1: Input invalid Email");
-        loginPage.inputIntoDynamicTextbox(driver,"Email", "abc");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.EMAIL_ID, "abc");
 
         log.info("Step 2:");
-        verifyEquals("Wrong email",loginPage.getDynamicValidate(driver,"Email-error"));
+        verifyEquals("Wrong email",loginPage.getDynamicValidate(driver,LoginPageUI.VALIDATE_MSG_ID));
     }
 
     @Test
     public void TC03_EmailUnregister() {
         log.info("Step 1: Input Email Unregister");
-        loginPage.inputIntoDynamicTextbox(driver,"Email", "abdsadsac@gmail.com");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.EMAIL_ID, "abdsadsac@gmail.com");
 
         log.info("Step 2: Click Login button");
         loginPage.clickToLoginButton();
@@ -59,7 +60,7 @@ public class validateLoginPage extends AbstractTest {
     @Test
     public void TC04_EmailRegisteredAndEmptyPassword() {
         log.info("Step 1: Input Email Registered");
-        loginPage.inputIntoDynamicTextbox(driver,"Email", "abds12adsac@gmail.com");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.EMAIL_ID, "abds12adsac@gmail.com");
 
         log.info("Step 2: Click Login button");
         loginPage.clickToLoginButton();
@@ -72,10 +73,10 @@ public class validateLoginPage extends AbstractTest {
     @Test
     public void TC05_EmailRegisteredAndIncorrectPassword() {
         log.info("Step 1: Input Email Registered");
-        loginPage.inputIntoDynamicTextbox(driver,"Email", "binvnese@gmail.com");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.EMAIL_ID, "binvnese@gmail.com");
 
         log.info("Step 2: Input Password Incorrect");
-        loginPage.inputIntoDynamicTextbox(driver,"Password", "abds12adsac@gmail.com");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.PASSWORD_ID, "abds12adsac@gmail.com");
 
         log.info("Step 3: Click Login button");
         loginPage.clickToLoginButton();
@@ -88,10 +89,10 @@ public class validateLoginPage extends AbstractTest {
     @Test
     public void TC06_EmailRegisteredAndCorrectPassword() {
         log.info("Step 1: Input Email Registered");
-        loginPage.inputIntoDynamicTextbox(driver,"Email", "binvnese@gmail.com");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.EMAIL_ID, "binvnese@gmail.com");
 
         log.info("Step 2: Input Password Correct");
-        loginPage.inputIntoDynamicTextbox(driver,"Password", "123123");
+        loginPage.inputIntoDynamicTextbox(driver,LoginPageUI.PASSWORD_ID, "123123");
 
         log.info("Step 3: Click Login button");
         homePage = loginPage.clickToLoginButton();

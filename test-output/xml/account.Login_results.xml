@@ -8,10 +8,10 @@
   <properties />
   
   
-            <testcase name="TC05_ConfirmPasswordDoNotMatch" time="0.919" classname="account.validateRegisterPage" />
-                <testcase name="TC02_InvalidMail" time="0.621" classname="account.validateRegisterPage" />
-                <testcase name="TC01_EmptyData" time="1.433" classname="account.validateRegisterPage" />
-                <testcase name="TC04_PasswordLessThan6Chars" time="0.623" classname="account.validateRegisterPage" />
-                <testcase name="TC06_InputAllValidData" time="4.525" classname="account.validateRegisterPage" />
+            <testcase name="TC05_ConfirmPasswordDoNotMatch" time="0.919" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC02_InvalidMail" time="0.621" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC01_EmptyData" time="1.433" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC04_PasswordLessThan6Chars" time="0.623" classname="account.id001_validateRegisterPage" />
+                <testcase name="TC06_InputAllValidData" time="4.525" classname="account.id001_validateRegisterPage" />
       
 </testsuite>

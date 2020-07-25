@@ -1,0 +1,85 @@
+2020-07-23 22:52:54,498 INFO  account.id001_validateRegisterPage - Step 1: Click Register button
+2020-07-23 22:52:54,749 INFO  account.id001_validateRegisterPage - Step 2.1: Verify validate message First Name
+2020-07-23 22:52:54,976 INFO  account.id001_validateRegisterPage - Actual = First name is required.
+2020-07-23 22:52:54,976 INFO  account.id001_validateRegisterPage - Expected = First name is required.
+2020-07-23 22:52:54,976 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:54,976 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:54,977 INFO  account.id001_validateRegisterPage - Step 2.2: Verify validate message Last Name
+2020-07-23 22:52:55,214 INFO  account.id001_validateRegisterPage - Actual = Last name is required.
+2020-07-23 22:52:55,214 INFO  account.id001_validateRegisterPage - Expected = Last name is required.
+2020-07-23 22:52:55,214 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:55,214 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:55,214 INFO  account.id001_validateRegisterPage - Step 2.3: Verify validate message Email
+2020-07-23 22:52:55,434 INFO  account.id001_validateRegisterPage - Actual = Email is required.
+2020-07-23 22:52:55,434 INFO  account.id001_validateRegisterPage - Expected = Email is required.
+2020-07-23 22:52:55,434 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:55,434 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:55,434 INFO  account.id001_validateRegisterPage - Step 2.4: Verify validate message Password
+2020-07-23 22:52:55,665 INFO  account.id001_validateRegisterPage - Actual = Password is required.
+2020-07-23 22:52:55,665 INFO  account.id001_validateRegisterPage - Expected = Password is required.
+2020-07-23 22:52:55,665 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:55,665 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:55,665 INFO  account.id001_validateRegisterPage - Step 2.5: Verify validate message Confirm Password
+2020-07-23 22:52:55,882 INFO  account.id001_validateRegisterPage - Actual = Password is required.
+2020-07-23 22:52:55,882 INFO  account.id001_validateRegisterPage - Expected = Password is required.
+2020-07-23 22:52:55,882 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:55,882 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:55,883 INFO  account.id001_validateRegisterPage - Step 1: Input invalid Email
+2020-07-23 22:52:56,253 INFO  account.id001_validateRegisterPage - Step 2: Verify validate message Email
+2020-07-23 22:52:56,470 INFO  account.id001_validateRegisterPage - Actual = Wrong email
+2020-07-23 22:52:56,471 INFO  account.id001_validateRegisterPage - Expected = Wrong email
+2020-07-23 22:52:56,471 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:56,471 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:56,471 INFO  account.id001_validateRegisterPage - Step 1: Input password less than 6 chars
+2020-07-23 22:52:56,831 INFO  account.id001_validateRegisterPage - Step 3: Verify validate message Password
+2020-07-23 22:52:57,074 INFO  account.id001_validateRegisterPage - Actual = Password must meet the following rules:
+must have at least 6 characters
+2020-07-23 22:52:57,074 INFO  account.id001_validateRegisterPage - Expected = Password must meet the following rules:
+must have at least 6 characters
+2020-07-23 22:52:57,074 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:57,074 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:57,075 INFO  account.id001_validateRegisterPage - Step 1: Input valid password
+2020-07-23 22:52:57,387 INFO  account.id001_validateRegisterPage - Step 2: Input confirm password do not match
+2020-07-23 22:52:57,707 INFO  account.id001_validateRegisterPage - Step 3: Verify validate message Confirm Password
+2020-07-23 22:52:57,937 INFO  account.id001_validateRegisterPage - Actual = The password and confirmation password do not match.
+2020-07-23 22:52:57,937 INFO  account.id001_validateRegisterPage - Expected = The password and confirmation password do not match.
+2020-07-23 22:52:57,937 INFO  account.id001_validateRegisterPage - Compare value = true
+2020-07-23 22:52:57,937 INFO  account.id001_validateRegisterPage - ===PASSED===
+2020-07-23 22:52:57,938 INFO  account.id001_validateRegisterPage - Step 1: Input First Name
+2020-07-23 22:52:58,284 INFO  account.id001_validateRegisterPage - Step 2: Input Last Name
+2020-07-23 22:52:58,625 INFO  account.id001_validateRegisterPage - Step 3: Input Email
+2020-07-23 22:52:58,972 INFO  account.id001_validateRegisterPage - Step 4: Input Password
+2020-07-23 22:52:59,273 INFO  account.id001_validateRegisterPage - Step 5: Input Confirm Password
+2020-07-23 22:52:59,584 INFO  account.id001_validateRegisterPage - Step 6: Click Register Button
+2020-07-23 22:53:02,083 INFO  account.id001_validateRegisterPage - Step 7: Message success displayed
+2020-07-23 22:53:02,320 INFO  account.id001_validateRegisterPage - ===PASSED==
+2020-07-23 22:53:11,814 INFO  account.id002_validateLoginPage - Step 1: Click Login button
+2020-07-23 22:53:12,047 INFO  account.id002_validateLoginPage - Step 2: Verify error msg displayed
+2020-07-23 22:53:12,268 INFO  account.id002_validateLoginPage - Actual = Please enter your email
+2020-07-23 22:53:12,268 INFO  account.id002_validateLoginPage - Expected = Please enter your email
+2020-07-23 22:53:12,268 INFO  account.id002_validateLoginPage - Compare value = true
+2020-07-23 22:53:12,268 INFO  account.id002_validateLoginPage - ===PASSED===
+2020-07-23 22:53:12,268 INFO  account.id002_validateLoginPage - Step 1: Input invalid Email
+2020-07-23 22:53:12,601 INFO  account.id002_validateLoginPage - Step 2:
+2020-07-23 22:53:12,824 INFO  account.id002_validateLoginPage - Actual = Wrong email
+2020-07-23 22:53:12,824 INFO  account.id002_validateLoginPage - Expected = Wrong email
+2020-07-23 22:53:12,824 INFO  account.id002_validateLoginPage - Compare value = true
+2020-07-23 22:53:12,824 INFO  account.id002_validateLoginPage - ===PASSED===
+2020-07-23 22:53:12,824 INFO  account.id002_validateLoginPage - Step 1: Input Email Unregister
+2020-07-23 22:53:13,195 INFO  account.id002_validateLoginPage - Step 2: Click Login button
+2020-07-23 22:53:14,762 INFO  account.id002_validateLoginPage - Step 3: Error Msg displayed
+2020-07-23 22:53:15,015 INFO  account.id002_validateLoginPage - ===PASSED==
+2020-07-23 22:53:15,015 INFO  account.id002_validateLoginPage - Step 1: Input Email Registered
+2020-07-23 22:53:15,359 INFO  account.id002_validateLoginPage - Step 2: Click Login button
+2020-07-23 22:53:16,058 INFO  account.id002_validateLoginPage - Step 3: Error Msg displayed
+2020-07-23 22:53:16,305 INFO  account.id002_validateLoginPage - ===PASSED==
+2020-07-23 22:53:16,307 INFO  account.id002_validateLoginPage - Step 1: Input Email Registered
+2020-07-23 22:53:16,648 INFO  account.id002_validateLoginPage - Step 2: Input Password Incorrect
+2020-07-23 22:53:17,002 INFO  account.id002_validateLoginPage - Step 3: Click Login button
+2020-07-23 22:53:18,575 INFO  account.id002_validateLoginPage - Step 4: Error Msg displayed
+2020-07-23 22:53:18,808 INFO  account.id002_validateLoginPage - ===PASSED==
+2020-07-23 22:53:18,809 INFO  account.id002_validateLoginPage - Step 1: Input Email Registered
+2020-07-23 22:53:19,154 INFO  account.id002_validateLoginPage - Step 2: Input Password Correct
+2020-07-23 22:53:19,499 INFO  account.id002_validateLoginPage - Step 3: Click Login button
+2020-07-23 22:53:20,572 INFO  account.id002_validateLoginPage - Step 4: Login success - My Account Item displayed
+2020-07-23 22:53:20,809 INFO  account.id002_validateLoginPage - ===PASSED==

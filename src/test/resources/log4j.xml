@@ -25,19 +25,24 @@
 		</layout>
 	</appender>
 
-	<category name="account.validateRegisterPage">
+	<category name="account.id001_validateRegisterPage">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />
 		<appender-ref ref="testng" />
 	</category>
-	<category name="account.validateLoginPage">
+	<category name="account.id002_validateLoginPage">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />
 		<appender-ref ref="testng" />
 	</category>
-
+	<category name="account.id003_myAccount">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="testng" />
+	</category>
 
 	<root>
 		<priority value="warn" />
