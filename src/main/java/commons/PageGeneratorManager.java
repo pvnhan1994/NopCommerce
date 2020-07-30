@@ -34,6 +34,9 @@ public class PageGeneratorManager {
     public static ChangePasswordPageObject getChangePasswordPage(WebDriver driver) {
         return new ChangePasswordPageObject(driver);
     }
+    public static MyProductReviewsPageObject getMyProductReviewsPage(WebDriver driver){
+        return new MyProductReviewsPageObject(driver);
+    }
 
 
 

@@ -15,9 +15,9 @@ public class AddressPageObject extends AbstractPage {
         waitForElementVisible(driver, AddressPageUIs.DYNAMIC_INFOR_ADDRESS,inforName);
         return getTextElement(driver, AddressPageUIs.DYNAMIC_INFOR_ADDRESS,inforName);
     }
-    public ChangePasswordPageObject clickDynamicMenuBar( String nameMenu) {
-        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_BAR, nameMenu );
-        clickToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_BAR, nameMenu);
+    public ChangePasswordPageObject clickChangePasswordMenuBar() {
+        waitForElementVisible(driver, MyAccountPageUIs.CHANGE_PASSWORD_MENU_BAR);
+        clickToElement(driver, MyAccountPageUIs.CHANGE_PASSWORD_MENU_BAR);
         return PageGeneratorManager.getChangePasswordPage(driver);
     }
 

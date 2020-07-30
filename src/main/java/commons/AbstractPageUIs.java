@@ -13,4 +13,5 @@ public class AbstractPageUIs {
     public static final String LASTNAME_ID = "LastName";
     public static final String LOGOUT_ITEM = "//a[@class='ico-logout']";
 
+    public static final String DYNAMIC_TEXTAREA = "//textarea[@id='%s']" ;
 }
