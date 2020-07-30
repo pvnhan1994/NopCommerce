@@ -375,6 +375,13 @@ public class AbstractPage extends AbstractTest {
         javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].click();", element);
     }
+    public void clickToElementByJS(WebDriver driver, String locator,String... values) {
+        locator = String.format(locator,(Object[]) values);
+        highlightElement(driver, locator);
+        element = driver.findElement(By.xpath(locator));
+        javascriptExecutor = (JavascriptExecutor) driver;
+        javascriptExecutor.executeScript("arguments[0].click();", element);
+    }
 
     public void scrollToElement(WebDriver driver, String locator) {
         element = driver.findElement(By.xpath(locator));
@@ -396,7 +403,7 @@ public class AbstractPage extends AbstractTest {
         locator = String.format(locator, (Object[]) values);
         highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
-        element.clear();
+//        element.clear();
         element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
         element.sendKeys(Keys.DELETE);
         javascriptExecutor = (JavascriptExecutor) driver;
@@ -517,6 +524,13 @@ public class AbstractPage extends AbstractTest {
         int size = allItems.size();
         return size;
     }
+    public int listSizeLocatorInElements(WebDriver driver, String listLocator, String... values){
+        listLocator = String.format(listLocator, (Object[]) values);
+        waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(listLocator)));
+        List<WebElement> allItems = driver.findElements(By.xpath(listLocator));
+        int size = allItems.size();
+        return size;
+    }
 
     public void selectFolder(String listFolder, String NameFolder) throws Exception {
         List<WebElement> allItems = driver.findElements(By.xpath(listFolder));
@@ -587,8 +601,10 @@ public class AbstractPage extends AbstractTest {
     }
 
     public void inputIntoDynamicTextbox(WebDriver driver, String textboxNameID, String valueToSendKey) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, textboxNameID);
-        sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxNameID);
+        overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
+        sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, valueToSendKey, textboxNameID);
+
 //        sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
     }
     public void inputIntoDynamicTextArea(WebDriver driver, String textAreaNameID, String valueToSendKey){
@@ -596,8 +612,8 @@ public class AbstractPage extends AbstractTest {
         sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, valueToSendKey,textAreaNameID);
     }
     public void clickIntoDynamicButton(WebDriver driver, String buttonNameID) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON, buttonNameID);
-        clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON, buttonNameID);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, buttonNameID);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, buttonNameID);
     }
 
     public String getDynamicValidate(WebDriver driver, String validateID) {
@@ -605,14 +621,18 @@ public class AbstractPage extends AbstractTest {
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
     }
 
-    public void selectDynamicRadio(WebDriver driver, String nameID) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON, nameID);
-        clickToElement(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON, nameID);
+    public void selectDynamicRadioCheckbox(WebDriver driver, String nameID) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID, nameID);
+        clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID, nameID);
     }
 
     public void selectDynamicDropDown(WebDriver driver, String nameDropdown, String value) {
         waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
         selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
+    }
+    public void selectDynamicDropDownByID(WebDriver driver, String nameDropdown, String value) {
+        waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, nameDropdown);
+        selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
     }
 
 

@@ -103,6 +103,6 @@ public class id002_validateLoginPage extends AbstractTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        closeBrowserAndDriver(driver);
     }
 }

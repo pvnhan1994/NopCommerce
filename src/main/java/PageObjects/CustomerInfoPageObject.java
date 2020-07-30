@@ -20,8 +20,8 @@ public class CustomerInfoPageObject extends AbstractPage {
     }
 
     public String getDynamicAttribueTextboxValue(WebDriver driver,String textboxID,String attributeName){
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, textboxID);
-        return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_TEXTBOX,attributeName,textboxID);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxID);
+        return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID,attributeName,textboxID);
     }
 
     public String getTextDOBDropdown(WebDriver driver, String nameDropdown){
@@ -30,8 +30,8 @@ public class CustomerInfoPageObject extends AbstractPage {
     }
 
     public boolean isGenderSelected(WebDriver driver, String nameID){
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON,nameID);
-        return isControlSelected(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON,nameID);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID,nameID);
+        return isControlSelected(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID,nameID);
     }
     public AddressPageObject clickAddressMenuBar() {
         waitForElementVisible(driver, MyAccountPageUIs.ADDRESS_MENU_BAR);
