@@ -33,9 +33,9 @@ public class CustomerInfoPageObject extends AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON,nameID);
         return isControlSelected(driver, AbstractPageUIs.DYNAMIC_RADIO_BUTTON,nameID);
     }
-    public AddressPageObject clickDynamicMenuBar( String nameMenu) {
-        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_BAR, nameMenu );
-        clickToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_BAR, nameMenu);
+    public AddressPageObject clickAddressMenuBar() {
+        waitForElementVisible(driver, MyAccountPageUIs.ADDRESS_MENU_BAR);
+        clickToElement(driver, MyAccountPageUIs.ADDRESS_MENU_BAR);
         return PageGeneratorManager.getAddressPage(driver);
     }
 }

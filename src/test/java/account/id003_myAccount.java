@@ -22,11 +22,13 @@ public class id003_myAccount extends AbstractTest {
     RegisterPageObject registerPage;
     AddressPageObject addressPage;
     LoginPageObject loginPage;
+    MyProductReviewsPageObject myProductReviewPage;
     String password = "123123";
     String newPassword = "123123123";
-    String email = "aloalo123@gmail.com";
+    String email = "alodsadsads1a5t493@gmail.com";
     String firstName = "Nhan";
     String lastName = "Phan";
+    String emailEdit = "editalodsa" + randomDataTest() + "@gmail.com";
 
     @Parameters("browser")
     @BeforeClass
@@ -47,7 +49,7 @@ public class id003_myAccount extends AbstractTest {
     @Test
     public void TC01_CustomerInfo() {
         log.info("Step 1: Click Customer Info menu");
-        customerInfoPage = myAccountPage.clickDynamicMenuBar("Customer info");
+        customerInfoPage = myAccountPage.clickCustomerInfoMenuBar();
 
         log.info("Step 2: Select Gender");
         customerInfoPage.selectDynamicRadio(driver, "gender-male");
@@ -64,7 +66,7 @@ public class id003_myAccount extends AbstractTest {
         customerInfoPage.selectDynamicDropDown(driver, "DateOfBirthYear", "1994");
 
         log.info("Step 6: Edit Email");
-        customerInfoPage.inputIntoDynamicTextbox(driver, AbstractPageUIs.EMAIL_ID, "okroiday@gmail.com");
+        customerInfoPage.inputIntoDynamicTextbox(driver, AbstractPageUIs.EMAIL_ID, emailEdit);
 
         log.info("Step 7: Edit Company name");
         customerInfoPage.inputIntoDynamicTextbox(driver, AbstractPageUIs.COMPANY_ID, "AutoCompany");
@@ -76,7 +78,7 @@ public class id003_myAccount extends AbstractTest {
         verifyEquals(customerInfoPage.getDynamicAttribueTextboxValue(driver, AbstractPageUIs.FIRSTNAME_ID, "value"), "Tony");
 
         verifyEquals(customerInfoPage.getDynamicAttribueTextboxValue(driver, AbstractPageUIs.LASTNAME_ID, "value"), "Luca");
-        verifyEquals(customerInfoPage.getDynamicAttribueTextboxValue(driver, AbstractPageUIs.EMAIL_ID, "value"), "okroiday@gmail.com");
+        verifyEquals(customerInfoPage.getDynamicAttribueTextboxValue(driver, AbstractPageUIs.EMAIL_ID, "value"), emailEdit);
         verifyEquals(customerInfoPage.getDynamicAttribueTextboxValue(driver, AbstractPageUIs.COMPANY_ID, "value"), "AutoCompany");
 
         verifyEquals(customerInfoPage.getTextDOBDropdown(driver, "DateOfBirthDay"), "17");
@@ -89,7 +91,7 @@ public class id003_myAccount extends AbstractTest {
     @Test
     public void TC02_AddAddress() {
         log.info("Step 1: Click Address menu");
-        addressPage = customerInfoPage.clickDynamicMenuBar("Addresses");
+        addressPage = customerInfoPage.clickAddressMenuBar();
         log.info("Step 2: Click Address button");
         addressPage.clickIntoDynamicButton(driver, "button-1 add-address-button");
 
@@ -100,38 +102,39 @@ public class id003_myAccount extends AbstractTest {
         addressPage.inputIntoDynamicTextbox(driver, "Address_Company", Address_Company);
         addressPage.inputIntoDynamicTextbox(driver, "Address_City", Address_City);
         addressPage.inputIntoDynamicTextbox(driver, "Address_Address1", Address_Address1);
-        addressPage.inputIntoDynamicTextbox(driver, "Address_Address2",Address_Address2);
-        addressPage.inputIntoDynamicTextbox(driver, "Address_ZipPostalCode",Address_ZipPostalCode);
-        addressPage.inputIntoDynamicTextbox(driver, "Address_PhoneNumber",Address_PhoneNumber);
-        addressPage.inputIntoDynamicTextbox(driver, "Address_FaxNumber",Address_FaxNumber);
-        addressPage.selectDynamicDropDown(driver,"Address.CountryId",Address_CountryId);
+        addressPage.inputIntoDynamicTextbox(driver, "Address_Address2", Address_Address2);
+        addressPage.inputIntoDynamicTextbox(driver, "Address_ZipPostalCode", Address_ZipPostalCode);
+        addressPage.inputIntoDynamicTextbox(driver, "Address_PhoneNumber", Address_PhoneNumber);
+        addressPage.inputIntoDynamicTextbox(driver, "Address_FaxNumber", Address_FaxNumber);
+        addressPage.selectDynamicDropDown(driver, "Address.CountryId", Address_CountryId);
 
         log.info("Step 4: Click Save btn");
-        addressPage.clickIntoDynamicButton(driver,"button-1 save-address-button");
+        addressPage.clickIntoDynamicButton(driver, "button-1 save-address-button");
 
         log.info("Step 5: Verify data");
-        verifyEquals(addressPage.getDynamicTextWithTableLi("name"),Address_FirstName+" "+Address_LastName);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("email"),"Email: "+Address_Email);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("phone"),"Phone number: "+Address_PhoneNumber);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("fax"),"Fax number: "+Address_FaxNumber);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("company"),Address_Company);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("address1"),Address_Address1);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("address2"),Address_Address2);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("city-state-zip"),Address_City+", "+Address_ZipPostalCode);
-        verifyEquals(addressPage.getDynamicTextWithTableLi("country"),Address_CountryId);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("name"), Address_FirstName + " " + Address_LastName);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("email"), "Email: " + Address_Email);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("phone"), "Phone number: " + Address_PhoneNumber);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("fax"), "Fax number: " + Address_FaxNumber);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("company"), Address_Company);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("address1"), Address_Address1);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("address2"), Address_Address2);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("city-state-zip"), Address_City + ", " + Address_ZipPostalCode);
+        verifyEquals(addressPage.getDynamicTextWithTableLi("country"), Address_CountryId);
     }
+
     @Test
-    public void TC03_ChangePassword(){
+    public void TC03_ChangePassword() {
         log.info("Step 1: Click Change Password menu ");
-        changePasswordPage = addressPage.clickDynamicMenuBar("Change password");
+        changePasswordPage = addressPage.clickChangePasswordMenuBar();
 
         log.info("Step 2: Input valid password for change ");
-        changePasswordPage.inputIntoDynamicTextbox(driver,"OldPassword",password);
-        changePasswordPage.inputIntoDynamicTextbox(driver,"NewPassword",newPassword);
-        changePasswordPage.inputIntoDynamicTextbox(driver,"ConfirmNewPassword",newPassword);
+        changePasswordPage.inputIntoDynamicTextbox(driver, "OldPassword", password);
+        changePasswordPage.inputIntoDynamicTextbox(driver, "NewPassword", newPassword);
+        changePasswordPage.inputIntoDynamicTextbox(driver, "ConfirmNewPassword", newPassword);
 
         log.info("Step 3: Click Change Password Button ");
-        changePasswordPage.clickIntoDynamicButton(driver,"button-1 change-password-button");
+        changePasswordPage.clickIntoDynamicButton(driver, "button-1 change-password-button");
 
         log.info("Step 4: Click Logout item ");
         mainPage = changePasswordPage.clickIntoLogOutButton();
@@ -140,8 +143,8 @@ public class id003_myAccount extends AbstractTest {
         loginPage = mainPage.clickLoginItem();
 
         log.info("Step 6: Input valid email with new Password ");
-        loginPage.inputIntoDynamicTextbox(driver,"Email",email);
-        loginPage.inputIntoDynamicTextbox(driver,"Password",newPassword);
+        loginPage.inputIntoDynamicTextbox(driver, "Email", email);
+        loginPage.inputIntoDynamicTextbox(driver, "Password", newPassword);
 
         log.info("Step 7: Click Login button");
         homePage = loginPage.clickToLoginButton();
@@ -151,10 +154,43 @@ public class id003_myAccount extends AbstractTest {
 
     }
 
+    @Test
+    public void TC04_MyProductReview() {
+        log.info("Step 1: Click Logout item ");
+        myAccountPage = homePage.clickToMyAccountItem();
+        myProductReviewPage = myAccountPage.clickMyProductReviewsMenuBar();
+        log.info("Step 2: Hover into Menutop");
+        myAccountPage.hoverIntoMenuTopProduct("Computers");
+        log.info("Step 3: Click into Menutop");
+        myAccountPage.clickIntoMenuTopProduct("Desktops");
+        log.info("Step 4: Click Addto Card");
+        myAccountPage.clickAddToCardProduct("Build your own computer");
+        log.info("Step 5: Click Add review");
+        myAccountPage.clickAddYourReviewItem();
+        log.info("Step 6: Input title review");
+        myAccountPage.inputIntoDynamicTextbox(driver, "AddProductReview_Title", "review 1");
+        log.info("Step 7: Input content review");
+        myAccountPage.inputIntoDynamicTextArea(driver, "AddProductReview_ReviewText", "ok review");
+        log.info("Step 8: Click Review button");
+        myAccountPage.clickIntoDynamicButton(driver, "button-1 write-product-review-button");
+        log.info("Step 9: Click Logo Nop");
+        homePage = myAccountPage.clickLogoNopCommerce();
+
+        log.info("Step 10: Click My Account item");
+        myAccountPage = homePage.clickToMyAccountItem();
+        log.info("Step 11: Click My product review");
+        myProductReviewPage = myAccountPage.clickMyProductReviewsMenuBar();
+        log.info("Step 12: Verify name displays");
+        myProductReviewPage.isNameProductReviewDisplayed("Build your own computer");
+
+
+    }
+
     @AfterClass(alwaysRun = true)
     public void afterClass() {
         driver.quit();
     }
+
     String Address_FirstName = "Automation";
     String Address_LastName = "FC";
     String Address_Email = "nhanpv1994@gmail.com";
@@ -167,7 +203,6 @@ public class id003_myAccount extends AbstractTest {
     String Address_FaxNumber = "0987654321";
     String Address_CountryId = "Viet Nam";
     String Address_StateProvinceId = "Other";
-
 
 
 }

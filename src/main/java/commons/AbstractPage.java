@@ -336,7 +336,12 @@ public class AbstractPage extends AbstractTest {
         action.moveToElement(element).perform();
 
     }
-
+    public void hoverMouseToElement(WebDriver driver, String locator, String... values){
+        locator = String.format(locator, (Object[]) values);
+        element = driver.findElement(By.xpath(locator));
+        action = new Actions(driver);
+        action.moveToElement(element).perform();
+    }
     public void doubleClickToElement(WebDriver driver, String locator) {
         element = driver.findElement(By.xpath(locator));
         action = new Actions(driver);
@@ -586,7 +591,10 @@ public class AbstractPage extends AbstractTest {
         sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
 //        sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
     }
-
+    public void inputIntoDynamicTextArea(WebDriver driver, String textAreaNameID, String valueToSendKey){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, textAreaNameID);
+        sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, valueToSendKey,textAreaNameID);
+    }
     public void clickIntoDynamicButton(WebDriver driver, String buttonNameID) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON, buttonNameID);
         clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON, buttonNameID);
