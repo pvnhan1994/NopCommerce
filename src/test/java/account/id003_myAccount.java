@@ -52,7 +52,7 @@ public class id003_myAccount extends AbstractTest {
         customerInfoPage = myAccountPage.clickCustomerInfoMenuBar();
 
         log.info("Step 2: Select Gender");
-        customerInfoPage.selectDynamicRadio(driver, "gender-male");
+        customerInfoPage.selectDynamicRadioCheckbox(driver, "gender-male");
 
         log.info("Step 3: Edit First Name");
         customerInfoPage.inputIntoDynamicTextbox(driver, AbstractPageUIs.FIRSTNAME_ID, "Tony");
@@ -188,7 +188,7 @@ public class id003_myAccount extends AbstractTest {
 
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-        driver.quit();
+        closeBrowserAndDriver(driver);
     }
 
     String Address_FirstName = "Automation";

@@ -2,10 +2,10 @@ package commons;
 
 public class AbstractPageUIs {
 
-    public static final String DYNAMIC_TEXTBOX = "//input[@id='%s']";
-    public static final String DYNAMIC_BUTTON = "//input[@class='%s']";
+    public static final String DYNAMIC_TEXTBOX_WITH_ID = "//input[@id='%s']";
+    public static final String DYNAMIC_BUTTON_WITH_CLASS = "//input[@class='%s']";
     public static final String DYNAMIC_VALIDATE_WITH_ID = "//span[@id='%s']";
-    public static final String DYNAMIC_RADIO_BUTTON = "//input[@id='%s']";
+    public static final String DYNAMIC_RADIO_CHECKBOX_WITH_ID = "//input[@id='%s']";
     public static final String EMAIL_ID ="Email";
     public static final String PASSWORD_ID = "Password";
     public static final String COMPANY_ID ="Company";
@@ -14,4 +14,5 @@ public class AbstractPageUIs {
     public static final String LOGOUT_ITEM = "//a[@class='ico-logout']";
 
     public static final String DYNAMIC_TEXTAREA = "//textarea[@id='%s']" ;
+    public static final String DYNAMIC_ITEM_PAGE = "//ul[@class='list']//a[text()='%s']";
 }

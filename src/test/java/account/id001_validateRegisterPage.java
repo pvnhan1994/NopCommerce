@@ -104,8 +104,7 @@ public class id001_validateRegisterPage extends AbstractTest {
     }
     @AfterClass(alwaysRun = true)
     public void afterClass() {
-
-        driver.quit();
+        closeBrowserAndDriver(driver);
     }
 
 }

@@ -12,7 +12,7 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 
-			<class name="account.id003_myAccount"/>
+			<class name="search.id001_funcSearch"/>
 
 		</classes>
 	</test>

@@ -18,32 +18,28 @@ import java.util.concurrent.TimeUnit;
 public class draft {
     WebDriver driver;
     JavascriptExecutor javascriptExecutor;
+
     @BeforeClass
-    public void beforeClass(){
+    public void beforeClass() {
 
 
         System.setProperty(Setting.CHROME_DRIVER_PROP, Setting.CHROME_DRIVER_PATH);
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com/");
     }
+
     @Test
     public void TC_01() {
-        WebElement hover = driver.findElement(By.xpath("//ul[@class='top-menu notmobile']//a[contains(text(),'Computers')]"));
-        Actions action = new Actions(driver);
-        action.moveToElement(hover).perform();
-        WebElement product = driver.findElement(By.xpath("//ul[@class='top-menu notmobile']//a[contains(text(),'Desktops')]"));
-        Assert.assertTrue(product.isDisplayed());
-     //   product.click();
-
-        javascriptExecutor = (JavascriptExecutor) driver;
-        javascriptExecutor.executeScript("arguments[0].click();", product);
-
-        driver.findElement(By.xpath("//input[@id='small-searchterms']")).sendKeys("dsadsadsadsajdsal;dskajel;wqkejwqlp;ekwjqe;wlqkdjs;alkdjsa;ldkjqw;elqkje;lksdja;lsdkajds;akewq;k");
-
-
+        driver.findElement(By.xpath("//a[@class='ico-register']")).click();
+        driver.findElement(By.xpath("//input[@id='FirstName']")).sendKeys("Phan ");
+        driver.findElement(By.xpath("//input[@id='LastName']")).sendKeys("Viet ");
+        driver.findElement(By.xpath("//input[@id='Email']")).sendKeys("binvnese2341@gmail.com");
+        driver.findElement(By.xpath("//input[@id='Password']")).sendKeys("123123");
+        driver.findElement(By.xpath("//input[@id='ConfirmPassword']")).sendKeys("123123");
     }
+
     @AfterClass
     public void afterClass() {
         driver.quit();

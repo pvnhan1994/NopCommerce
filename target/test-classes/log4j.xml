@@ -43,6 +43,12 @@
 		<appender-ref ref="logfile" />
 		<appender-ref ref="testng" />
 	</category>
+	<category name="search.id001_funcSearch">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="testng" />
+	</category>
 
 	<root>
 		<priority value="warn" />
