@@ -14,5 +14,7 @@ public class AbstractPageUIs {
     public static final String LOGOUT_ITEM = "//a[@class='ico-logout']";
 
     public static final String DYNAMIC_TEXTAREA = "//textarea[@id='%s']" ;
-    public static final String DYNAMIC_ITEM_PAGE = "//ul[@class='list']//a[text()='%s']";
+    public static final String DYNAMIC_ITEM_FOOTER_PAGE = "//ul[@class='list']//a[text()='%s']";
+    public static final String DYNAMIC_TOAST_MSG = "//p[@class='content']";
+
 }

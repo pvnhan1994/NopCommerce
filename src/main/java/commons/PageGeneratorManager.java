@@ -40,6 +40,9 @@ public class PageGeneratorManager {
     public static SearchPageObject getSearchPage(WebDriver driver){
         return new SearchPageObject(driver);
     }
+    public static WishListPageObject getWishListPage(WebDriver driver){
+        return new WishListPageObject(driver);
+    }
 
 
 }

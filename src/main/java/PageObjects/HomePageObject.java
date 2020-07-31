@@ -5,6 +5,7 @@ import commons.AbstractPageUIs;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.HomePageUIs;
+import pageUIs.MyAccountPageUIs;
 
 public class HomePageObject extends AbstractPage {
     WebDriver driver;
@@ -24,8 +25,13 @@ public class HomePageObject extends AbstractPage {
     }
 
     public SearchPageObject clickIntoSearchItemFooter(String searchName) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_PAGE, searchName);
-        clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_PAGE, searchName);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, searchName);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, searchName);
         return PageGeneratorManager.getSearchPage(driver);
+    }
+    public MainPageObject clickLogoNopCommerce() {
+        waitForElementVisible(driver, MyAccountPageUIs.LOGO_NOP);
+        clickToElement(driver, MyAccountPageUIs.LOGO_NOP);
+        return PageGeneratorManager.getMainPage(driver);
     }
 }

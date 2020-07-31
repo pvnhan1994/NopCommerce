@@ -1,34 +1,19 @@
-2020-07-31 17:36:55,228 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:36:57,043 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:36:57,114 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:36:57,116 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:36:58,833 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:36:58,901 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:36:58,902 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:36:59,737 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:36:59,812 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:36:59,813 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:37:01,586 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:37:01,654 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:01,654 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
-2020-07-31 17:37:02,495 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
-2020-07-31 17:37:02,603 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:02,603 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar displayed
-2020-07-31 17:37:02,808 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:02,808 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 4: Verify Next icon displayed
-2020-07-31 17:37:03,015 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:03,016 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 5: Click second page
-2020-07-31 17:37:03,885 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 6: Verify Previous displayed
-2020-07-31 17:37:04,080 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:04,080 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
-2020-07-31 17:37:04,921 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
-2020-07-31 17:37:05,099 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:05,099 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar undisplayed
-2020-07-31 17:37:07,194 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:07,195 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
-2020-07-31 17:37:08,043 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
-2020-07-31 17:37:08,182 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:08,182 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar undisplayed
-2020-07-31 17:37:10,283 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:10,283 INFO  sortNdisplayNpaging.id001_sort_displays_paging - OS name = windows 10
-2020-07-31 17:37:10,994 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ---------- QUIT BROWSER SUCCESS ----------
+2020-07-31 21:14:01,236 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Step 1: Click open Product Detail
+2020-07-31 21:14:03,866 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Step 2: Click wishlist button
+2020-07-31 21:14:04,179 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Step 3: Verify toast msg
+2020-07-31 21:14:04,756 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Actual = The product has been added to your wishlist
+2020-07-31 21:14:04,756 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Expected = The product has been added to your wishlist
+2020-07-31 21:14:04,756 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Compare value = true
+2020-07-31 21:14:04,756 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - ===PASSED===
+2020-07-31 21:14:04,757 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Step 4: Open wishList page
+2020-07-31 21:14:06,381 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Step 5: Verify add product success
+2020-07-31 21:14:06,577 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Actual = AP_MBP_13
+2020-07-31 21:14:06,577 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Expected = AP_MBP_13
+2020-07-31 21:14:06,577 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Compare value = true
+2020-07-31 21:14:06,577 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - ===PASSED===
+2020-07-31 21:14:06,762 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Actual = Apple MacBook Pro 13-inch
+2020-07-31 21:14:06,762 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Expected = Apple MacBook Pro 13-inch
+2020-07-31 21:14:06,762 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - Compare value = true
+2020-07-31 21:14:06,762 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - ===PASSED===
+2020-07-31 21:14:06,762 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - OS name = windows 10
+2020-07-31 21:14:07,468 INFO  wishList_compare_recentView.id001_withList_compare_recentReview - ---------- QUIT BROWSER SUCCESS ----------

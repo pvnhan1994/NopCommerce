@@ -164,7 +164,7 @@ public class id003_myAccount extends AbstractTest {
         log.info("Step 3: Click into Menutop");
         myAccountPage.clickIntoMenuTopProduct("Desktops");
         log.info("Step 4: Click Addto Card");
-        myAccountPage.clickAddToCardProduct("Build your own computer");
+        myAccountPage.openProductDetails("Build your own computer");
         log.info("Step 5: Click Add review");
         myAccountPage.clickAddYourReviewItem();
         log.info("Step 6: Input title review");

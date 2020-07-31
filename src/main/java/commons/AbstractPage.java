@@ -607,13 +607,24 @@ public class AbstractPage  {
 
 //        sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
     }
+    public void inputIntoDynamicTextboxByJS(WebDriver driver, String textboxNameID, String valueToSendKey) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxNameID);
+        overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
+        sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, valueToSendKey, textboxNameID);
+
+
+    }
     public void inputIntoDynamicTextArea(WebDriver driver, String textAreaNameID, String valueToSendKey){
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, textAreaNameID);
         sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, valueToSendKey,textAreaNameID);
     }
-    public void clickIntoDynamicButton(WebDriver driver, String buttonNameID) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, buttonNameID);
-        clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, buttonNameID);
+    public void clickIntoDynamicButton(WebDriver driver, String nameClass) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
+    }
+    public void clickIntoDynamicButtonByJS(WebDriver driver, String nameClass) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
+        clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
     }
 
     public String getDynamicValidate(WebDriver driver, String validateID) {
@@ -633,6 +644,10 @@ public class AbstractPage  {
     public void selectDynamicDropDownByID(WebDriver driver, String nameDropdown, String value) {
         waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, nameDropdown);
         selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
+    }
+    public String getTextToastMessageDisplayed(WebDriver driver){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
+        return getTextElement(driver,AbstractPageUIs.DYNAMIC_TOAST_MSG);
     }
 
 
