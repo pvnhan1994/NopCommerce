@@ -49,7 +49,12 @@
 		<appender-ref ref="logfile" />
 		<appender-ref ref="testng" />
 	</category>
-
+	<category name="sortNdisplayNpaging.id001_sort_displays_paging">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="testng" />
+	</category>
 	<root>
 		<priority value="warn" />
 	</root>

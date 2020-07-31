@@ -10,7 +10,7 @@ import pageUIs.CustomerInfoUIs;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class AbstractPage extends AbstractTest {
+public class AbstractPage  {
 
     public void openUrl(WebDriver driver, String urlValue) {
         driver.get(urlValue);
@@ -532,7 +532,7 @@ public class AbstractPage extends AbstractTest {
         return size;
     }
 
-    public void selectFolder(String listFolder, String NameFolder) throws Exception {
+    public void selectFolder(WebDriver driver, String listFolder, String NameFolder) throws Exception {
         List<WebElement> allItems = driver.findElements(By.xpath(listFolder));
 //		System.out.println("Tat ca phan tu trong dropdown =" + allItems.size());
 
