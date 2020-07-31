@@ -1,97 +1,34 @@
-2020-07-30 21:53:10,760 INFO  search.id001_funcSearch - Step 1: Dont input data
-2020-07-30 21:53:11,103 INFO  search.id001_funcSearch - Step 2: Click Search button
-2020-07-30 21:53:12,743 INFO  search.id001_funcSearch - Step 3: Validate message is displayed
-2020-07-30 21:53:12,962 INFO  search.id001_funcSearch - Actual = Search term minimum length is 3 characters
-2020-07-30 21:53:12,962 INFO  search.id001_funcSearch - Expected = Search term minimum length is 3 characters
-2020-07-30 21:53:12,962 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:12,962 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:12,964 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:13,310 INFO  search.id001_funcSearch - Step 2: Click Search button
-2020-07-30 21:53:14,995 INFO  search.id001_funcSearch - Step 3: Validate message is displayed
-2020-07-30 21:53:15,211 INFO  search.id001_funcSearch - Actual = No products were found that matched your criteria.
-2020-07-30 21:53:15,211 INFO  search.id001_funcSearch - Expected = No products were found that matched your criteria.
-2020-07-30 21:53:15,211 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:15,211 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:15,212 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:15,525 INFO  search.id001_funcSearch - Step 2: Click Search button
-2020-07-30 21:53:16,345 INFO  search.id001_funcSearch - Step 3: Validate message is displayed
-2020-07-30 21:53:16,373 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:16,374 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:16,374 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:16,717 INFO  search.id001_funcSearch - Step 2: Click Search button
-2020-07-30 21:53:18,398 INFO  search.id001_funcSearch - Step 3: Validate message is displayed
-2020-07-30 21:53:18,429 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:18,429 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:18,430 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:18,802 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:19,039 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:19,345 INFO  search.id001_funcSearch - Step 4: Click Search button
-2020-07-30 21:53:20,161 INFO  search.id001_funcSearch - Step 5: Validate message is displayed
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Actual = No products were found that matched your criteria.
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Expected = No products were found that matched your criteria.
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:20,386 INFO  search.id001_funcSearch - Step 4: Check Automatically search sub categories
-2020-07-30 21:53:20,611 INFO  search.id001_funcSearch - Step 5: Click Search button
-2020-07-30 21:53:21,416 INFO  search.id001_funcSearch - Step 6: Validate message is displayed
-2020-07-30 21:53:21,451 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:21,451 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:21,452 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:21,452 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:21,452 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:21,452 INFO  search.id001_funcSearch - Step 4: Check Automatically search sub categories
-2020-07-30 21:53:21,452 INFO  search.id001_funcSearch - Step 5: Select incorrect Manufacturer
-2020-07-30 21:53:21,728 INFO  search.id001_funcSearch - Step 6: Click Search button
-2020-07-30 21:53:22,524 INFO  search.id001_funcSearch - Step 7: Validate message is displayed
-2020-07-30 21:53:22,752 INFO  search.id001_funcSearch - Actual = No products were found that matched your criteria.
-2020-07-30 21:53:22,752 INFO  search.id001_funcSearch - Expected = No products were found that matched your criteria.
-2020-07-30 21:53:22,752 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:22,752 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:22,753 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:22,753 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:22,753 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:22,753 INFO  search.id001_funcSearch - Step 4: Check Automatically search sub categories
-2020-07-30 21:53:22,753 INFO  search.id001_funcSearch - Step 5: Select Correct Manufacturer
-2020-07-30 21:53:23,020 INFO  search.id001_funcSearch - Step 6: Click Search button
-2020-07-30 21:53:23,814 INFO  search.id001_funcSearch - Step 7: Validate message is displayed
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Step 4: Check Automatically search sub categories
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Step 5: Select Correct Manufacturer
-2020-07-30 21:53:23,846 INFO  search.id001_funcSearch - Step 6: Input price range
-2020-07-30 21:53:24,524 INFO  search.id001_funcSearch - Step 7: Click Search button
-2020-07-30 21:53:26,246 INFO  search.id001_funcSearch - Step 8: Validate message is displayed
-2020-07-30 21:53:26,271 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:26,271 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:26,272 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:26,272 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:26,272 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:26,272 INFO  search.id001_funcSearch - Step 4: Check Automatically search sub categories
-2020-07-30 21:53:26,272 INFO  search.id001_funcSearch - Step 5: Select Correct Manufacturer
-2020-07-30 21:53:26,272 INFO  search.id001_funcSearch - Step 6: Input price range
-2020-07-30 21:53:26,935 INFO  search.id001_funcSearch - Step 7: Click Search button
-2020-07-30 21:53:28,667 INFO  search.id001_funcSearch - Step 8: Validate message is displayed
-2020-07-30 21:53:28,890 INFO  search.id001_funcSearch - Actual = No products were found that matched your criteria.
-2020-07-30 21:53:28,890 INFO  search.id001_funcSearch - Expected = No products were found that matched your criteria.
-2020-07-30 21:53:28,890 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:28,890 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:28,891 INFO  search.id001_funcSearch - Step 1: Input data
-2020-07-30 21:53:28,891 INFO  search.id001_funcSearch - Step 2: Check avanced search
-2020-07-30 21:53:28,891 INFO  search.id001_funcSearch - Step 3: Select Category is Computers
-2020-07-30 21:53:28,891 INFO  search.id001_funcSearch - Step 4: Check Automatically search sub categories
-2020-07-30 21:53:28,891 INFO  search.id001_funcSearch - Step 5: Select Correct Manufacturer
-2020-07-30 21:53:28,891 INFO  search.id001_funcSearch - Step 6: Input price range
-2020-07-30 21:53:29,557 INFO  search.id001_funcSearch - Step 7: Click Search button
-2020-07-30 21:53:30,343 INFO  search.id001_funcSearch - Step 8: Validate message is displayed
-2020-07-30 21:53:30,566 INFO  search.id001_funcSearch - Actual = No products were found that matched your criteria.
-2020-07-30 21:53:30,566 INFO  search.id001_funcSearch - Expected = No products were found that matched your criteria.
-2020-07-30 21:53:30,566 INFO  search.id001_funcSearch - Compare value = true
-2020-07-30 21:53:30,566 INFO  search.id001_funcSearch - ===PASSED===
-2020-07-30 21:53:30,567 INFO  search.id001_funcSearch - OS name = windows 10
-2020-07-30 21:53:31,275 INFO  search.id001_funcSearch - ---------- QUIT BROWSER SUCCESS ----------
+2020-07-31 17:36:55,228 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
+2020-07-31 17:36:57,043 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
+2020-07-31 17:36:57,114 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:36:57,116 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
+2020-07-31 17:36:58,833 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
+2020-07-31 17:36:58,901 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:36:58,902 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
+2020-07-31 17:36:59,737 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
+2020-07-31 17:36:59,812 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:36:59,813 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
+2020-07-31 17:37:01,586 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
+2020-07-31 17:37:01,654 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:01,654 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
+2020-07-31 17:37:02,495 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
+2020-07-31 17:37:02,603 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:02,603 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar displayed
+2020-07-31 17:37:02,808 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:02,808 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 4: Verify Next icon displayed
+2020-07-31 17:37:03,015 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:03,016 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 5: Click second page
+2020-07-31 17:37:03,885 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 6: Verify Previous displayed
+2020-07-31 17:37:04,080 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:04,080 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
+2020-07-31 17:37:04,921 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
+2020-07-31 17:37:05,099 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:05,099 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar undisplayed
+2020-07-31 17:37:07,194 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:07,195 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
+2020-07-31 17:37:08,043 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
+2020-07-31 17:37:08,182 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:08,182 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar undisplayed
+2020-07-31 17:37:10,283 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
+2020-07-31 17:37:10,283 INFO  sortNdisplayNpaging.id001_sort_displays_paging - OS name = windows 10
+2020-07-31 17:37:10,994 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ---------- QUIT BROWSER SUCCESS ----------

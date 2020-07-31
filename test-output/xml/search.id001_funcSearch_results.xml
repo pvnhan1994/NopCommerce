@@ -4,20 +4,20 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="19.801">
+           time="20.538">
   <properties />
   
   
-            <testcase name="TC009_AdvancedSearchWithScopePriceRange" time="2.425" classname="search.id001_funcSearch" />
-                <testcase name="TC010_AdvancedSearchWithOutOfScopePriceRange" time="2.619" classname="search.id001_funcSearch" />
-                <testcase name="TC001_DontInputData" time="2.204" classname="search.id001_funcSearch" />
-                <testcase name="TC011_AdvancedSearchMoreThanProductPrice" time="1.675" classname="search.id001_funcSearch" />
-                <testcase name="TC006_AdvancedSearchWithSubCategories" time="1.065" classname="search.id001_funcSearch" />
-                <testcase name="TC004_InputDataOnly1ProductExis" time="2.055" classname="search.id001_funcSearch" />
-                <testcase name="TC003_InputDataExistRelative" time="1.162" classname="search.id001_funcSearch" />
-                <testcase name="TC002_InputDataNotExist" time="2.247" classname="search.id001_funcSearch" />
-                <testcase name="TC005_AdvancedSearchWithParentCategories" time="1.956" classname="search.id001_funcSearch" />
-                <testcase name="TC008_AdvancedSearchWithCorrectManufacturer" time="1.093" classname="search.id001_funcSearch" />
-                <testcase name="TC007_AdvancedSearchWithIncorrectManufacturer" time="1.300" classname="search.id001_funcSearch" />
+            <testcase name="TC009_AdvancedSearchWithScopePriceRange" time="2.362" classname="search.id001_funcSearch" />
+                <testcase name="TC010_AdvancedSearchWithOutOfScopePriceRange" time="1.630" classname="search.id001_funcSearch" />
+                <testcase name="TC001_DontInputData" time="1.329" classname="search.id001_funcSearch" />
+                <testcase name="TC011_AdvancedSearchMoreThanProductPrice" time="2.526" classname="search.id001_funcSearch" />
+                <testcase name="TC006_AdvancedSearchWithSubCategories" time="1.940" classname="search.id001_funcSearch" />
+                <testcase name="TC004_InputDataOnly1ProductExis" time="2.078" classname="search.id001_funcSearch" />
+                <testcase name="TC003_InputDataExistRelative" time="2.058" classname="search.id001_funcSearch" />
+                <testcase name="TC002_InputDataNotExist" time="2.290" classname="search.id001_funcSearch" />
+                <testcase name="TC005_AdvancedSearchWithParentCategories" time="1.907" classname="search.id001_funcSearch" />
+                <testcase name="TC008_AdvancedSearchWithCorrectManufacturer" time="1.114" classname="search.id001_funcSearch" />
+                <testcase name="TC007_AdvancedSearchWithIncorrectManufacturer" time="1.304" classname="search.id001_funcSearch" />
       
 </testsuite>

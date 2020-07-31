@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="15.054">
+  <properties />
+  
+  
+            <testcase name="TC006_DisplayWith6ProductPerPaging" time="3.114" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+                <testcase name="TC002_SortZtoA" time="1.785" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+                <testcase name="TC005_DisplayWith3ProductPerPaging" time="2.426" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+                <testcase name="TC001_SortAtoZ" time="1.888" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+                <testcase name="TC004_SortHightoLow" time="1.841" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+                <testcase name="TC007_DisplayWith9ProductPerPaging" time="3.088" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+                <testcase name="TC003_SortLowtoHigh" time="0.912" classname="sortNdisplayNpaging.id001_sort_displays_paging" />
+      
+</testsuite>
