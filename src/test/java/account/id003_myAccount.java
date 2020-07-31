@@ -52,7 +52,7 @@ public class id003_myAccount extends AbstractTest {
         customerInfoPage = myAccountPage.clickCustomerInfoMenuBar();
 
         log.info("Step 2: Select Gender");
-        customerInfoPage.selectDynamicRadioCheckbox(driver, "gender-male");
+        customerInfoPage.selectDynamicRadioCheckboxWithID(driver, "gender-male");
 
         log.info("Step 3: Edit First Name");
         customerInfoPage.inputIntoDynamicTextbox(driver, AbstractPageUIs.FIRSTNAME_ID, "Tony");
@@ -93,7 +93,7 @@ public class id003_myAccount extends AbstractTest {
         log.info("Step 1: Click Address menu");
         addressPage = customerInfoPage.clickAddressMenuBar();
         log.info("Step 2: Click Address button");
-        addressPage.clickIntoDynamicButton(driver, "button-1 add-address-button");
+        addressPage.clickIntoDynamicButtonWithClass(driver, "button-1 add-address-button");
 
         log.info("Step 3: Input valid data");
         addressPage.inputIntoDynamicTextbox(driver, "Address_FirstName", Address_FirstName);
@@ -109,7 +109,7 @@ public class id003_myAccount extends AbstractTest {
         addressPage.selectDynamicDropDown(driver, "Address.CountryId", Address_CountryId);
 
         log.info("Step 4: Click Save btn");
-        addressPage.clickIntoDynamicButton(driver, "button-1 save-address-button");
+        addressPage.clickIntoDynamicButtonWithClass(driver, "button-1 save-address-button");
 
         log.info("Step 5: Verify data");
         verifyEquals(addressPage.getDynamicTextWithTableLi("name"), Address_FirstName + " " + Address_LastName);
@@ -134,7 +134,7 @@ public class id003_myAccount extends AbstractTest {
         changePasswordPage.inputIntoDynamicTextbox(driver, "ConfirmNewPassword", newPassword);
 
         log.info("Step 3: Click Change Password Button ");
-        changePasswordPage.clickIntoDynamicButton(driver, "button-1 change-password-button");
+        changePasswordPage.clickIntoDynamicButtonWithClass(driver, "button-1 change-password-button");
 
         log.info("Step 4: Click Logout item ");
         mainPage = changePasswordPage.clickIntoLogOutButton();
@@ -172,7 +172,7 @@ public class id003_myAccount extends AbstractTest {
         log.info("Step 7: Input content review");
         myAccountPage.inputIntoDynamicTextArea(driver, "AddProductReview_ReviewText", "ok review");
         log.info("Step 8: Click Review button");
-        myAccountPage.clickIntoDynamicButton(driver, "button-1 write-product-review-button");
+        myAccountPage.clickIntoDynamicButtonWithClass(driver, "button-1 write-product-review-button");
         log.info("Step 9: Click Logo Nop");
         homePage = myAccountPage.clickLogoNopCommerce();
 

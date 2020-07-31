@@ -55,7 +55,7 @@
 		<appender-ref ref="logfile" />
 		<appender-ref ref="testng" />
 	</category>
-	<category name="wishList_compare_recentView.id001_withList_compare_recentReview">
+	<category name="wishList_compare_recentView">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />

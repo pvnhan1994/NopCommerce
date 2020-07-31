@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="1.999">
+           time="19.666">
   <properties />
   
   
-            <testcase name="TC03_RemoveProductInWishListPage" time="1.999" classname="wishList_compare_recentView.id001_withListProduct" />
+            <testcase name="TC004_CompareProduct" time="19.666" classname="wishList_compare_recentView.id002_compareProduct" />
       
 </testsuite>

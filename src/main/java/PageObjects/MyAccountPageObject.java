@@ -56,7 +56,16 @@ public class MyAccountPageObject extends AbstractPage {
         clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, wishListName);
         return PageGeneratorManager.getWishListPage(driver);
     }
+    public CompareProductListPageObject clickIntoCompareProdcutListItemFooter(String compareProductListName){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE,  compareProductListName);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, compareProductListName);
+        return PageGeneratorManager.getCompareProductListPage(driver);
+    }
 
 
+    public void clickIntoCompareProductButton(String nameProduct, String indexButton) {
+        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_OPTION_BUTTON_PRODUCT_DETAIL, nameProduct, indexButton);
+        clickToElement(driver, MyAccountPageUIs.DYNAMIC_OPTION_BUTTON_PRODUCT_DETAIL, nameProduct, indexButton);
+    }
 
 }

@@ -43,6 +43,9 @@ public class PageGeneratorManager {
     public static WishListPageObject getWishListPage(WebDriver driver){
         return new WishListPageObject(driver);
     }
+    public static CompareProductListPageObject getCompareProductListPage(WebDriver driver){
+        return new CompareProductListPageObject(driver);
+    }
 
 
 }

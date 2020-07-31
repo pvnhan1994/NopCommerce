@@ -6,6 +6,7 @@ public class AbstractPageUIs {
     public static final String DYNAMIC_BUTTON_WITH_CLASS = "//input[@class='%s']";
     public static final String DYNAMIC_VALIDATE_WITH_ID = "//span[@id='%s']";
     public static final String DYNAMIC_RADIO_CHECKBOX_WITH_ID = "//input[@id='%s']";
+    public static final String DYNAMIC_RADIO_CHECKBOX_WITH_NAME = "//input[@name='%s']";
     public static final String EMAIL_ID ="Email";
     public static final String PASSWORD_ID = "Password";
     public static final String COMPANY_ID ="Company";
