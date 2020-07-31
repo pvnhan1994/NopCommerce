@@ -44,19 +44,18 @@ public class id002_compareProduct extends AbstractTest {
         myAccountPage.hoverIntoMenuTopProduct("Computers");
         myAccountPage.clickIntoMenuTopProduct("Desktops");
 
-
         String priceProduct1 = myAccountPage.getTextElement(driver, MyAccountPageUIs.PRICE_PRODUCT, nameProduct1);
         String priceProduct2 = myAccountPage.getTextElement(driver, MyAccountPageUIs.PRICE_PRODUCT, nameProduct2);
 
-
         log.info("Step 1: Click compare prodcut 1");
         myAccountPage.clickIntoCompareProductButton(nameProduct1, "2");
+
         log.info("Step 2: Verify add compare prodcut 1 success");
         verifyEquals("The product has been added to your product comparison", myAccountPage.getTextElement(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG));
 
         log.info("Step 3: Click compare prodcut 2");
         myAccountPage.clickIntoCompareProductButton(nameProduct2, "2");
-        log.info("Step 2: Verify add compare prodcut 2 success");
+        log.info("Step 4: Verify add compare prodcut 2 success");
         verifyEquals("The product has been added to your product comparison", myAccountPage.getTextElement(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG));
 
         log.info("Step 5: Click compare product list footer");
@@ -70,13 +69,19 @@ public class id002_compareProduct extends AbstractTest {
         log.info("==== Icon remove product 1 ====");
         verifyTrue(compareProductListPage.isControlDisplayed(driver,CompareProductListUIs.REMOVE_PRODUCT,indexProduct1));
 
-        log.info("Step: Verify info Product 2");
+        log.info("Step 7: Verify info Product 2");
         log.info("==== Price product 2 ====");
         verifyEquals(priceProduct2, compareProductListPage.getTextElement(driver, CompareProductListUIs.PRICE_PRODUCT, indexProduct2));
         log.info("==== Name product 2 ====");
         verifyEquals(nameProduct2, compareProductListPage.getTextElement(driver, CompareProductListUIs.NAME_PRODUCT,indexProduct2));
         log.info("==== Icon remove product 2 ====");
         verifyTrue(compareProductListPage.isControlDisplayed(driver,CompareProductListUIs.REMOVE_PRODUCT,indexProduct2));
+
+        log.info("Step 8: Click Clear List button ");
+        compareProductListPage.clickToElement(driver,CompareProductListUIs.CLEAR_LIST_BUTTON);
+
+        log.info("Step 9: Message clear list is displayed");
+        verifyTrue(compareProductListPage.isControlDisplayed(driver, CompareProductListUIs.MESSAGE_CLEAR_LIST));
 
         closeBrowserAndDriver(driver);
 
