@@ -44,7 +44,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "q", "");
 
         log.info("Step 2: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 3: Validate message is displayed");
         verifyEquals("Search term minimum length is 3 characters", searchPage.getValidateMessageSearch("warning"));
@@ -57,7 +57,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "q", "Macbook Pro2050");
 
         log.info("Step 2: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 3: Validate message is displayed");
         verifyEquals("No products were found that matched your criteria.", searchPage.getValidateMessageSearch("no-result"));
@@ -69,7 +69,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "q", "Lenovo");
 
         log.info("Step 2: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 3: Validate message is displayed");
         verifyEquals(2, searchPage.countProductRelativeInSearch("Lenovo"));
@@ -81,7 +81,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "q", "ThinkPad X1 Carbon");
 
         log.info("Step 2: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 3: Validate message is displayed");
         verifyEquals(1, searchPage.countProductRelativeInSearch("Lenovo Thinkpad X1 Carbon Laptop"));
@@ -93,13 +93,13 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "q", "Apple Macbook Pro");
 
         log.info("Step 2: Check avanced search");
-        searchPage.selectDynamicRadioCheckbox(driver, "adv");
+        searchPage.selectDynamicRadioCheckboxWithID(driver, "adv");
 
         log.info("Step 3: Select Category is Computers");
         searchPage.selectDynamicDropDownByID(driver, "cid", "Computers");
 
         log.info("Step 4: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 5: Validate message is displayed");
         verifyEquals("No products were found that matched your criteria.", searchPage.getValidateMessageSearch("no-result"));
@@ -115,10 +115,10 @@ public class id001_funcSearch extends AbstractTest {
         log.info("Step 3: Select Category is Computers");
 
         log.info("Step 4: Check Automatically search sub categories");
-        searchPage.selectDynamicRadioCheckbox(driver, "isc");
+        searchPage.selectDynamicRadioCheckboxWithID(driver, "isc");
 
         log.info("Step 5: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 6: Validate message is displayed");
         verifyEquals(1, searchPage.countProductRelativeInSearch("Apple MacBook Pro 13-inch"));
@@ -139,7 +139,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.selectDynamicDropDownByID(driver, "mid", "HP");
 
         log.info("Step 6: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 7: Validate message is displayed");
         verifyEquals("No products were found that matched your criteria.", searchPage.getValidateMessageSearch("no-result"));
@@ -159,7 +159,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.selectDynamicDropDownByID(driver, "mid", "Apple");
 
         log.info("Step 6: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 7: Validate message is displayed");
         verifyEquals(1, searchPage.countProductRelativeInSearch("Apple MacBook Pro 13-inch"));
@@ -183,7 +183,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "pt", "2000");
 
         log.info("Step 7: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 8: Validate message is displayed");
         verifyEquals(1, searchPage.countProductRelativeInSearch("Apple MacBook Pro 13-inch"));
@@ -207,7 +207,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "pt", "5000");
 
         log.info("Step 7: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 8: Validate message is displayed");
         verifyEquals("No products were found that matched your criteria.", searchPage.getValidateMessageSearch("no-result"));
@@ -231,7 +231,7 @@ public class id001_funcSearch extends AbstractTest {
         searchPage.inputIntoDynamicTextbox(driver, "pt", "1700");
 
         log.info("Step 7: Click Search button");
-        searchPage.clickIntoDynamicButton(driver, "button-1 search-button");
+        searchPage.clickIntoDynamicButtonWithClass(driver, "button-1 search-button");
 
         log.info("Step 8: Validate message is displayed");
         verifyEquals("No products were found that matched your criteria.", searchPage.getValidateMessageSearch("no-result"));

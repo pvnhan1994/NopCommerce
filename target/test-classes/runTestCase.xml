@@ -12,7 +12,7 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 
-			<class name="sortNdisplayNpaging.id001_sort_displays_paging"/>
+			<class name="wishList_compare_recentView.id003_reviewProduct"/>
 
 		</classes>
 	</test>

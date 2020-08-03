@@ -1,6 +1,7 @@
 package PageObjects;
 
 import commons.AbstractPage;
+import commons.AbstractPageUIs;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.MainPageUI;
@@ -48,4 +49,14 @@ public class MainPageObject extends AbstractPage {
         waitForElementVisible(driver, MainPageUI.PAGING_NAVIGATE,valueNavigate);
         clickToElement(driver, MainPageUI.PAGING_NAVIGATE, valueNavigate);
     }
+    public void openProductDetails(String nameProduct) {
+        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_ADD_TO_CART_PRODUCT_DETAILS, nameProduct);
+        clickToElementByJS(driver, MyAccountPageUIs.DYNAMIC_ADD_TO_CART_PRODUCT_DETAILS, nameProduct);
+    }
+    public ReviewProductPageObject clickIntoReviewProductItemFooter(String reviewProductName){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE,  reviewProductName);
+        clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, reviewProductName);
+        return PageGeneratorManager.getReviewProductPage(driver);
+    }
+
 }

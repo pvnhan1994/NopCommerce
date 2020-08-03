@@ -1,34 +1,10 @@
-2020-07-31 17:36:55,228 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:36:57,043 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:36:57,114 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:36:57,116 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:36:58,833 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:36:58,901 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:36:58,902 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:36:59,737 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:36:59,812 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:36:59,813 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option orderby
-2020-07-31 17:37:01,586 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify orderby correct
-2020-07-31 17:37:01,654 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:01,654 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
-2020-07-31 17:37:02,495 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
-2020-07-31 17:37:02,603 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:02,603 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar displayed
-2020-07-31 17:37:02,808 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:02,808 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 4: Verify Next icon displayed
-2020-07-31 17:37:03,015 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:03,016 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 5: Click second page
-2020-07-31 17:37:03,885 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 6: Verify Previous displayed
-2020-07-31 17:37:04,080 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:04,080 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
-2020-07-31 17:37:04,921 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
-2020-07-31 17:37:05,099 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:05,099 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar undisplayed
-2020-07-31 17:37:07,194 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:07,195 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 1: Select option pagesize
-2020-07-31 17:37:08,043 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 2: Verify pagesize correct
-2020-07-31 17:37:08,182 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:08,182 INFO  sortNdisplayNpaging.id001_sort_displays_paging - Step 3: Verify Page Bar undisplayed
-2020-07-31 17:37:10,283 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ===PASSED==
-2020-07-31 17:37:10,283 INFO  sortNdisplayNpaging.id001_sort_displays_paging - OS name = windows 10
-2020-07-31 17:37:10,994 INFO  sortNdisplayNpaging.id001_sort_displays_paging - ---------- QUIT BROWSER SUCCESS ----------
+2020-08-03 15:31:23,007 INFO  wishList_compare_recentView.id003_reviewProduct - Step 1: Click product for review
+2020-08-03 15:31:31,730 INFO  wishList_compare_recentView.id003_reviewProduct - Step 2: Click into Review products page
+2020-08-03 15:31:32,511 INFO  wishList_compare_recentView.id003_reviewProduct - Step 3: Verify product displayed
+2020-08-03 15:31:32,709 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:32,911 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:33,116 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:33,116 INFO  wishList_compare_recentView.id003_reviewProduct - Step 4: Verify product undisplayed
+2020-08-03 15:31:35,173 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:37,242 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:39,318 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==

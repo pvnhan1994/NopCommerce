@@ -40,6 +40,15 @@ public class PageGeneratorManager {
     public static SearchPageObject getSearchPage(WebDriver driver){
         return new SearchPageObject(driver);
     }
+    public static WishListPageObject getWishListPage(WebDriver driver){
+        return new WishListPageObject(driver);
+    }
+    public static CompareProductListPageObject getCompareProductListPage(WebDriver driver){
+        return new CompareProductListPageObject(driver);
+    }
+    public static ReviewProductPageObject getReviewProductPage(WebDriver driver){
+        return new ReviewProductPageObject(driver);
+    }
 
 
 }

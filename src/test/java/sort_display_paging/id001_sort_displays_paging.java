@@ -1,14 +1,11 @@
-package sortNdisplayNpaging;
+package sort_display_paging;
 
 import PageObjects.MainPageObject;
-import commons.AbstractPage;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import org.testng.reporters.jq.Main;
 import pageUIs.MainPageUI;
-import pageUIs.SearchPageUIs;
 
 
 public class id001_sort_displays_paging extends AbstractTest {
