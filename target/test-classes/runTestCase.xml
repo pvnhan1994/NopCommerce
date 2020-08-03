@@ -12,7 +12,7 @@
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 
-			<class name="wishList_compare_recentView.id002_compareProduct"/>
+			<class name="wishList_compare_recentView.id003_reviewProduct"/>
 
 		</classes>
 	</test>

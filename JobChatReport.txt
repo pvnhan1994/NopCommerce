@@ -1,41 +1,10 @@
-2020-08-01 00:42:12,763 INFO  wishList_compare_recentView.id002_compareProduct - Step 1: Click compare prodcut 1
-2020-08-01 00:42:13,035 INFO  wishList_compare_recentView.id002_compareProduct - Step 2: Verify add compare prodcut 1 success
-2020-08-01 00:42:13,578 INFO  wishList_compare_recentView.id002_compareProduct - Actual = The product has been added to your product comparison
-2020-08-01 00:42:13,578 INFO  wishList_compare_recentView.id002_compareProduct - Expected = The product has been added to your product comparison
-2020-08-01 00:42:13,578 INFO  wishList_compare_recentView.id002_compareProduct - Compare value = true
-2020-08-01 00:42:13,578 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED===
-2020-08-01 00:42:13,579 INFO  wishList_compare_recentView.id002_compareProduct - Step 3: Click compare prodcut 2
-2020-08-01 00:42:13,837 INFO  wishList_compare_recentView.id002_compareProduct - Step 2: Verify add compare prodcut 2 success
-2020-08-01 00:42:14,023 INFO  wishList_compare_recentView.id002_compareProduct - Actual = The product has been added to your product comparison
-2020-08-01 00:42:14,023 INFO  wishList_compare_recentView.id002_compareProduct - Expected = The product has been added to your product comparison
-2020-08-01 00:42:14,023 INFO  wishList_compare_recentView.id002_compareProduct - Compare value = true
-2020-08-01 00:42:14,023 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED===
-2020-08-01 00:42:14,023 INFO  wishList_compare_recentView.id002_compareProduct - Step 5: Click compare product list footer
-2020-08-01 00:42:14,710 INFO  wishList_compare_recentView.id002_compareProduct - Step 6: Verify info Product 1
-2020-08-01 00:42:14,710 INFO  wishList_compare_recentView.id002_compareProduct - ==== Price product 1 ====
-2020-08-01 00:42:14,899 INFO  wishList_compare_recentView.id002_compareProduct - Actual = $500.00
-2020-08-01 00:42:14,899 INFO  wishList_compare_recentView.id002_compareProduct - Expected = $500.00
-2020-08-01 00:42:14,899 INFO  wishList_compare_recentView.id002_compareProduct - Compare value = true
-2020-08-01 00:42:14,900 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED===
-2020-08-01 00:42:14,900 INFO  wishList_compare_recentView.id002_compareProduct - ==== Name product 1 ====
-2020-08-01 00:42:15,103 INFO  wishList_compare_recentView.id002_compareProduct - Actual = Lenovo IdeaCentre 600 All-in-One PC
-2020-08-01 00:42:15,103 INFO  wishList_compare_recentView.id002_compareProduct - Expected = Lenovo IdeaCentre 600 All-in-One PC
-2020-08-01 00:42:15,103 INFO  wishList_compare_recentView.id002_compareProduct - Compare value = true
-2020-08-01 00:42:15,104 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED===
-2020-08-01 00:42:15,104 INFO  wishList_compare_recentView.id002_compareProduct - ==== Icon remove product 1 ====
-2020-08-01 00:42:15,313 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED==
-2020-08-01 00:42:15,313 INFO  wishList_compare_recentView.id002_compareProduct - Step: Verify info Product 2
-2020-08-01 00:42:15,313 INFO  wishList_compare_recentView.id002_compareProduct - ==== Price product 2 ====
-2020-08-01 00:42:15,509 INFO  wishList_compare_recentView.id002_compareProduct - Actual = $1,259.00
-2020-08-01 00:42:15,509 INFO  wishList_compare_recentView.id002_compareProduct - Expected = $1,259.00
-2020-08-01 00:42:15,509 INFO  wishList_compare_recentView.id002_compareProduct - Compare value = true
-2020-08-01 00:42:15,509 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED===
-2020-08-01 00:42:15,509 INFO  wishList_compare_recentView.id002_compareProduct - ==== Name product 2 ====
-2020-08-01 00:42:15,697 INFO  wishList_compare_recentView.id002_compareProduct - Actual = Digital Storm VANQUISH 3 Custom Performance PC
-2020-08-01 00:42:15,697 INFO  wishList_compare_recentView.id002_compareProduct - Expected = Digital Storm VANQUISH 3 Custom Performance PC
-2020-08-01 00:42:15,697 INFO  wishList_compare_recentView.id002_compareProduct - Compare value = true
-2020-08-01 00:42:15,697 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED===
-2020-08-01 00:42:15,697 INFO  wishList_compare_recentView.id002_compareProduct - ==== Icon remove product 2 ====
-2020-08-01 00:42:15,955 INFO  wishList_compare_recentView.id002_compareProduct - ===PASSED==
-2020-08-01 00:42:15,955 INFO  wishList_compare_recentView.id002_compareProduct - OS name = windows 10
-2020-08-01 00:42:16,665 INFO  wishList_compare_recentView.id002_compareProduct - ---------- QUIT BROWSER SUCCESS ----------
+2020-08-03 15:31:23,007 INFO  wishList_compare_recentView.id003_reviewProduct - Step 1: Click product for review
+2020-08-03 15:31:31,730 INFO  wishList_compare_recentView.id003_reviewProduct - Step 2: Click into Review products page
+2020-08-03 15:31:32,511 INFO  wishList_compare_recentView.id003_reviewProduct - Step 3: Verify product displayed
+2020-08-03 15:31:32,709 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:32,911 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:33,116 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:33,116 INFO  wishList_compare_recentView.id003_reviewProduct - Step 4: Verify product undisplayed
+2020-08-03 15:31:35,173 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:37,242 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==
+2020-08-03 15:31:39,318 INFO  wishList_compare_recentView.id003_reviewProduct - ===PASSED==

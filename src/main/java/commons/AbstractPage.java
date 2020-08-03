@@ -236,6 +236,31 @@ public class AbstractPage {
             return false;
         }
     }
+    public boolean isControlUndisplayed(WebDriver driver, String locator, String... values) {
+        locator = String.format(locator, (Object[]) values);
+        Date date = new Date();
+        System.out.println("Start time=" + date.toString());
+
+        overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
+
+        List<WebElement> elements = driver.findElements(By.xpath(locator));
+
+        if (elements.size() == 0) {
+            System.out.println("Element not in DOM");
+            System.out.println("End time = " + new Date().toString());
+            overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
+            return true;
+        } else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
+            System.out.println("Element in DOM but not visible/ displayed");
+            System.out.println("End time = " + new Date().toString());
+            overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
+            return true;
+        } else {
+            System.out.println("Element in DOM and visible");
+            overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
+            return false;
+        }
+    }
 
     public boolean isControlSelected(WebDriver driver, String locator) {
         element = driver.findElement(By.xpath(locator));

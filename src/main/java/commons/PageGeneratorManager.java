@@ -46,6 +46,9 @@ public class PageGeneratorManager {
     public static CompareProductListPageObject getCompareProductListPage(WebDriver driver){
         return new CompareProductListPageObject(driver);
     }
+    public static ReviewProductPageObject getReviewProductPage(WebDriver driver){
+        return new ReviewProductPageObject(driver);
+    }
 
 
 }
