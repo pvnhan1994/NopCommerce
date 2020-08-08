@@ -224,7 +224,7 @@ public class AbstractTest {
         }
     }
 
-    public int randomDataTest() {
+    public static int randomDataTest() {
         Random random = new Random();
         return random.nextInt(99999);
     }

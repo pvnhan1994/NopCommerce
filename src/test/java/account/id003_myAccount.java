@@ -3,6 +3,7 @@ package account;
 import PageObjects.*;
 import commons.AbstractPageUIs;
 import commons.AbstractTest;
+import commons.Constants;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -23,11 +24,8 @@ public class id003_myAccount extends AbstractTest {
     AddressPageObject addressPage;
     LoginPageObject loginPage;
     MyProductReviewsPageObject myProductReviewPage;
-    String password = "123123";
+
     String newPassword = "123123123";
-    String email = "alodsadsads1a5t493@gmail.com";
-    String firstName = "Nhan";
-    String lastName = "Phan";
     String emailEdit = "editalodsa" + randomDataTest() + "@gmail.com";
 
     @Parameters("browser")
@@ -37,19 +35,15 @@ public class id003_myAccount extends AbstractTest {
         mainPage = PageGeneratorManager.getMainPage(driver);
         System.out.println("id Driver:" + driver);
         registerPage = mainPage.clickRegisterItem();
-        registerPage.inputIntoDynamicTextbox(driver, "FirstName", firstName);
-        registerPage.inputIntoDynamicTextbox(driver, "LastName", lastName);
-        registerPage.inputIntoDynamicTextbox(driver, "Email", email);
-        registerPage.inputIntoDynamicTextbox(driver, "Password", password);
-        registerPage.inputIntoDynamicTextbox(driver, "ConfirmPassword", password);
+        registerPage.registerAccount();
         homePage = registerPage.clickRegisterButton();
-        myAccountPage = homePage.clickToMyAccountItem();
+        myAccountPage = homePage.clickToMyAccountItem(driver);
     }
 
     @Test
     public void TC01_CustomerInfo() {
         log.info("Step 1: Click Customer Info menu");
-        customerInfoPage = myAccountPage.clickCustomerInfoMenuBar();
+        customerInfoPage = (CustomerInfoPageObject) myAccountPage.openMultiPageInLeftBar(driver, "Customer info");
 
         log.info("Step 2: Select Gender");
         customerInfoPage.selectDynamicRadioCheckboxWithID(driver, "gender-male");
@@ -91,7 +85,7 @@ public class id003_myAccount extends AbstractTest {
     @Test
     public void TC02_AddAddress() {
         log.info("Step 1: Click Address menu");
-        addressPage = customerInfoPage.clickAddressMenuBar();
+        addressPage = (AddressPageObject) customerInfoPage.openMultiPageInLeftBar(driver, "Addresses");
         log.info("Step 2: Click Address button");
         addressPage.clickIntoDynamicButtonWithClass(driver, "button-1 add-address-button");
 
@@ -126,10 +120,10 @@ public class id003_myAccount extends AbstractTest {
     @Test
     public void TC03_ChangePassword() {
         log.info("Step 1: Click Change Password menu ");
-        changePasswordPage = addressPage.clickChangePasswordMenuBar();
+        changePasswordPage = (ChangePasswordPageObject) addressPage.openMultiPageInLeftBar(driver, "Change password");
 
         log.info("Step 2: Input valid password for change ");
-        changePasswordPage.inputIntoDynamicTextbox(driver, "OldPassword", password);
+        changePasswordPage.inputIntoDynamicTextbox(driver, "OldPassword", Constants.PASSWORD);
         changePasswordPage.inputIntoDynamicTextbox(driver, "NewPassword", newPassword);
         changePasswordPage.inputIntoDynamicTextbox(driver, "ConfirmNewPassword", newPassword);
 
@@ -137,13 +131,13 @@ public class id003_myAccount extends AbstractTest {
         changePasswordPage.clickIntoDynamicButtonWithClass(driver, "button-1 change-password-button");
 
         log.info("Step 4: Click Logout item ");
-        mainPage = changePasswordPage.clickIntoLogOutButton();
+        mainPage = changePasswordPage.clickIntoLogOutButton(driver);
 
         log.info("Step 5: Click Login item ");
         loginPage = mainPage.clickLoginItem();
 
         log.info("Step 6: Input valid email with new Password ");
-        loginPage.inputIntoDynamicTextbox(driver, "Email", email);
+        loginPage.inputIntoDynamicTextbox(driver, "Email", Constants.EMAIL);
         loginPage.inputIntoDynamicTextbox(driver, "Password", newPassword);
 
         log.info("Step 7: Click Login button");
@@ -157,12 +151,12 @@ public class id003_myAccount extends AbstractTest {
     @Test
     public void TC04_MyProductReview() {
         log.info("Step 1: Click Logout item ");
-        myAccountPage = homePage.clickToMyAccountItem();
-        myProductReviewPage = myAccountPage.clickMyProductReviewsMenuBar();
+        myAccountPage = homePage.clickToMyAccountItem(driver);
+        myProductReviewPage = (MyProductReviewsPageObject) myAccountPage.openMultiPageInLeftBar(driver, "My product reviews");
         log.info("Step 2: Hover into Menutop");
-        myAccountPage.hoverIntoMenuTopProduct("Computers");
+        myAccountPage.hoverIntoMenuTopProduct(driver, "Computers");
         log.info("Step 3: Click into Menutop");
-        myAccountPage.clickIntoMenuTopProduct("Desktops");
+        myAccountPage.clickIntoMenuTopProduct(driver, "Desktops");
         log.info("Step 4: Click Addto Card");
         myAccountPage.openProductDetails("Build your own computer");
         log.info("Step 5: Click Add review");
@@ -174,12 +168,12 @@ public class id003_myAccount extends AbstractTest {
         log.info("Step 8: Click Review button");
         myAccountPage.clickIntoDynamicButtonWithClass(driver, "button-1 write-product-review-button");
         log.info("Step 9: Click Logo Nop");
-        homePage = myAccountPage.clickLogoNopCommerce();
+        homePage = myAccountPage.clickLogoNopCommerce(driver);
 
         log.info("Step 10: Click My Account item");
-        myAccountPage = homePage.clickToMyAccountItem();
+        myAccountPage = homePage.clickToMyAccountItem(driver);
         log.info("Step 11: Click My product review");
-        myProductReviewPage = myAccountPage.clickMyProductReviewsMenuBar();
+        myProductReviewPage = (MyProductReviewsPageObject) myAccountPage.openMultiPageInFooter(driver, "Recently viewed products");
         log.info("Step 12: Verify name displays");
         myProductReviewPage.isNameProductReviewDisplayed("Build your own computer");
 
@@ -202,7 +196,6 @@ public class id003_myAccount extends AbstractTest {
     String Address_PhoneNumber = "0935602450";
     String Address_FaxNumber = "0987654321";
     String Address_CountryId = "Viet Nam";
-    String Address_StateProvinceId = "Other";
 
 
 }

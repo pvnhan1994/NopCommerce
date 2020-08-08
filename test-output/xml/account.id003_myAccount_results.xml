@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="4"
+           tests="3"
            failures="2"
            errors="0"
            skipped="0"
-           time="61.333">
+           time="9.091">
   <properties />
-            <testcase name="TC03_ChangePassword" time="24.599" classname="account.id003_myAccount">
-                <failure type="org.openqa.selenium.TimeoutException"
-                  message="Expected condition failed: waiting for visibility of all elements located by By.xpath: //input[@id=&apos;Email&apos;] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NHANPV&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3c26cbefc4808b7f3bbb9c4e0d7521bb"
+            <testcase name="TC04_MyProductReview" time="2.112" classname="account.id003_myAccount">
+                <failure type="java.lang.ClassCastException"
+                  message="PageObjects.MyAccountPageObject cannot be cast to PageObjects.MyProductReviewsPageObject"
               >
-<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //input[@id='Email'] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NHANPV', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3c26cbefc4808b7f3bbb9c4e0d7521bb
-  org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-  commons.AbstractPage.waitForElementVisible(AbstractPage.java:466)
-  commons.AbstractPage.inputIntoDynamicTextbox(AbstractPage.java:590)
-  account.id003_myAccount.TC03_ChangePassword(id003_myAccount.java:146)
+<![CDATA[java.lang.ClassCastException: PageObjects.MyAccountPageObject cannot be cast to PageObjects.MyProductReviewsPageObject
+  account.id003_myAccount.TC04_MyProductReview(id003_myAccount.java:161)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,26 +40,12 @@ Session ID: 3c26cbefc4808b7f3bbb9c4e0d7521bb
       </failure>
 
           </testcase>
-            <testcase name="TC04_MyProductReview" time="20.050" classname="account.id003_myAccount">
-                <failure type="org.openqa.selenium.TimeoutException"
-                  message="Expected condition failed: waiting for visibility of all elements located by By.xpath: //a[@class=&apos;ico-account&apos;] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;NHANPV&apos;, ip: &apos;192.168.0.107&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_211&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3c26cbefc4808b7f3bbb9c4e0d7521bb"
+            <testcase name="TC03_ChangePassword" time="0.683" classname="account.id003_myAccount">
+                <failure type="java.lang.ClassCastException"
+                  message="PageObjects.HomePageObject cannot be cast to PageObjects.ChangePasswordPageObject"
               >
-<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //a[@class='ico-account'] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'NHANPV', ip: '192.168.0.107', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.89, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:55015}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 3c26cbefc4808b7f3bbb9c4e0d7521bb
-  org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-  org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-  commons.AbstractPage.waitForElementVisible(AbstractPage.java:459)
-  PageObjects.HomePageObject.clickToMyAccountItem(HomePageObject.java:20)
-  account.id003_myAccount.TC04_MyProductReview(id003_myAccount.java:160)
+<![CDATA[java.lang.ClassCastException: PageObjects.HomePageObject cannot be cast to PageObjects.ChangePasswordPageObject
+  account.id003_myAccount.TC03_ChangePassword(id003_myAccount.java:129)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -104,7 +76,6 @@ Session ID: 3c26cbefc4808b7f3bbb9c4e0d7521bb
           </testcase>
   
   
-            <testcase name="TC01_CustomerInfo" time="6.549" classname="account.id003_myAccount" />
-                <testcase name="TC02_AddAddress" time="10.135" classname="account.id003_myAccount" />
+            <testcase name="TC01_CustomerInfo" time="6.296" classname="account.id003_myAccount" />
       
 </testsuite>

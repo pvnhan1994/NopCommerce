@@ -2,6 +2,7 @@ package search;
 
 import PageObjects.*;
 import commons.AbstractTest;
+import commons.Constants;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
@@ -14,13 +15,7 @@ public class id001_funcSearch extends AbstractTest {
     MainPageObject mainPage;
     RegisterPageObject registerPage;
     HomePageObject homePage;
-    MyAccountPageObject myAccountPage;
     SearchPageObject searchPage;
-
-    String password = "123123";
-    String email = "321dsa2321231@gmail.com";
-    String firstName = "Nhan";
-    String lastName = "Phan";
 
     @Parameters("browser")
     @BeforeClass
@@ -28,13 +23,9 @@ public class id001_funcSearch extends AbstractTest {
         driver = openMultiBrowser(browserName);
         mainPage = PageGeneratorManager.getMainPage(driver);
         registerPage = mainPage.clickRegisterItem();
-        registerPage.inputIntoDynamicTextbox(driver, "FirstName", firstName);
-        registerPage.inputIntoDynamicTextbox(driver, "LastName", lastName);
-        registerPage.inputIntoDynamicTextbox(driver, "Email", email);
-        registerPage.inputIntoDynamicTextbox(driver, "Password", password);
-        registerPage.inputIntoDynamicTextbox(driver, "ConfirmPassword", password);
+        registerPage.registerAccount();
         homePage = registerPage.clickRegisterButton();
-        searchPage = homePage.clickIntoSearchItemFooter("Search");
+        searchPage = (SearchPageObject) homePage.openMultiPageInFooter(driver, "Search");
 
     }
 

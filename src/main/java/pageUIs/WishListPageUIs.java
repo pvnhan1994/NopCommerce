@@ -5,8 +5,6 @@ public class WishListPageUIs {
     public static final String NAME_PRODUCT = "//td[@class='product']/a[text()='%s']";
     public static final String SHARE_LINK = "//a[@class='share-link']";
     public static final String NAME_WISHLIST = "//div[@class='page-title']/h1";
-    public static final String NUMBER_PRODUCT_IN_WISHLIST = "//span[@class='wishlist-qty']";
-    public static final String NUMBER_PRODUCT_IN_CART = "//span[@class='cart-qty']";
     public static final String NUMER_PRODUCT = "//span[@class='%s']";
     public static final String CHECKBOX = "//td[@class='product']/a[text()='%s']//ancestor::tr/td[@class='%s']/input";
     public static final String MESSAGE_EMPTY = "//div[@class='no-data']";

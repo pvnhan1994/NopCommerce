@@ -27,4 +27,23 @@ public class WishListPageObject extends AbstractPage {
     }
 
 
+    public String getTextNameProductSuccess(String nameProduct) {
+        waitForElementVisible(driver, WishListPageUIs.NAME_PRODUCT, nameProduct);
+        return getTextElement(driver, WishListPageUIs.NAME_PRODUCT, nameProduct);
+    }
+
+    public String getTextSkuCodeSuccess(String nameProduct) {
+        waitForElementVisible(driver, WishListPageUIs.SKU_ID, nameProduct);
+        return getTextElement(driver, WishListPageUIs.SKU_ID, nameProduct);
+    }
+
+    public String getTextNameWishList() {
+        waitForElementVisible(driver, WishListPageUIs.NAME_WISHLIST);
+        return getTextElement(driver, WishListPageUIs.NAME_WISHLIST);
+    }
+
+    public boolean isMessageEmptyDisplayed() {
+        waitForElementVisible(driver, WishListPageUIs.MESSAGE_EMPTY);
+        return isControlDisplayed(driver, WishListPageUIs.MESSAGE_EMPTY);
+    }
 }

@@ -4,13 +4,12 @@ import commons.AbstractPage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.LoginPageUI;
-import pageUIs.MainPageUI;
-import sun.rmi.runtime.Log;
 
 public class LoginPageObject extends AbstractPage {
 
     WebDriver driver;
-    public LoginPageObject (WebDriver mappingDriver){
+
+    public LoginPageObject(WebDriver mappingDriver) {
         driver = mappingDriver;
     }
 
