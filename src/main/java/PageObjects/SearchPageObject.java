@@ -1,12 +1,8 @@
 package PageObjects;
 
 import commons.AbstractPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import pageUIs.SearchPageUIs;
-
-import java.util.List;
 
 public class SearchPageObject extends AbstractPage {
     WebDriver driver;
@@ -26,6 +22,6 @@ public class SearchPageObject extends AbstractPage {
 
     public void input(String value) {
         waitForElementVisible(driver, SearchPageUIs.INPUT);
-        sendkeyToElementByJS(driver,SearchPageUIs.INPUT,value);
+        sendkeyToElementByJS(driver, SearchPageUIs.INPUT, value);
     }
 }

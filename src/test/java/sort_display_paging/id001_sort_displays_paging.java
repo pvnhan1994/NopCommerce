@@ -17,8 +17,8 @@ public class id001_sort_displays_paging extends AbstractTest {
     public void beforeClass(String browserName) {
         driver = openMultiBrowser(browserName);
         mainPage = PageGeneratorManager.getMainPage(driver);
-        mainPage.hoverIntoMenuTopProduct("Computers");
-        mainPage.clickIntoMenuTopProduct("Notebooks");
+        mainPage.hoverIntoMenuTopProduct(driver, "Computers");
+        mainPage.clickIntoMenuTopProduct(driver, "Notebooks");
     }
 
     @Test

@@ -1,8 +1,6 @@
 package PageObjects;
 
 import commons.AbstractPage;
-import commons.AbstractPageUIs;
-import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.MyAccountPageUIs;
 
@@ -11,18 +9,6 @@ public class MyAccountPageObject extends AbstractPage {
 
     public MyAccountPageObject(WebDriver mappingDriver) {
         driver = mappingDriver;
-    }
-
-    public CustomerInfoPageObject clickCustomerInfoMenuBar() {
-        waitForElementVisible(driver, MyAccountPageUIs.CUSTOMER_INFO_MENU_BAR);
-        clickToElement(driver, MyAccountPageUIs.CUSTOMER_INFO_MENU_BAR);
-        return PageGeneratorManager.getCustomerInfoPage(driver);
-    }
-
-    public MyProductReviewsPageObject clickMyProductReviewsMenuBar() {
-        waitForElementVisible(driver, MyAccountPageUIs.MY_PRODUCT_REVIEWS_MENU_BAR);
-        clickToElement(driver, MyAccountPageUIs.MY_PRODUCT_REVIEWS_MENU_BAR);
-        return PageGeneratorManager.getMyProductReviewsPage(driver);
     }
 
     public void hoverIntoMenuTopProduct(String nameCategory) {
@@ -45,21 +31,19 @@ public class MyAccountPageObject extends AbstractPage {
         clickToElement(driver, MyAccountPageUIs.ADD_YOUR_REVIEW_ITEM);
     }
 
-    public HomePageObject clickLogoNopCommerce() {
-        waitForElementVisible(driver, MyAccountPageUIs.LOGO_NOP);
-        clickToElement(driver, MyAccountPageUIs.LOGO_NOP);
-        return PageGeneratorManager.getHomePage(driver);
+    public String getTextSkuCode() {
+        waitForElementVisible(driver, MyAccountPageUIs.SKU_DETAIL_PRODUCT);
+        return getTextElement(driver, MyAccountPageUIs.SKU_DETAIL_PRODUCT);
     }
 
-    public WishListPageObject clickIntoWishListItemFooter(String wishListName) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, wishListName);
-        clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, wishListName);
-        return PageGeneratorManager.getWishListPage(driver);
+    public String getTextNameProduct() {
+        waitForElementVisible(driver, MyAccountPageUIs.NAME_DETAIL_PRODUCT);
+        return getTextElement(driver, MyAccountPageUIs.NAME_DETAIL_PRODUCT);
     }
-    public CompareProductListPageObject clickIntoCompareProdcutListItemFooter(String compareProductListName){
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE,  compareProductListName);
-        clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, compareProductListName);
-        return PageGeneratorManager.getCompareProductListPage(driver);
+
+    public String getPriceProduct(String nameProduct) {
+        waitForElementVisible(driver, MyAccountPageUIs.PRICE_PRODUCT, nameProduct);
+        return getTextElement(driver, MyAccountPageUIs.PRICE_PRODUCT, nameProduct);
     }
 
 

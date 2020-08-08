@@ -5,9 +5,9 @@ import PageObjects.ReviewProductPageObject;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageUIs.ReviewProductPageUIs;
 
 public class id003_reviewProduct extends AbstractTest {
     WebDriver driver;
@@ -22,12 +22,12 @@ public class id003_reviewProduct extends AbstractTest {
     String namePr6st = "Samsung Series 9 NP900X4C Premium Ultrabook";
 
     @Parameters("browser")
-    @Test
-    public void TC003_reviewProduct(String browserName){
+    @Test(alwaysRun = true)
+    public void TC003_reviewProduct(String browserName) {
         driver = openMultiBrowser(browserName);
         mainPage = PageGeneratorManager.getMainPage(driver);
-        mainPage.hoverIntoMenuTopProduct("Computers");
-        mainPage.clickIntoMenuTopProduct("Notebooks");
+        mainPage.hoverIntoMenuTopProduct(driver, "Computers");
+        mainPage.clickIntoMenuTopProduct(driver, "Notebooks");
 
         log.info("Step 1: Click product for review");
         mainPage.openProductDetails(namePr1st);
@@ -49,18 +49,21 @@ public class id003_reviewProduct extends AbstractTest {
         mainPage.backToPage(driver);
 
         log.info("Step 2: Click into Review products page");
-        reviewProductPage = mainPage.clickIntoReviewProductItemFooter("Recently viewed products");
+        reviewProductPage = (ReviewProductPageObject) mainPage.openMultiPageInFooter(driver, "Recently viewed products");
 
         log.info("Step 3: Verify product displayed");
-        verifyTrue(reviewProductPage.isControlDisplayed(driver, ReviewProductPageUIs.NAME_REVIEW_PRODUCT,namePr4st));
-        verifyTrue(reviewProductPage.isControlDisplayed(driver, ReviewProductPageUIs.NAME_REVIEW_PRODUCT,namePr5st));
-        verifyTrue(reviewProductPage.isControlDisplayed(driver, ReviewProductPageUIs.NAME_REVIEW_PRODUCT,namePr6st));
+        verifyTrue(reviewProductPage.isProductDisplayed(namePr4st));
+        verifyTrue(reviewProductPage.isProductDisplayed(namePr5st));
+        verifyTrue(reviewProductPage.isProductDisplayed(namePr6st));
 
         log.info("Step 4: Verify product undisplayed");
-        verifyTrue(reviewProductPage.isControlUndisplayed(driver, ReviewProductPageUIs.NAME_REVIEW_PRODUCT,namePr1st));
-        verifyTrue(reviewProductPage.isControlUndisplayed(driver, ReviewProductPageUIs.NAME_REVIEW_PRODUCT,namePr2st));
-        verifyTrue(reviewProductPage.isControlUndisplayed(driver, ReviewProductPageUIs.NAME_REVIEW_PRODUCT,namePr3st));
+        verifyFalse(reviewProductPage.isProductUndisplayed(namePr1st));
+        verifyFalse(reviewProductPage.isProductUndisplayed(namePr2st));
+        verifyFalse(reviewProductPage.isProductUndisplayed(namePr3st));
+    }
 
+    @AfterTest(alwaysRun = true)
+    public void afterClass() {
         closeBrowserAndDriver(driver);
     }
 

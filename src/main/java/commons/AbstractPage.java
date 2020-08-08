@@ -1,11 +1,15 @@
 package commons;
 
+import PageObjects.HomePageObject;
+import PageObjects.MainPageObject;
+import PageObjects.MyAccountPageObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageUIs.CustomerInfoUIs;
+import pageUIs.MyAccountPageUIs;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -566,28 +570,24 @@ public class AbstractPage {
 
         return sortedList.equals(arrayList);
     }
-
+    // Dynamic textbox
     public void inputIntoDynamicTextbox(WebDriver driver, String textboxNameID, String valueToSendKey) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxNameID);
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
         sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, valueToSendKey, textboxNameID);
-
-//        sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX, valueToSendKey, textboxNameID);
     }
 
     public void inputIntoDynamicTextboxByJS(WebDriver driver, String textboxNameID, String valueToSendKey) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxNameID);
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
         sendkeyToElementByJS(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, valueToSendKey, textboxNameID);
-
-
     }
-
+    // Dynamic textArea
     public void inputIntoDynamicTextArea(WebDriver driver, String textAreaNameID, String valueToSendKey) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, textAreaNameID);
         sendkeyElements(driver, AbstractPageUIs.DYNAMIC_TEXTAREA, valueToSendKey, textAreaNameID);
     }
-
+    // Dynamic button
     public void clickIntoDynamicButtonWithClass(WebDriver driver, String nameClass) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
         clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
@@ -597,12 +597,16 @@ public class AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
         clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
     }
-
+    // Dynamic error/ toast msg
     public String getDynamicValidate(WebDriver driver, String validateID) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_VALIDATE_WITH_ID, validateID);
     }
-
+    public String getTextToastMessageDisplayed(WebDriver driver) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
+        return getTextElement(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
+    }
+    // Dynamic Radiobutton
     public void selectDynamicRadioCheckboxWithID(WebDriver driver, String nameID) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID, nameID);
         clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID, nameID);
@@ -611,7 +615,7 @@ public class AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_NAME, name);
         clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_NAME, name);
     }
-
+    // Dropdownlist
     public void selectDynamicDropDown(WebDriver driver, String nameDropdown, String value) {
         waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
         selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
@@ -622,11 +626,64 @@ public class AbstractPage {
         selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
     }
 
-    public String getTextToastMessageDisplayed(WebDriver driver) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
-        return getTextElement(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
+    public AbstractPage openMultiPageInFooter(WebDriver driver, String pagename) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, pagename);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_FOOTER_PAGE, pagename);
+
+        switch (pagename) {
+            case "Search":
+                return PageGeneratorManager.getSearchPage(driver);
+            case "Recently viewed products":
+                return PageGeneratorManager.getReviewProductPage(driver);
+            case "Compare products list":
+                return PageGeneratorManager.getCompareProductListPage(driver);
+            case "Wishlist":
+                return PageGeneratorManager.getWishListPage(driver);
+            default:
+                return PageGeneratorManager.getHomePage(driver);
+        }
+    }
+    public AbstractPage openMultiPageInLeftBar(WebDriver driver, String pageName){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_MENU_LEFT_BAR, pageName);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_MENU_LEFT_BAR, pageName);
+
+        switch(pageName){
+            case "Customer info":
+                return PageGeneratorManager.getCustomerInfoPage(driver);
+            case "Addresses":
+                return PageGeneratorManager.getAddressPage(driver);
+            case "Change password":
+                return PageGeneratorManager.getChangePasswordPage(driver);
+            default:
+                return PageGeneratorManager.getMyAccountPage(driver);
+
+        }
+    }
+    // menu bar
+    public void hoverIntoMenuTopProduct(WebDriver driver, String nameCategory) {
+        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        hoverMouseToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
     }
 
+    public void clickIntoMenuTopProduct(WebDriver driver, String nameCategory) {
+        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        clickToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+    }
+    public HomePageObject clickLogoNopCommerce(WebDriver driver) {
+        waitForElementVisible(driver, AbstractPageUIs.LOGO_NOP);
+        clickToElement(driver, AbstractPageUIs.LOGO_NOP);
+        return PageGeneratorManager.getHomePage(driver);
+    }
+    public MyAccountPageObject clickToMyAccountItem(WebDriver driver) {
+        waitForElementVisible(driver, AbstractPageUIs.MY_ACCOUNT_ITEM);
+        clickToElement(driver, AbstractPageUIs.MY_ACCOUNT_ITEM);
+        return PageGeneratorManager.getMyAccountPage(driver);
+    }
+    public MainPageObject clickIntoLogOutButton(WebDriver driver) {
+        waitForElementVisible(driver, AbstractPageUIs.LOGOUT_ITEM);
+        clickToElement(driver,AbstractPageUIs.LOGOUT_ITEM);
+        return PageGeneratorManager.getMainPage(driver);
+    }
 
     private WebElement element;
     private List<WebElement> elements;
@@ -636,5 +693,6 @@ public class AbstractPage {
     private Actions action;
     private By byLocator;
     private int longTimeOut = Constants.LONG_TIMEOUT;
+
 
 }

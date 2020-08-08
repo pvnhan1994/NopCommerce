@@ -13,9 +13,11 @@ public class AbstractPageUIs {
     public static final String FIRSTNAME_ID = "FirstName";
     public static final String LASTNAME_ID = "LastName";
     public static final String LOGOUT_ITEM = "//a[@class='ico-logout']";
-
+    public static final String DYNAMIC_MENU_LEFT_BAR = "//a[contains(text(),'%s')]";
     public static final String DYNAMIC_TEXTAREA = "//textarea[@id='%s']" ;
     public static final String DYNAMIC_ITEM_FOOTER_PAGE = "//ul[@class='list']//a[text()='%s']";
     public static final String DYNAMIC_TOAST_MSG = "//p[@class='content']";
+    public static final String MY_ACCOUNT_ITEM = "//a[@class='ico-account']";
+    public static final String LOGO_NOP = "//div[@class='header-logo']//a//img";
 
 }
