@@ -36,7 +36,7 @@ public class id002_compareProduct extends AbstractTest {
         registerPage = mainPage.clickRegisterItem();
         registerPage.registerAccount();
         homePage = registerPage.clickRegisterButton();
-        myAccountPage = homePage.clickToMyAccountItem(driver);
+        myAccountPage = (MyAccountPageObject) homePage.openMultiPageInItemHeader(driver,"ico-account");
         myAccountPage.hoverIntoMenuTopProduct("Computers");
         myAccountPage.clickIntoMenuTopProduct("Desktops");
 

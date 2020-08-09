@@ -6,8 +6,6 @@ public class MyAccountPageUIs {
     public static final String ADD_YOUR_REVIEW_ITEM = "//a[text()='Add your review']";
 
 
-    public static final String SKU_DETAIL_PRODUCT = "//span[@id='sku-3']";
-    public static final String NAME_DETAIL_PRODUCT = "//div[@class='product-name']";
 
     public static final String DYNAMIC_OPTION_BUTTON_PRODUCT_DETAIL = "//h2[@class='product-title']//a[text()='%s']" +
             "//parent::h2//following-sibling::div[@class='add-info']//div[@class='buttons']/input[%s]";

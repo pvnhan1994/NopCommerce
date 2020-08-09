@@ -1,25 +1,86 @@
-2020-08-08 13:34:10,014 INFO  wishList_compare_recentView.id001_withListProduct - Step 1: Click open Product Detail
-2020-08-08 13:34:11,585 INFO  wishList_compare_recentView.id001_withListProduct - Step 2: Click wishlist button
-2020-08-08 13:34:11,899 INFO  wishList_compare_recentView.id001_withListProduct - Step 3: Verify toast msg
-2020-08-08 13:34:12,456 INFO  wishList_compare_recentView.id001_withListProduct - Actual = The product has been added to your wishlist
-2020-08-08 13:34:12,456 INFO  wishList_compare_recentView.id001_withListProduct - Expected = The product has been added to your wishlist
-2020-08-08 13:34:12,456 INFO  wishList_compare_recentView.id001_withListProduct - Compare value = true
-2020-08-08 13:34:12,456 INFO  wishList_compare_recentView.id001_withListProduct - ===PASSED===
-2020-08-08 13:34:12,457 INFO  wishList_compare_recentView.id001_withListProduct - Step 4: Open wishList page
-2020-08-08 13:34:13,147 INFO  wishList_compare_recentView.id001_withListProduct - Step 5: Verify add product success
-2020-08-08 13:34:13,395 INFO  wishList_compare_recentView.id001_withListProduct - Actual = LE_IC_600
-2020-08-08 13:34:13,395 INFO  wishList_compare_recentView.id001_withListProduct - Expected = LE_IC_600
-2020-08-08 13:34:13,395 INFO  wishList_compare_recentView.id001_withListProduct - Compare value = true
-2020-08-08 13:34:13,396 INFO  wishList_compare_recentView.id001_withListProduct - ===PASSED===
-2020-08-08 13:34:13,613 INFO  wishList_compare_recentView.id001_withListProduct - Actual = Lenovo IdeaCentre 600 All-in-One PC
-2020-08-08 13:34:13,613 INFO  wishList_compare_recentView.id001_withListProduct - Expected = Lenovo IdeaCentre 600 All-in-One PC
-2020-08-08 13:34:13,614 INFO  wishList_compare_recentView.id001_withListProduct - Compare value = true
-2020-08-08 13:34:13,614 INFO  wishList_compare_recentView.id001_withListProduct - ===PASSED===
-2020-08-08 13:34:13,614 INFO  wishList_compare_recentView.id001_withListProduct - Step 6: Click share link
-2020-08-08 13:34:14,296 INFO  wishList_compare_recentView.id001_withListProduct - Step 7: Verify name wishlist
-2020-08-08 13:34:14,523 INFO  wishList_compare_recentView.id001_withListProduct - Actual = Wishlist of Nhan Phan
-2020-08-08 13:34:14,523 INFO  wishList_compare_recentView.id001_withListProduct - Expected = Wishlist of Nhan Nhan
-2020-08-08 13:34:14,523 INFO  wishList_compare_recentView.id001_withListProduct - Compare value = false
-2020-08-08 13:34:14,523 INFO  wishList_compare_recentView.id001_withListProduct - ===FAILED===
-2020-08-08 13:34:14,525 INFO  wishList_compare_recentView.id001_withListProduct - OS name = windows 10
-2020-08-08 13:34:15,240 INFO  wishList_compare_recentView.id001_withListProduct - ---------- QUIT BROWSER SUCCESS ----------
+2020-08-09 11:53:02,769 INFO  order.id001_orderProduct - Step 1: Open Prodcut Detail
+2020-08-09 11:53:04,683 INFO  order.id001_orderProduct - Step 2: Choose option
+2020-08-09 11:53:05,973 INFO  order.id001_orderProduct - Step 3: Get value option choose
+2020-08-09 11:53:07,936 INFO  order.id001_orderProduct - Step 4: Click button Add to cart
+2020-08-09 11:53:08,191 INFO  order.id001_orderProduct - Step 6: Verify count number product on Shopping card at Header page
+2020-08-09 11:53:08,425 INFO  order.id001_orderProduct - Actual = (1)
+2020-08-09 11:53:08,425 INFO  order.id001_orderProduct - Expected = (0)
+2020-08-09 11:53:08,425 INFO  order.id001_orderProduct - Compare value = false
+2020-08-09 11:53:08,425 INFO  order.id001_orderProduct - ===FAILED===
+2020-08-09 11:53:08,827 INFO  order.id001_orderProduct - Step 7: Hover into Shopping card item on header
+2020-08-09 11:53:09,011 INFO  order.id001_orderProduct - Step 8: Verify count number product on Shopping card at popup hover
+2020-08-09 11:53:10,360 INFO  order.id001_orderProduct - Actual = 1 item(s)
+2020-08-09 11:53:10,360 INFO  order.id001_orderProduct - Expected = 1 item(s)
+2020-08-09 11:53:10,360 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:10,360 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:10,360 INFO  order.id001_orderProduct - Step 9: Verify attribute product on Shopping card at popup hover
+2020-08-09 11:53:10,594 INFO  order.id001_orderProduct - Actual = Processor: 2.2 GHz Intel Pentium Dual-Core E2200
+RAM: 2 GB
+HDD: 400 GB [+$100.00]
+OS: Vista Home [+$50.00]
+Software: Microsoft Office [+$50.00]
+Software: Acrobat Reader [+$10.00]
+Software: Total Commander [+$5.00]
+2020-08-09 11:53:10,594 INFO  order.id001_orderProduct - Expected = Processor: 2.2 GHz Intel Pentium Dual-Core E2200
+RAM: 2 GB
+HDD: 400 GB [+$100.00]
+OS: Vista Home [+$50.00]
+Software: Microsoft Office [+$50.00]
+Software: Acrobat Reader [+$10.00]
+Software: Total Commander [+$5.00]
+2020-08-09 11:53:10,594 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:10,594 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:10,594 INFO  order.id001_orderProduct - Step 10: Verify unit price product on Shopping card at popup hover
+2020-08-09 11:53:10,809 INFO  order.id001_orderProduct - Actual = Unit price: $1,415.00
+2020-08-09 11:53:10,809 INFO  order.id001_orderProduct - Expected = Unit price: $1,415.00
+2020-08-09 11:53:10,809 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:10,809 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:10,809 INFO  order.id001_orderProduct - Step 11: Verify quantity product on Shopping card at popup hover
+2020-08-09 11:53:11,028 INFO  order.id001_orderProduct - Actual = Quantity: 1
+2020-08-09 11:53:11,028 INFO  order.id001_orderProduct - Expected = Quantity: 1
+2020-08-09 11:53:11,028 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:11,028 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:13,002 INFO  order.id001_orderProduct - Step 3: Edit data
+2020-08-09 11:53:14,619 INFO  order.id001_orderProduct - Step 3: Get value option choose
+2020-08-09 11:53:16,181 INFO  order.id001_orderProduct - Step 4: Click button Add to cart
+2020-08-09 11:53:16,443 INFO  order.id001_orderProduct - Step 5: Verify toast msg displayed
+2020-08-09 11:53:17,031 INFO  order.id001_orderProduct - Actual = The product has been added to your shopping cart
+2020-08-09 11:53:17,031 INFO  order.id001_orderProduct - Expected = The product has been added to your shopping cart
+2020-08-09 11:53:17,031 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:17,031 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:17,031 INFO  order.id001_orderProduct - Step 6: Verify count number product on Shopping card at Header page
+2020-08-09 11:53:17,251 INFO  order.id001_orderProduct - Actual = (2)
+2020-08-09 11:53:17,251 INFO  order.id001_orderProduct - Expected = (2)
+2020-08-09 11:53:17,251 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:17,251 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:17,504 INFO  order.id001_orderProduct - Step 7: Hover into Shopping card item on header
+2020-08-09 11:53:17,689 INFO  order.id001_orderProduct - Step 8: Verify count number product on Shopping card at popup hover
+2020-08-09 11:53:18,456 INFO  order.id001_orderProduct - Actual = 2 item(s)
+2020-08-09 11:53:18,456 INFO  order.id001_orderProduct - Expected = 2 item(s)
+2020-08-09 11:53:18,456 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:18,456 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:18,456 INFO  order.id001_orderProduct - Step 9: Verify attribute product on Shopping card at popup hover
+2020-08-09 11:53:18,686 INFO  order.id001_orderProduct - Actual = Processor: 2.2 GHz Intel Pentium Dual-Core E2200
+RAM: 4GB [+$20.00]
+HDD: 320 GB
+OS: Vista Home [+$50.00]
+Software: Microsoft Office [+$50.00]
+2020-08-09 11:53:18,687 INFO  order.id001_orderProduct - Expected = Processor: 2.2 GHz Intel Pentium Dual-Core E2200
+RAM: 4GB [+$20.00]
+HDD: 320 GB
+OS: Vista Home [+$50.00]
+Software: Microsoft Office [+$50.00]
+2020-08-09 11:53:18,687 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:18,687 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:18,687 INFO  order.id001_orderProduct - Step 10: Verify unit price product on Shopping card at popup hover
+2020-08-09 11:53:18,905 INFO  order.id001_orderProduct - Actual = Unit price: $1,320.00
+2020-08-09 11:53:18,905 INFO  order.id001_orderProduct - Expected = Unit price: $1,320.00
+2020-08-09 11:53:18,905 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:18,905 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:18,905 INFO  order.id001_orderProduct - Step 11: Verify quantity product on Shopping card at popup hover
+2020-08-09 11:53:19,137 INFO  order.id001_orderProduct - Actual = Quantity: 2
+2020-08-09 11:53:19,137 INFO  order.id001_orderProduct - Expected = Quantity: 2
+2020-08-09 11:53:19,137 INFO  order.id001_orderProduct - Compare value = true
+2020-08-09 11:53:19,137 INFO  order.id001_orderProduct - ===PASSED===
+2020-08-09 11:53:19,138 INFO  order.id001_orderProduct - OS name = windows 10
+2020-08-09 11:53:19,845 INFO  order.id001_orderProduct - ---------- QUIT BROWSER SUCCESS ----------
