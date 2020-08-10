@@ -8,7 +8,6 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageUIs.ProductDetailPageUIs;
 
 public class id001_orderProduct extends AbstractTest {
     WebDriver driver;
@@ -165,6 +164,27 @@ public class id001_orderProduct extends AbstractTest {
 
         log.info("Step 12: Verify quantity product on Shopping card at popup hover");
         verifyEquals("Quantity: " + quantityProdcut, productDetailPage.getQuantityProductOnShoppingCartHeader(driver));
+
+    }
+    @Test
+    public void TC03_RemoveProductFromCart(){
+        log.info("Step 1: Open Shopping Cart");
+        shoppingCartPage = (ShoppingCartPageObject) productDetailPage.openMultiPageInItemHeader(driver, "ico-cart");
+
+        log.info("Step 2: Check remove checkbox");
+        shoppingCartPage.clickRemoveProductCheckBox();
+
+        log.info("Step 3: Click Update button");
+        shoppingCartPage.clickIntoDynamicButtonWithClass(driver,"button-2 update-cart-button");
+
+        log.info("Step 4: Verify message empty displayed");
+        verifyEquals("Your Shopping Cart is empty!",shoppingCartPage.isMessageEmptyDisplayed(driver));
+
+        log.info("Step 5: Click Shopping Card again");
+        shoppingCartPage.openMultiPageInItemHeader(driver, "ico-cart");
+
+        log.info("Step 6: Verify product already remove undisplayed");
+        verifyTrue(shoppingCartPage.isProductUndisplayed("Build your own computer"));
 
     }
 

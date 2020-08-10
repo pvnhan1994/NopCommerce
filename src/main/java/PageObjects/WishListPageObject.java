@@ -37,8 +37,5 @@ public class WishListPageObject extends AbstractPage {
         return getTextElement(driver, WishListPageUIs.NAME_WISHLIST);
     }
 
-    public boolean isMessageEmptyDisplayed() {
-        waitForElementVisible(driver, WishListPageUIs.MESSAGE_EMPTY);
-        return isControlDisplayed(driver, WishListPageUIs.MESSAGE_EMPTY);
-    }
+
 }

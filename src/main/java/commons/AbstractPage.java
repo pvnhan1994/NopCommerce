@@ -460,7 +460,20 @@ public class AbstractPage {
         waitExplicit.until(ExpectedConditions.elementToBeClickable(byLocator));
 
     }
+    public void waitForElementInvisible(WebDriver driver, String locator,String... values) {
+        locator = String.format(locator, (Object[]) values);
+        Date date = new Date();
+        waitExplicit = new WebDriverWait(driver, longTimeOut);
+        byLocator = By.xpath(locator);
 
+        overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
+        System.out.println("Start time for wait invisible = " + date.toString());
+        waitExplicit.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
+        overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
+        System.out.println("End time for wait invisible = " + new Date().toString());
+        overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
+
+    }
     public void waitForElementInvisible(WebDriver driver, String locator) {
         Date date = new Date();
         waitExplicit = new WebDriverWait(driver, longTimeOut);
@@ -729,6 +742,10 @@ public class AbstractPage {
     public String getQuantityProductOnShoppingCartHeader(WebDriver driver){
         waitForElementVisible(driver, AbstractPageUIs.QUANTITY_PRODUCT_SHOPPING_CART_ITEM_HEADER);
         return getTextElement(driver, AbstractPageUIs.QUANTITY_PRODUCT_SHOPPING_CART_ITEM_HEADER);
+    }
+    public boolean isMessageEmptyDisplayed(WebDriver driver) {
+        waitForElementVisible(driver, WishListPageUIs.MESSAGE_EMPTY);
+        return isControlDisplayed(driver, WishListPageUIs.MESSAGE_EMPTY);
     }
 
     private WebElement element;

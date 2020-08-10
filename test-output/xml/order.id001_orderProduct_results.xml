@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Run on Chrome"
-           tests="2"
+           tests="3"
            failures="0"
            errors="0"
            skipped="0"
-           time="16.368">
+           time="23.187">
   <properties />
   
   
-            <testcase name="TC01" time="8.260" classname="order.id001_orderProduct" />
-                <testcase name="TC02" time="8.108" classname="order.id001_orderProduct" />
+            <testcase name="TC01_AddProductToShoppingCart" time="8.038" classname="order.id001_orderProduct" />
+                <testcase name="TC02_EditProductInShoppingCart" time="8.294" classname="order.id001_orderProduct" />
+                <testcase name="TC03_RemoveProductFromCart" time="6.855" classname="order.id001_orderProduct" />
       
 </testsuite>

@@ -1,17 +1,12 @@
 package wishList_compare_recentView;
 
 import PageObjects.*;
-import com.sun.xml.internal.bind.v2.runtime.reflect.opt.Const;
-import commons.AbstractPageUIs;
 import commons.AbstractTest;
-import commons.Constants;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageUIs.CompareProductListUIs;
-import pageUIs.MyAccountPageUIs;
 
 public class id002_compareProduct extends AbstractTest {
 

@@ -2,7 +2,6 @@ package search;
 
 import PageObjects.*;
 import commons.AbstractTest;
-import commons.Constants;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;

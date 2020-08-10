@@ -63,11 +63,11 @@ public class ProductDetailPageObject extends AbstractPage {
         waitForElementVisible(driver, ProductDetailPageUIs.TOTAL_PRICE);
         return getTextElement(driver, ProductDetailPageUIs.TOTAL_PRICE);
     }
-
     public String getQuantityProduct() {
         waitForElementVisible(driver, ProductDetailPageUIs.QUANTITY_PRODUCT);
         return getAttributeValue(driver, ProductDetailPageUIs.QUANTITY_PRODUCT, "value");
     }
+
 
 
 }

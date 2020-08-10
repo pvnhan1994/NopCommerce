@@ -4,8 +4,6 @@ import PageObjects.*;
 import commons.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import pageUIs.MyAccountPageUIs;
-import pageUIs.WishListPageUIs;
 
 public class id001_withListProduct extends AbstractTest {
     WebDriver driver;
@@ -85,7 +83,7 @@ public class id001_withListProduct extends AbstractTest {
         wishListPage.clickIntoDynamicButtonWithClass(driver, "button-2 update-wishlist-button");
 
         log.info("Step 8: Verify message empty is displayed");
-        verifyTrue(wishListPage.isMessageEmptyDisplayed());
+        verifyTrue(wishListPage.isMessageEmptyDisplayed(driver));
     }
 
     @AfterMethod(alwaysRun = true)

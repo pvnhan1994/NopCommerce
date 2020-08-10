@@ -26,6 +26,7 @@ public class AbstractPageUIs {
     public static final String UNIT_PRICE_SHOPPING_CART_ITEM_HEADER = "//div[@class='price']";
     public static final String QUANTITY_PRODUCT_SHOPPING_CART_ITEM_HEADER = "//div[@class='quantity']";
     public static final String CLOSE_TOAST_MSG = "//span[@class='close']";
+    public static final String MESSAGE_EMPTY = "//div[@class='no-data']";
 
 
 }
