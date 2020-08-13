@@ -3,6 +3,7 @@ package PageObjects;
 import commons.AbstractPage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
+import pageUIs.CheckOutProjectUIs;
 import pageUIs.ShoppingCartPageUIs;
 
 public class ShoppingCartPageObject extends AbstractPage {
@@ -24,7 +25,36 @@ public class ShoppingCartPageObject extends AbstractPage {
     }
 
     public boolean isProductUndisplayed(String nameProduct) {
-        waitForElementInvisible(driver,ShoppingCartPageUIs.NAME_PRODUCT,nameProduct);
+        waitForElementInvisible(driver, ShoppingCartPageUIs.NAME_PRODUCT, nameProduct);
         return isControlUndisplayed(driver, ShoppingCartPageUIs.NAME_PRODUCT, nameProduct);
+    }
+
+    public String getExpectedValueSubTotal() {
+        waitForElementVisible(driver, ShoppingCartPageUIs.SUB_TOTAL);
+        return getTextElement(driver, ShoppingCartPageUIs.SUB_TOTAL);
+    }
+
+    public String getActualValueSubTotal(String pricePerUnit, String qualityProduct) {
+        int totalSubPrice = convertPriceIntoInt(pricePerUnit) * convertPriceIntoInt(qualityProduct);
+        String s = "$" + String.valueOf(totalSubPrice) + ".00";
+        return s;
+    }
+
+    public int convertPriceIntoInt(String pricePerUnit) {
+        String s = pricePerUnit.replaceAll("(\\$)|(\\.00)", "");
+        int i = Integer.parseInt(s);
+        return i;
+    }
+
+    public void inputNumberForUpdateQtyProduct(String qty) {
+        waitForElementVisible(driver, ShoppingCartPageUIs.QTY_TEXTBOX);
+        sendkeyElements(driver, ShoppingCartPageUIs.QTY_TEXTBOX,qty);
+
+    }
+
+    public CheckOutPageObject clickCheckOutButton() {
+        waitForElementVisible(driver, CheckOutProjectUIs.CHECK_OUT_BUTTON);
+        clickToElement(driver, CheckOutProjectUIs.CHECK_OUT_BUTTON);
+        return PageGeneratorManager.getCheckOutPage(driver);
     }
 }

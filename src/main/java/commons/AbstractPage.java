@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pageUIs.CustomerInfoUIs;
 import pageUIs.MyAccountPageUIs;
+import pageUIs.ProductDetailPageUIs;
 import pageUIs.WishListPageUIs;
 
 import java.util.*;
@@ -146,21 +147,17 @@ public class AbstractPage {
         waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(listItem)));
 
         List<WebElement> allItems = driver.findElements(By.xpath(listItem));
-        //System.out.println("Get all value in dropdown =" + allItems.size());
 
         for (WebElement items : allItems) {
-            //	System.out.println("Text moi lan get = " + items.getText());
 
             if (items.getText().equals(expectedItem)) {
 
                 if (items.isDisplayed()) {
-                    //		System.out.println("Click by Selenium = " + items.getText());
                     items.click();
 
                 } else {
                     javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", items);
                     Thread.sleep(1000);
-                    //	System.out.println("Click by JS = " + items.getText());
                     javascriptExecutor.executeScript("arguments[0].click();", items);
                 }
                 Thread.sleep(1000);
@@ -221,25 +218,16 @@ public class AbstractPage {
     }
 
     public boolean isControlUndisplayed(WebDriver driver, String locator) {
-        Date date = new Date();
-        System.out.println("Start time=" + date.toString());
-
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
-
         List<WebElement> elements = driver.findElements(By.xpath(locator));
 
         if (elements.size() == 0) {
-            System.out.println("Element not in DOM");
-            System.out.println("End time = " + new Date().toString());
             overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
             return true;
         } else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
-            System.out.println("Element in DOM but not visible/ displayed");
-            System.out.println("End time = " + new Date().toString());
             overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
             return true;
         } else {
-            System.out.println("Element in DOM and visible");
             overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
             return false;
         }
@@ -247,25 +235,18 @@ public class AbstractPage {
 
     public boolean isControlUndisplayed(WebDriver driver, String locator, String... values) {
         locator = String.format(locator, (Object[]) values);
-        Date date = new Date();
-        System.out.println("Start time=" + date.toString());
 
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
 
         List<WebElement> elements = driver.findElements(By.xpath(locator));
 
         if (elements.size() == 0) {
-            System.out.println("Element not in DOM");
-            System.out.println("End time = " + new Date().toString());
             overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
             return true;
         } else if (elements.size() > 0 && !elements.get(0).isDisplayed()) {
-            System.out.println("Element in DOM but not visible/ displayed");
-            System.out.println("End time = " + new Date().toString());
             overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
             return true;
         } else {
-            System.out.println("Element in DOM and visible");
             overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
             return false;
         }
@@ -356,7 +337,6 @@ public class AbstractPage {
         javascriptExecutor = (JavascriptExecutor) driver;
         String textActual = (String) javascriptExecutor
                 .executeScript("return document.documentElement.innerText.match('" + textExpected + "')[0]");
-        System.out.println("Text actual = " + textActual);
         return textActual.equals(textExpected);
     }
 
@@ -460,30 +440,26 @@ public class AbstractPage {
         waitExplicit.until(ExpectedConditions.elementToBeClickable(byLocator));
 
     }
-    public void waitForElementInvisible(WebDriver driver, String locator,String... values) {
+
+    public void waitForElementInvisible(WebDriver driver, String locator, String... values) {
         locator = String.format(locator, (Object[]) values);
-        Date date = new Date();
         waitExplicit = new WebDriverWait(driver, longTimeOut);
         byLocator = By.xpath(locator);
 
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
-        System.out.println("Start time for wait invisible = " + date.toString());
         waitExplicit.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
-        System.out.println("End time for wait invisible = " + new Date().toString());
         overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
 
     }
+
     public void waitForElementInvisible(WebDriver driver, String locator) {
-        Date date = new Date();
         waitExplicit = new WebDriverWait(driver, longTimeOut);
         byLocator = By.xpath(locator);
 
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
-        System.out.println("Start time for wait invisible = " + date.toString());
         waitExplicit.until(ExpectedConditions.invisibilityOfElementLocated(byLocator));
         overrideGlobalTimeOut(driver, Constants.SHORT_TIMEOUT);
-        System.out.println("End time for wait invisible = " + new Date().toString());
         overrideGlobalTimeOut(driver, Constants.LONG_TIMEOUT);
 
     }
@@ -516,15 +492,12 @@ public class AbstractPage {
 
     public void selectFolder(WebDriver driver, String listFolder, String NameFolder) throws Exception {
         List<WebElement> allItems = driver.findElements(By.xpath(listFolder));
-//		System.out.println("Tat ca phan tu trong dropdown =" + allItems.size());
 
         for (WebElement folder : allItems) {
-//			System.out.println("Text moi lan get = " + folder.getText());
 
             if (folder.getText().contains(NameFolder)) {
 
                 if (folder.isDisplayed()) {
-                    System.out.println("Click by Selenium = " + folder.getText());
                     folder.click();
                 }
                 Thread.sleep(1000);
@@ -622,10 +595,12 @@ public class AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_TOAST_MSG);
     }
-    public void clickCloseToastMsg(WebDriver driver){
+
+    public void clickCloseToastMsg(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.CLOSE_TOAST_MSG);
-        clickToElementByJS(driver,AbstractPageUIs.CLOSE_TOAST_MSG);
+        clickToElementByJS(driver, AbstractPageUIs.CLOSE_TOAST_MSG);
     }
+
     // Dynamic Radiobutton
     public void selectDynamicRadioCheckboxWithID(WebDriver driver, String nameID) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_ID, nameID);
@@ -635,6 +610,10 @@ public class AbstractPage {
     public void selectDynamicRadioCheckboxWithName(WebDriver driver, String name) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_NAME, name);
         clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_NAME, name);
+    }
+    public void selectDynamicCheckbox(WebDriver driver,String idCheckbox) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_CHECKBOX, idCheckbox);
+        checkToTheCheckbox(driver, AbstractPageUIs.DYNAMIC_CHECKBOX, idCheckbox);
     }
 
     // Dropdownlist
@@ -682,6 +661,7 @@ public class AbstractPage {
 
         }
     }
+
     public AbstractPage openMultiPageInItemHeader(WebDriver driver, String classNamePage) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_ITEM_ON_HEADER, classNamePage);
         clickToElement(driver, AbstractPageUIs.DYNAMIC_ITEM_ON_HEADER, classNamePage);
@@ -699,6 +679,7 @@ public class AbstractPage {
                 return null;
         }
     }
+
     // menu bar
     public void hoverIntoMenuTopProduct(WebDriver driver, String nameCategory) {
         waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
@@ -722,27 +703,33 @@ public class AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_NUMER_PRODUCT_ON_ITEM_HEADER, classItem);
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_NUMER_PRODUCT_ON_ITEM_HEADER, classItem);
     }
+
     // hover into Shopping card header
-    public void hoverIntoShoppingCartHeader(WebDriver driver){
+    public void hoverIntoShoppingCartHeader(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.SHOPPING_CART_ITEM_HEADER);
         hoverMouseToElement(driver, AbstractPageUIs.SHOPPING_CART_ITEM_HEADER);
     }
-    public String getNumberCountItemOnShoppingCartHeader(WebDriver driver, String number){
+
+    public String getNumberCountItemOnShoppingCartHeader(WebDriver driver, String number) {
         waitForElementVisible(driver, AbstractPageUIs.COUNT_PRODUCT_ADD_SHOPPING_CART_ITEM_HEADER, number);
         return getTextElement(driver, AbstractPageUIs.COUNT_PRODUCT_ADD_SHOPPING_CART_ITEM_HEADER, number);
     }
-    public String getTextNameProductOnShoppingCartHeader(WebDriver driver){
+
+    public String getTextNameProductOnShoppingCartHeader(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.ATTRIBUTE_PRODUCT_SHOPPING_CART_ITEM_HEADER);
         return getTextElement(driver, AbstractPageUIs.ATTRIBUTE_PRODUCT_SHOPPING_CART_ITEM_HEADER);
     }
-    public String getUnitPriceOnShoppingCartHeader(WebDriver driver){
+
+    public String getUnitPriceOnShoppingCartHeader(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.UNIT_PRICE_SHOPPING_CART_ITEM_HEADER);
         return getTextElement(driver, AbstractPageUIs.UNIT_PRICE_SHOPPING_CART_ITEM_HEADER);
     }
-    public String getQuantityProductOnShoppingCartHeader(WebDriver driver){
+
+    public String getQuantityProductOnShoppingCartHeader(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.QUANTITY_PRODUCT_SHOPPING_CART_ITEM_HEADER);
         return getTextElement(driver, AbstractPageUIs.QUANTITY_PRODUCT_SHOPPING_CART_ITEM_HEADER);
     }
+
     public boolean isMessageEmptyDisplayed(WebDriver driver) {
         waitForElementVisible(driver, WishListPageUIs.MESSAGE_EMPTY);
         return isControlDisplayed(driver, WishListPageUIs.MESSAGE_EMPTY);

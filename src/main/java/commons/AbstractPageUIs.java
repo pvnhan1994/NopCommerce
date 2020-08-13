@@ -29,4 +29,5 @@ public class AbstractPageUIs {
     public static final String MESSAGE_EMPTY = "//div[@class='no-data']";
 
 
+    public static final String DYNAMIC_CHECKBOX = "//input[@id='%s']" ;
 }

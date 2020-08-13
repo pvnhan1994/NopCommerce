@@ -31,7 +31,7 @@ public class id001_withListProduct extends AbstractTest {
         log.info("Step 1: Click open Product Detail");
         productDetailPage = myAccountPage.openProductDetails(nameProduct);
         String skuProduct = productDetailPage.getTextSkuCode();
-        String nameProduct = productDetailPage.getTextNameProduct();
+        String nameProduct = productDetailPage.getInforOverviewProduct("product-name");
         log.info("Step 2: Click wishlist button");
 
         productDetailPage.clickIntoDynamicButtonWithClass(driver, "button-2 add-to-wishlist-button");

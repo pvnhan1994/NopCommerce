@@ -1,0 +1,19 @@
+2020-08-14 01:29:13,659 INFO  order.id002_updateCheckOutProduct - Step 1: Open Prodcut Detail
+2020-08-14 01:29:15,692 INFO  order.id002_updateCheckOutProduct - Step 2: Click button Add to cart
+2020-08-14 01:29:15,955 INFO  order.id002_updateCheckOutProduct - Step 3: Get price/unit
+2020-08-14 01:29:16,237 INFO  order.id002_updateCheckOutProduct - Step 4: Verify toast msg displayed
+2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - Actual = The product has been added to your shopping cart
+2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - Expected = The product has been added to your shopping cart
+2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 01:29:16,532 INFO  order.id002_updateCheckOutProduct - Step 4.1: Close toast msg
+2020-08-14 01:29:16,772 INFO  order.id002_updateCheckOutProduct - Step 5: Open Shopping Cart
+2020-08-14 01:29:18,301 INFO  order.id002_updateCheckOutProduct - Step 6: Input value updateQuality
+2020-08-14 01:29:18,616 INFO  order.id002_updateCheckOutProduct - Step 7: Click Update button
+2020-08-14 01:29:19,681 INFO  order.id002_updateCheckOutProduct - Step 8: Verify sub-total displays correct
+2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - Actual = $2500.00
+2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - Expected = $2,500.00
+2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - Compare value = false
+2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - ===FAILED===
+2020-08-14 01:29:19,915 INFO  order.id002_updateCheckOutProduct - OS name = windows 10
+2020-08-14 01:29:20,628 INFO  order.id002_updateCheckOutProduct - ---------- QUIT BROWSER SUCCESS ----------

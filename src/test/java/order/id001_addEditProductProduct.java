@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class id001_orderProduct extends AbstractTest {
+public class id001_addEditProductProduct extends AbstractTest {
     WebDriver driver;
     MainPageObject mainPage;
     RegisterPageObject registerPage;

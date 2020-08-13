@@ -18,10 +18,7 @@ public class ProductDetailPageObject extends AbstractPage {
         return getTextElement(driver, ProductDetailPageUIs.SKU_DETAIL_PRODUCT);
     }
 
-    public String getTextNameProduct() {
-        waitForElementVisible(driver, ProductDetailPageUIs.NAME_DETAIL_PRODUCT);
-        return getTextElement(driver, ProductDetailPageUIs.NAME_DETAIL_PRODUCT);
-    }
+
 
     public void selectDynamicDropDownConfig(String nameConfig, String value) {
         waitForElementVisible(driver, ProductDetailPageUIs.DROPDOWN_LIST_CONFIG, nameConfig);
@@ -68,6 +65,10 @@ public class ProductDetailPageObject extends AbstractPage {
         return getAttributeValue(driver, ProductDetailPageUIs.QUANTITY_PRODUCT, "value");
     }
 
+    public String getInforOverviewProduct(String className){
+        waitForElementVisible(driver, ProductDetailPageUIs.DYNAMIC_OVERVIEW_DETAIL_PRODUCT,className);
+        return getTextElement(driver, ProductDetailPageUIs.DYNAMIC_OVERVIEW_DETAIL_PRODUCT,className);
+    }
 
 
 }
