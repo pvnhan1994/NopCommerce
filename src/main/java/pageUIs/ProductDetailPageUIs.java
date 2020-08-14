@@ -1,7 +1,7 @@
 package pageUIs;
 
 public class ProductDetailPageUIs {
-    public static final String SKU_DETAIL_PRODUCT = "//span[@id='sku-3']";
+    public static final String SKU_DETAIL_PRODUCT = "//span[text()='SKU:']//following-sibling::span";
     public static final String NAME_DETAIL_PRODUCT = "//div[@class='product-name']";
     public static final String DYNAMIC_OVERVIEW_DETAIL_PRODUCT = "//div[@class='%s']";
 

@@ -1,19 +1,294 @@
-2020-08-14 01:29:13,659 INFO  order.id002_updateCheckOutProduct - Step 1: Open Prodcut Detail
-2020-08-14 01:29:15,692 INFO  order.id002_updateCheckOutProduct - Step 2: Click button Add to cart
-2020-08-14 01:29:15,955 INFO  order.id002_updateCheckOutProduct - Step 3: Get price/unit
-2020-08-14 01:29:16,237 INFO  order.id002_updateCheckOutProduct - Step 4: Verify toast msg displayed
-2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - Actual = The product has been added to your shopping cart
-2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - Expected = The product has been added to your shopping cart
-2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - Compare value = true
-2020-08-14 01:29:16,531 INFO  order.id002_updateCheckOutProduct - ===PASSED===
-2020-08-14 01:29:16,532 INFO  order.id002_updateCheckOutProduct - Step 4.1: Close toast msg
-2020-08-14 01:29:16,772 INFO  order.id002_updateCheckOutProduct - Step 5: Open Shopping Cart
-2020-08-14 01:29:18,301 INFO  order.id002_updateCheckOutProduct - Step 6: Input value updateQuality
-2020-08-14 01:29:18,616 INFO  order.id002_updateCheckOutProduct - Step 7: Click Update button
-2020-08-14 01:29:19,681 INFO  order.id002_updateCheckOutProduct - Step 8: Verify sub-total displays correct
-2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - Actual = $2500.00
-2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - Expected = $2,500.00
-2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - Compare value = false
-2020-08-14 01:29:19,912 INFO  order.id002_updateCheckOutProduct - ===FAILED===
-2020-08-14 01:29:19,915 INFO  order.id002_updateCheckOutProduct - OS name = windows 10
-2020-08-14 01:29:20,628 INFO  order.id002_updateCheckOutProduct - ---------- QUIT BROWSER SUCCESS ----------
+2020-08-14 16:54:00,639 INFO  order.id002_updateCheckOutProduct -  My Account Page - Step 1: Open Prodcut Detail
+2020-08-14 16:54:02,304 INFO  order.id002_updateCheckOutProduct - Product Detail Page - Step 2: Click button Add to cart
+2020-08-14 16:54:02,572 INFO  order.id002_updateCheckOutProduct - Product Detail Page - Step 3: Verify toast msg displayed
+2020-08-14 16:54:03,198 INFO  order.id002_updateCheckOutProduct - Actual = The product has been added to your shopping cart
+2020-08-14 16:54:03,198 INFO  order.id002_updateCheckOutProduct - Expected = The product has been added to your shopping cart
+2020-08-14 16:54:03,198 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:03,198 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:03,200 INFO  order.id002_updateCheckOutProduct - Product Detail Page - Step 4: Close toast msg
+2020-08-14 16:54:03,428 INFO  order.id002_updateCheckOutProduct - Shopping Cart Page - Step 5: Open Shopping Cart
+2020-08-14 16:54:05,030 INFO  order.id002_updateCheckOutProduct - Shopping Cart Page - Step 6 : Click Checkbox agree
+2020-08-14 16:54:05,141 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 6.1: Click Checkout button
+2020-08-14 16:54:07,583 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 7: Checkout screen is displays
+2020-08-14 16:54:07,583 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 7.1: Header screen is displays
+2020-08-14 16:54:07,852 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:07,852 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 7.2: Page Billing address displays
+2020-08-14 16:54:08,086 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:08,086 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 8: Input infor
+2020-08-14 16:54:10,802 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 9: Click Continute button
+2020-08-14 16:54:11,065 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 10: Page Shipping Method displays
+2020-08-14 16:54:11,290 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:11,290 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 11: Select any Shipping method
+2020-08-14 16:54:11,469 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 12: Click Continute button
+2020-08-14 16:54:11,720 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 13: Page Payment Method displays
+2020-08-14 16:54:11,950 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:11,950 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 14: Select any Payment method
+2020-08-14 16:54:12,129 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 15: Click Continute button
+2020-08-14 16:54:12,419 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 16: Page Payment information displays
+2020-08-14 16:54:12,663 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:12,663 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 17: Verify Body Payment information displays
+2020-08-14 16:54:13,027 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:13,027 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 18: Click Continute button
+2020-08-14 16:54:13,298 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 19: Verify Billing Address/ Shipping Address/ Payment / Shipping infor
+2020-08-14 16:54:13,895 INFO  order.id002_updateCheckOutProduct - Actual = Nhan Nhan
+2020-08-14 16:54:13,895 INFO  order.id002_updateCheckOutProduct - Expected = Nhan Nhan
+2020-08-14 16:54:13,895 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:13,895 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:14,112 INFO  order.id002_updateCheckOutProduct - Actual = Email: binvnese87761@gmail.com
+2020-08-14 16:54:14,113 INFO  order.id002_updateCheckOutProduct - Expected = Email: binvnese87761@gmail.com
+2020-08-14 16:54:14,113 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:14,113 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:14,330 INFO  order.id002_updateCheckOutProduct - Actual = Phone: 0935602450
+2020-08-14 16:54:14,330 INFO  order.id002_updateCheckOutProduct - Expected = Phone: 0935602450
+2020-08-14 16:54:14,330 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:14,330 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:14,548 INFO  order.id002_updateCheckOutProduct - Actual = Fax: 123456789
+2020-08-14 16:54:14,548 INFO  order.id002_updateCheckOutProduct - Expected = Fax: 123456789
+2020-08-14 16:54:14,548 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:14,548 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:14,776 INFO  order.id002_updateCheckOutProduct - Actual = 32145324 AVASD
+2020-08-14 16:54:14,776 INFO  order.id002_updateCheckOutProduct - Expected = 32145324 AVASD
+2020-08-14 16:54:14,776 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:14,776 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:15,017 INFO  order.id002_updateCheckOutProduct - Actual = 29 Ho Xuan Huong
+2020-08-14 16:54:15,017 INFO  order.id002_updateCheckOutProduct - Expected = 29 Ho Xuan Huong
+2020-08-14 16:54:15,017 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:15,017 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:15,250 INFO  order.id002_updateCheckOutProduct - Actual = 203 Ong Ich Khiem
+2020-08-14 16:54:15,250 INFO  order.id002_updateCheckOutProduct - Expected = 203 Ong Ich Khiem
+2020-08-14 16:54:15,250 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:15,250 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:15,482 INFO  order.id002_updateCheckOutProduct - Actual = Da Nang,550000
+2020-08-14 16:54:15,482 INFO  order.id002_updateCheckOutProduct - Expected = Da Nang,550000
+2020-08-14 16:54:15,482 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:15,482 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:15,703 INFO  order.id002_updateCheckOutProduct - Actual = Viet Nam
+2020-08-14 16:54:15,703 INFO  order.id002_updateCheckOutProduct - Expected = Viet Nam
+2020-08-14 16:54:15,703 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:15,703 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:15,703 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 20: Verify Shipping Address infor
+2020-08-14 16:54:15,937 INFO  order.id002_updateCheckOutProduct - Actual = Nhan Nhan
+2020-08-14 16:54:15,937 INFO  order.id002_updateCheckOutProduct - Expected = Nhan Nhan
+2020-08-14 16:54:15,937 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:15,937 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:16,156 INFO  order.id002_updateCheckOutProduct - Actual = Email: binvnese87761@gmail.com
+2020-08-14 16:54:16,156 INFO  order.id002_updateCheckOutProduct - Expected = Email: binvnese87761@gmail.com
+2020-08-14 16:54:16,156 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:16,156 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:16,406 INFO  order.id002_updateCheckOutProduct - Actual = Phone: 0935602450
+2020-08-14 16:54:16,406 INFO  order.id002_updateCheckOutProduct - Expected = Phone: 0935602450
+2020-08-14 16:54:16,406 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:16,406 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:16,635 INFO  order.id002_updateCheckOutProduct - Actual = Fax: 123456789
+2020-08-14 16:54:16,635 INFO  order.id002_updateCheckOutProduct - Expected = Fax: 123456789
+2020-08-14 16:54:16,635 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:16,635 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:16,853 INFO  order.id002_updateCheckOutProduct - Actual = 32145324 AVASD
+2020-08-14 16:54:16,853 INFO  order.id002_updateCheckOutProduct - Expected = 32145324 AVASD
+2020-08-14 16:54:16,853 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:16,853 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:17,073 INFO  order.id002_updateCheckOutProduct - Actual = 29 Ho Xuan Huong
+2020-08-14 16:54:17,073 INFO  order.id002_updateCheckOutProduct - Expected = 29 Ho Xuan Huong
+2020-08-14 16:54:17,073 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:17,073 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:17,308 INFO  order.id002_updateCheckOutProduct - Actual = 203 Ong Ich Khiem
+2020-08-14 16:54:17,308 INFO  order.id002_updateCheckOutProduct - Expected = 203 Ong Ich Khiem
+2020-08-14 16:54:17,308 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:17,308 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:17,523 INFO  order.id002_updateCheckOutProduct - Actual = Da Nang,550000
+2020-08-14 16:54:17,524 INFO  order.id002_updateCheckOutProduct - Expected = Da Nang,550000
+2020-08-14 16:54:17,524 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:17,524 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:17,742 INFO  order.id002_updateCheckOutProduct - Actual = Viet Nam
+2020-08-14 16:54:17,742 INFO  order.id002_updateCheckOutProduct - Expected = Viet Nam
+2020-08-14 16:54:17,742 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:17,742 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:17,742 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 21: Verify Payment method infor
+2020-08-14 16:54:17,986 INFO  order.id002_updateCheckOutProduct - Actual = Payment Method: Check / Money Order
+2020-08-14 16:54:17,986 INFO  order.id002_updateCheckOutProduct - Expected = Payment Method: Check / Money Order
+2020-08-14 16:54:17,986 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:17,986 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:17,986 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 22: Verify Shipping method infor
+2020-08-14 16:54:18,214 INFO  order.id002_updateCheckOutProduct - Actual = Shipping Method: Ground
+2020-08-14 16:54:18,214 INFO  order.id002_updateCheckOutProduct - Expected = Shipping Method: Ground
+2020-08-14 16:54:18,214 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:18,214 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:18,214 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 23: Verify TableData infor
+2020-08-14 16:54:18,448 INFO  order.id002_updateCheckOutProduct - Actual = LE_IC_600
+2020-08-14 16:54:18,448 INFO  order.id002_updateCheckOutProduct - Expected = LE_IC_600
+2020-08-14 16:54:18,448 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:18,448 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:18,664 INFO  order.id002_updateCheckOutProduct - Actual = Lenovo IdeaCentre 600 All-in-One PC
+2020-08-14 16:54:18,664 INFO  order.id002_updateCheckOutProduct - Expected = Lenovo IdeaCentre 600 All-in-One PC
+2020-08-14 16:54:18,664 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:18,664 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:18,898 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:18,898 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:18,898 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:18,898 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:19,134 INFO  order.id002_updateCheckOutProduct - Actual = 1
+2020-08-14 16:54:19,134 INFO  order.id002_updateCheckOutProduct - Expected = 1
+2020-08-14 16:54:19,134 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:19,134 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:19,379 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:19,379 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:19,379 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:19,379 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:19,379 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 24: Verify Infor Cart Footer
+2020-08-14 16:54:19,600 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:19,600 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:19,600 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:19,600 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:19,835 INFO  order.id002_updateCheckOutProduct - Actual = $0.00
+2020-08-14 16:54:19,835 INFO  order.id002_updateCheckOutProduct - Expected = $0.00
+2020-08-14 16:54:19,836 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:19,836 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:20,069 INFO  order.id002_updateCheckOutProduct - Actual = $0.00
+2020-08-14 16:54:20,069 INFO  order.id002_updateCheckOutProduct - Expected = $0.00
+2020-08-14 16:54:20,069 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:20,069 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:20,317 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:20,317 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:20,317 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:20,317 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:20,317 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 25: Confirm order
+2020-08-14 16:54:20,580 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 26: Verify THANK YOU message displayed
+2020-08-14 16:54:21,790 INFO  order.id002_updateCheckOutProduct - ===PASSED==
+2020-08-14 16:54:22,017 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 27: Click button Continute
+2020-08-14 16:54:22,825 INFO  order.id002_updateCheckOutProduct - Checkout Page - Step 28: Open My Account screen
+2020-08-14 16:54:23,072 INFO  order.id002_updateCheckOutProduct - Order Page - Step 29: Open Order Page
+2020-08-14 16:54:23,803 INFO  order.id002_updateCheckOutProduct - Order Page - Step 30: Verify order number
+2020-08-14 16:54:24,030 INFO  order.id002_updateCheckOutProduct - Actual = ORDER NUMBER: 1037
+2020-08-14 16:54:24,030 INFO  order.id002_updateCheckOutProduct - Expected = ORDER NUMBER: 1037
+2020-08-14 16:54:24,030 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:24,030 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:24,030 INFO  order.id002_updateCheckOutProduct - Order Page - Step 31: Click Detail item
+2020-08-14 16:54:24,774 INFO  order.id002_updateCheckOutProduct - Order Page - Step 32: Verify Billing Address infor
+2020-08-14 16:54:24,997 INFO  order.id002_updateCheckOutProduct - Actual = Nhan Nhan
+2020-08-14 16:54:24,997 INFO  order.id002_updateCheckOutProduct - Expected = Nhan Nhan
+2020-08-14 16:54:24,997 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:24,997 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:25,216 INFO  order.id002_updateCheckOutProduct - Actual = Email: binvnese87761@gmail.com
+2020-08-14 16:54:25,216 INFO  order.id002_updateCheckOutProduct - Expected = Email: binvnese87761@gmail.com
+2020-08-14 16:54:25,216 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:25,216 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:25,434 INFO  order.id002_updateCheckOutProduct - Actual = Phone: 0935602450
+2020-08-14 16:54:25,434 INFO  order.id002_updateCheckOutProduct - Expected = Phone: 0935602450
+2020-08-14 16:54:25,434 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:25,434 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:25,652 INFO  order.id002_updateCheckOutProduct - Actual = Fax: 123456789
+2020-08-14 16:54:25,652 INFO  order.id002_updateCheckOutProduct - Expected = Fax: 123456789
+2020-08-14 16:54:25,652 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:25,652 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:25,869 INFO  order.id002_updateCheckOutProduct - Actual = 32145324 AVASD
+2020-08-14 16:54:25,870 INFO  order.id002_updateCheckOutProduct - Expected = 32145324 AVASD
+2020-08-14 16:54:25,870 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:25,870 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:26,088 INFO  order.id002_updateCheckOutProduct - Actual = 29 Ho Xuan Huong
+2020-08-14 16:54:26,088 INFO  order.id002_updateCheckOutProduct - Expected = 29 Ho Xuan Huong
+2020-08-14 16:54:26,088 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:26,088 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:26,320 INFO  order.id002_updateCheckOutProduct - Actual = 203 Ong Ich Khiem
+2020-08-14 16:54:26,320 INFO  order.id002_updateCheckOutProduct - Expected = 203 Ong Ich Khiem
+2020-08-14 16:54:26,320 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:26,320 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:26,542 INFO  order.id002_updateCheckOutProduct - Actual = Da Nang,550000
+2020-08-14 16:54:26,542 INFO  order.id002_updateCheckOutProduct - Expected = Da Nang,550000
+2020-08-14 16:54:26,542 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:26,542 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:26,756 INFO  order.id002_updateCheckOutProduct - Actual = Viet Nam
+2020-08-14 16:54:26,756 INFO  order.id002_updateCheckOutProduct - Expected = Viet Nam
+2020-08-14 16:54:26,756 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:26,756 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:26,756 INFO  order.id002_updateCheckOutProduct - Order Page - Step 33: Verify Shipping Address infor
+2020-08-14 16:54:26,993 INFO  order.id002_updateCheckOutProduct - Actual = Nhan Nhan
+2020-08-14 16:54:26,993 INFO  order.id002_updateCheckOutProduct - Expected = Nhan Nhan
+2020-08-14 16:54:26,993 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:26,993 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:27,212 INFO  order.id002_updateCheckOutProduct - Actual = Email: binvnese87761@gmail.com
+2020-08-14 16:54:27,212 INFO  order.id002_updateCheckOutProduct - Expected = Email: binvnese87761@gmail.com
+2020-08-14 16:54:27,212 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:27,212 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:27,431 INFO  order.id002_updateCheckOutProduct - Actual = Phone: 0935602450
+2020-08-14 16:54:27,431 INFO  order.id002_updateCheckOutProduct - Expected = Phone: 0935602450
+2020-08-14 16:54:27,431 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:27,431 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:27,650 INFO  order.id002_updateCheckOutProduct - Actual = Fax: 123456789
+2020-08-14 16:54:27,651 INFO  order.id002_updateCheckOutProduct - Expected = Fax: 123456789
+2020-08-14 16:54:27,651 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:27,651 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:27,868 INFO  order.id002_updateCheckOutProduct - Actual = 32145324 AVASD
+2020-08-14 16:54:27,868 INFO  order.id002_updateCheckOutProduct - Expected = 32145324 AVASD
+2020-08-14 16:54:27,869 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:27,869 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:28,086 INFO  order.id002_updateCheckOutProduct - Actual = 29 Ho Xuan Huong
+2020-08-14 16:54:28,086 INFO  order.id002_updateCheckOutProduct - Expected = 29 Ho Xuan Huong
+2020-08-14 16:54:28,086 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:28,086 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:28,320 INFO  order.id002_updateCheckOutProduct - Actual = 203 Ong Ich Khiem
+2020-08-14 16:54:28,320 INFO  order.id002_updateCheckOutProduct - Expected = 203 Ong Ich Khiem
+2020-08-14 16:54:28,320 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:28,320 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:28,552 INFO  order.id002_updateCheckOutProduct - Actual = Da Nang,550000
+2020-08-14 16:54:28,552 INFO  order.id002_updateCheckOutProduct - Expected = Da Nang,550000
+2020-08-14 16:54:28,552 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:28,552 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:28,788 INFO  order.id002_updateCheckOutProduct - Actual = Viet Nam
+2020-08-14 16:54:28,788 INFO  order.id002_updateCheckOutProduct - Expected = Viet Nam
+2020-08-14 16:54:28,788 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:28,788 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:28,788 INFO  order.id002_updateCheckOutProduct - Order Page - Step 34: Verify Payment method infor
+2020-08-14 16:54:29,022 INFO  order.id002_updateCheckOutProduct - Actual = Payment Method: Check / Money Order
+2020-08-14 16:54:29,023 INFO  order.id002_updateCheckOutProduct - Expected = Payment Method: Check / Money Order
+2020-08-14 16:54:29,023 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:29,023 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:29,023 INFO  order.id002_updateCheckOutProduct - Order Page - Step 35: Verify Shipping method infor
+2020-08-14 16:54:29,258 INFO  order.id002_updateCheckOutProduct - Actual = Shipping Method: Ground
+2020-08-14 16:54:29,258 INFO  order.id002_updateCheckOutProduct - Expected = Shipping Method: Ground
+2020-08-14 16:54:29,258 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:29,258 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:29,258 INFO  order.id002_updateCheckOutProduct - Order Page - Step 36: Verify TableData infor
+2020-08-14 16:54:29,490 INFO  order.id002_updateCheckOutProduct - Actual = LE_IC_600
+2020-08-14 16:54:29,490 INFO  order.id002_updateCheckOutProduct - Expected = LE_IC_600
+2020-08-14 16:54:29,490 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:29,490 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:29,718 INFO  order.id002_updateCheckOutProduct - Actual = Lenovo IdeaCentre 600 All-in-One PC
+2020-08-14 16:54:29,718 INFO  order.id002_updateCheckOutProduct - Expected = Lenovo IdeaCentre 600 All-in-One PC
+2020-08-14 16:54:29,718 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:29,718 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:29,961 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:29,961 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:29,961 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:29,961 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:30,179 INFO  order.id002_updateCheckOutProduct - Actual = 1
+2020-08-14 16:54:30,179 INFO  order.id002_updateCheckOutProduct - Expected = 1
+2020-08-14 16:54:30,179 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:30,179 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:30,397 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:30,397 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:30,397 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:30,397 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:30,397 INFO  order.id002_updateCheckOutProduct - Order Page - Step 37 : Verify Infor Cart Footer
+2020-08-14 16:54:30,619 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:30,619 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:30,619 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:30,619 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:30,836 INFO  order.id002_updateCheckOutProduct - Actual = $0.00
+2020-08-14 16:54:30,836 INFO  order.id002_updateCheckOutProduct - Expected = $0.00
+2020-08-14 16:54:30,836 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:30,836 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:31,057 INFO  order.id002_updateCheckOutProduct - Actual = $0.00
+2020-08-14 16:54:31,057 INFO  order.id002_updateCheckOutProduct - Expected = $0.00
+2020-08-14 16:54:31,057 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:31,057 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:31,289 INFO  order.id002_updateCheckOutProduct - Actual = $500.00
+2020-08-14 16:54:31,290 INFO  order.id002_updateCheckOutProduct - Expected = $500.00
+2020-08-14 16:54:31,290 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:31,290 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:31,290 INFO  order.id002_updateCheckOutProduct - Order Page - Step 38: Verify info Order Overview
+2020-08-14 16:54:31,543 INFO  order.id002_updateCheckOutProduct - Actual = Order Date: Friday, August 14, 2020
+2020-08-14 16:54:31,543 INFO  order.id002_updateCheckOutProduct - Expected = Order Date: Friday, August 14, 2020
+2020-08-14 16:54:31,543 INFO  order.id002_updateCheckOutProduct - Compare value = true
+2020-08-14 16:54:31,543 INFO  order.id002_updateCheckOutProduct - ===PASSED===
+2020-08-14 16:54:31,543 INFO  order.id002_updateCheckOutProduct - OS name = windows 10
+2020-08-14 16:54:32,251 INFO  order.id002_updateCheckOutProduct - ---------- QUIT BROWSER SUCCESS ----------

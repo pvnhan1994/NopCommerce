@@ -8,10 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageUIs.CustomerInfoUIs;
-import pageUIs.MyAccountPageUIs;
-import pageUIs.ProductDetailPageUIs;
-import pageUIs.WishListPageUIs;
+import pageUIs.*;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -616,6 +613,10 @@ public class AbstractPage {
         checkToTheCheckbox(driver, AbstractPageUIs.DYNAMIC_CHECKBOX, idCheckbox);
     }
 
+    public void selectDynamicCheckboxWithLabelText(WebDriver driver,String nameCheckbox) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_CHECKBOX_WITH_LABEL, nameCheckbox);
+        checkToTheCheckbox(driver, AbstractPageUIs.DYNAMIC_CHECKBOX_WITH_LABEL, nameCheckbox);
+    }
     // Dropdownlist
     public void selectDynamicDropDown(WebDriver driver, String nameDropdown, String value) {
         waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
@@ -656,6 +657,8 @@ public class AbstractPage {
                 return PageGeneratorManager.getAddressPage(driver);
             case "Change password":
                 return PageGeneratorManager.getChangePasswordPage(driver);
+            case "Orders":
+                return PageGeneratorManager.getOrderPage(driver);
             default:
                 return PageGeneratorManager.getMyAccountPage(driver);
 
@@ -735,6 +738,21 @@ public class AbstractPage {
         return isControlDisplayed(driver, WishListPageUIs.MESSAGE_EMPTY);
     }
 
+    public String getDynamicInforInConfirmOrder(WebDriver driver, String title, String classFieldInTitle) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_CONFIRM_ORDER, title, classFieldInTitle);
+        return getTextElement(driver, AbstractPageUIs.DYNAMIC_CONFIRM_ORDER, title, classFieldInTitle).trim();
+
+    }
+
+    public String getDynamicInfoTableData(WebDriver driver,String className, String tagName) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_INFOR_TABLE_DATA, className, tagName);
+        return getTextElement(driver, AbstractPageUIs.DYNAMIC_INFOR_TABLE_DATA, className, tagName);
+    }
+
+    public String getDynamicInforCartFooter(WebDriver driver,String nameField) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER, nameField);
+        return getTextElement(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER,nameField);
+    }
     private WebElement element;
     private List<WebElement> elements;
     private Select select;

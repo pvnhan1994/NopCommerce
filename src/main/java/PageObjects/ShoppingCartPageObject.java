@@ -3,7 +3,7 @@ package PageObjects;
 import commons.AbstractPage;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
-import pageUIs.CheckOutProjectUIs;
+import pageUIs.CheckOutPagetUIs;
 import pageUIs.ShoppingCartPageUIs;
 
 public class ShoppingCartPageObject extends AbstractPage {
@@ -53,8 +53,8 @@ public class ShoppingCartPageObject extends AbstractPage {
     }
 
     public CheckOutPageObject clickCheckOutButton() {
-        waitForElementVisible(driver, CheckOutProjectUIs.CHECK_OUT_BUTTON);
-        clickToElement(driver, CheckOutProjectUIs.CHECK_OUT_BUTTON);
+        waitForElementVisible(driver, CheckOutPagetUIs.CHECK_OUT_BUTTON);
+        clickToElementByJS(driver, CheckOutPagetUIs.CHECK_OUT_BUTTON);
         return PageGeneratorManager.getCheckOutPage(driver);
     }
 }

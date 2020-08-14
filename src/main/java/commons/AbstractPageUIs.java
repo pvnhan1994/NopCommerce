@@ -28,6 +28,10 @@ public class AbstractPageUIs {
     public static final String CLOSE_TOAST_MSG = "//span[@class='close']";
     public static final String MESSAGE_EMPTY = "//div[@class='no-data']";
 
+    public static final String DYNAMIC_INFOR_TABLE_DATA = "//td[@class='%s']//%s";
+    public static final String DYNAMIC_INFOR_CART_FOOTER = "//label[contains(text(),'%s')]//parent::td//following-sibling::td";
+    public static final String DYNAMIC_CONFIRM_ORDER = "//strong[text()='%s']//parent::div//following-sibling::ul//li[@class='%s']";
 
     public static final String DYNAMIC_CHECKBOX = "//input[@id='%s']" ;
+    public static final String DYNAMIC_CHECKBOX_WITH_LABEL = "//label[text()='%s']//preceding-sibling::input";
 }

@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.256">
+           time="28.971">
   <properties />
   
   
-            <testcase name="TC04_UpdateShoppingCart" time="6.256" classname="order.id002_updateCheckOutProduct" />
+            <testcase name="TC05_CheckOut_Order" time="28.971" classname="order.id002_updateCheckOutProduct" />
       
 </testsuite>
