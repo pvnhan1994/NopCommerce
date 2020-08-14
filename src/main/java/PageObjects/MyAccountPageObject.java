@@ -1,6 +1,7 @@
 package PageObjects;
 
 import commons.AbstractPage;
+import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import pageUIs.MyAccountPageUIs;
 
@@ -21,9 +22,11 @@ public class MyAccountPageObject extends AbstractPage {
         clickToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
     }
 
-    public void openProductDetails(String nameProduct) {
+    public ProductDetailPageObject openProductDetails(String nameProduct) {
         waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_ADD_TO_CART_PRODUCT_DETAILS, nameProduct);
         clickToElement(driver, MyAccountPageUIs.DYNAMIC_ADD_TO_CART_PRODUCT_DETAILS, nameProduct);
+        return PageGeneratorManager.getProductDetail(driver);
+
     }
 
     public void clickAddYourReviewItem() {
@@ -31,15 +34,7 @@ public class MyAccountPageObject extends AbstractPage {
         clickToElement(driver, MyAccountPageUIs.ADD_YOUR_REVIEW_ITEM);
     }
 
-    public String getTextSkuCode() {
-        waitForElementVisible(driver, MyAccountPageUIs.SKU_DETAIL_PRODUCT);
-        return getTextElement(driver, MyAccountPageUIs.SKU_DETAIL_PRODUCT);
-    }
 
-    public String getTextNameProduct() {
-        waitForElementVisible(driver, MyAccountPageUIs.NAME_DETAIL_PRODUCT);
-        return getTextElement(driver, MyAccountPageUIs.NAME_DETAIL_PRODUCT);
-    }
 
     public String getPriceProduct(String nameProduct) {
         waitForElementVisible(driver, MyAccountPageUIs.PRICE_PRODUCT, nameProduct);

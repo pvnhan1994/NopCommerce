@@ -16,11 +16,6 @@ public class WishListPageObject extends AbstractPage {
         clickToElement(driver, WishListPageUIs.SHARE_LINK);
     }
 
-    public String getNumberProduct(String item) {
-        waitForElementVisible(driver, WishListPageUIs.NUMER_PRODUCT, item);
-        return getTextElement(driver, WishListPageUIs.NUMER_PRODUCT, item);
-    }
-
     public void selectCheckBox(String nameProduct, String optionCheckboxByClass) {
         waitForElementVisible(driver, WishListPageUIs.CHECKBOX, nameProduct, optionCheckboxByClass);
         clickToElement(driver, WishListPageUIs.CHECKBOX, nameProduct, optionCheckboxByClass);
@@ -42,8 +37,5 @@ public class WishListPageObject extends AbstractPage {
         return getTextElement(driver, WishListPageUIs.NAME_WISHLIST);
     }
 
-    public boolean isMessageEmptyDisplayed() {
-        waitForElementVisible(driver, WishListPageUIs.MESSAGE_EMPTY);
-        return isControlDisplayed(driver, WishListPageUIs.MESSAGE_EMPTY);
-    }
+
 }

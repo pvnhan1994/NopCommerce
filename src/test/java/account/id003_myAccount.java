@@ -37,7 +37,7 @@ public class id003_myAccount extends AbstractTest {
         registerPage = mainPage.clickRegisterItem();
         registerPage.registerAccount();
         homePage = registerPage.clickRegisterButton();
-        myAccountPage = homePage.clickToMyAccountItem(driver);
+        myAccountPage = (MyAccountPageObject) homePage.openMultiPageInItemHeader(driver,"ico-account");
     }
 
     @Test
@@ -131,7 +131,7 @@ public class id003_myAccount extends AbstractTest {
         changePasswordPage.clickIntoDynamicButtonWithClass(driver, "button-1 change-password-button");
 
         log.info("Step 4: Click Logout item ");
-        mainPage = changePasswordPage.clickIntoLogOutButton(driver);
+        mainPage = (MainPageObject) changePasswordPage.openMultiPageInItemHeader(driver,"ico-logout");
 
         log.info("Step 5: Click Login item ");
         loginPage = mainPage.clickLoginItem();
@@ -151,7 +151,7 @@ public class id003_myAccount extends AbstractTest {
     @Test
     public void TC04_MyProductReview() {
         log.info("Step 1: Click Logout item ");
-        myAccountPage = homePage.clickToMyAccountItem(driver);
+        myAccountPage = (MyAccountPageObject) homePage.openMultiPageInItemHeader(driver,"ico-account");
         myProductReviewPage = (MyProductReviewsPageObject) myAccountPage.openMultiPageInLeftBar(driver, "My product reviews");
         log.info("Step 2: Hover into Menutop");
         myAccountPage.hoverIntoMenuTopProduct(driver, "Computers");
@@ -171,7 +171,7 @@ public class id003_myAccount extends AbstractTest {
         homePage = myAccountPage.clickLogoNopCommerce(driver);
 
         log.info("Step 10: Click My Account item");
-        myAccountPage = homePage.clickToMyAccountItem(driver);
+        myAccountPage = (MyAccountPageObject) homePage.openMultiPageInItemHeader(driver,"ico-account");
         log.info("Step 11: Click My product review");
         myProductReviewPage = (MyProductReviewsPageObject) myAccountPage.openMultiPageInFooter(driver, "Recently viewed products");
         log.info("Step 12: Verify name displays");

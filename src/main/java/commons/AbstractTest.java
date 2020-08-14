@@ -34,6 +34,7 @@ public class AbstractTest {
 
         return driver;
     }
+
     protected WebDriver openMultiBrowser(String browserName) {
 
         if (browserName.equalsIgnoreCase("firefox")) {
@@ -47,11 +48,11 @@ public class AbstractTest {
         } else if (browserName.equalsIgnoreCase("chromeheadless")) {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("headless");
-            options.addArguments("window-size="+Constants.HEADLESS_RESOLUTION);
+            options.addArguments("window-size=" + Constants.HEADLESS_RESOLUTION);
             driver = new ChromeDriver(options);
         } else if (browserName.equalsIgnoreCase("safari")) {
             driver = new SafariDriver();
-        }else {
+        } else {
             System.out.println("Please choose your browser name in TestNG xml");
         }
         driver.get(Constants.STAGING);
@@ -59,6 +60,7 @@ public class AbstractTest {
         driver.manage().window().maximize();
         return driver;
     }
+
     public void waitForPageLoaded() {
         ExpectedCondition<Boolean> expectation = new
                 ExpectedCondition<Boolean>() {
@@ -74,6 +76,7 @@ public class AbstractTest {
             Assert.fail("Timeout waiting for Page Load Request to complete.");
         }
     }
+
     private boolean checkPassed(boolean condition) {
         boolean pass = true;
         try {
@@ -201,25 +204,27 @@ public class AbstractTest {
             log.info(e.getMessage());
         }
     }
+
     @BeforeSuite
-    public void deleteAllFilesInReportNGScreenshot(){
+    public void deleteAllFilesInReportNGScreenshot() {
         System.out.println("--------------START delete file in folder-----");
         deleteAllFileInFolder();
         System.out.println("--------------END delete file in folder-----");
     }//
-    public void deleteAllFileInFolder(){
-        try{
+
+    public void deleteAllFileInFolder() {
+        try {
             //String pathFolderDownload = workingDir + "//ReportNGScreenShots";
             String pathFolderDownload = System.getProperty("user.dir") + "//ReportNGScreenShots";
-            File file= new File(pathFolderDownload);
+            File file = new File(pathFolderDownload);
             File[] listOfFiles = file.listFiles();
-            for(int i=0; i< listOfFiles.length;i++) {
+            for (int i = 0; i < listOfFiles.length; i++) {
                 if (listOfFiles[i].isFile()) {
                     System.out.println(listOfFiles[i].getName());
                     new File(listOfFiles[i].toString()).delete();
                 }
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             System.out.print(e.getMessage());
         }
     }
@@ -228,19 +233,47 @@ public class AbstractTest {
         Random random = new Random();
         return random.nextInt(99999);
     }
-    public String replaceFirstData(String value,String oldData, String newData){
-        return value.replaceFirst(oldData,newData);
+
+    public String replaceFirstData(String value, String oldData, String newData) {
+        return value.replaceFirst(oldData, newData);
     }
-    protected static String getMinuteCurrent(){
+
+    protected static String getMinuteCurrent() {
         DateTime nowUTC = new DateTime(DateTimeZone.UTC);
-        return nowUTC.getMinuteOfHour()+"";
+        return nowUTC.getMinuteOfHour() + "";
     }
-    protected static String getHourCurrent(){
+
+    protected static String getDayOfWeek() {
+        DateTime now = new DateTime(DateTimeZone.UTC);
+        String day;
+        int indexInWeek = now.getDayOfWeek();
+        switch (indexInWeek) {
+            case 0:
+                return day = "Sunday";
+            case 1:
+                return day = "Monday";
+            case 2:
+                return day = "Tuesday";
+            case 3:
+                return day = "Wednesday";
+            case 4:
+                return day = "Thursday";
+            case 5:
+                return day = "Friday";
+            case 6:
+                return day = "Saturday";
+            default:
+                return null;
+        }
+    }
+
+    protected static String getHourCurrent() {
         DateTime nowUTC = new DateTime(DateTimeZone.UTC);
-        int hour = 7+ nowUTC.getHourOfDay();
-        return hour+"";
+        int hour = 7 + nowUTC.getHourOfDay();
+        return hour + "";
         //	return nowUTC.getHourOfDay()+"";
     }
+
     protected static String getCurrentDay() {
         DateTime nowUTC = new DateTime(DateTimeZone.UTC);
         int day = nowUTC.getDayOfMonth();
@@ -253,12 +286,42 @@ public class AbstractTest {
 
     protected static String getCurrentMonth() {
         DateTime now = new DateTime(DateTimeZone.UTC);
+        String stringMonth;
         int month = now.getMonthOfYear();
-        if (month < 10) {
-            String monthValue = "0" + month;
-            return monthValue;
+//        if (month < 10) {
+//            String monthValue = "0" + month;
+//            return monthValue;
+//        }
+//        return month + "";
+        switch (month) {
+            case 1:
+                return stringMonth = "January";
+            case 2:
+                return stringMonth = "February";
+            case 3:
+                return stringMonth = "March";
+            case 4:
+                return stringMonth = "April";
+            case 5:
+                return stringMonth = "May";
+            case 6:
+                return stringMonth = "June";
+            case 7:
+                return stringMonth = "July";
+            case 8:
+                return stringMonth = "August";
+            case 9:
+                return stringMonth = "September";
+            case 10:
+                return stringMonth = "October";
+            case 11:
+                return stringMonth = "November";
+            case 12:
+                return stringMonth = "December";
+            default:
+                System.out.println("Wrong month");
         }
-        return month + "";
+        return null;
     }
 
     protected static String getCurrentYear() {
@@ -266,12 +329,8 @@ public class AbstractTest {
         return now.getYear() + "";
     }
 
-    protected static String getToday() {
-        //return getCurrentDay() + "/" + getCurrentMonth() + "/" + getCurrentYear();
-        return getCurrentMonth() + "/" + getCurrentDay() + "/" + getCurrentYear();
-    }
-    protected static String getTimeCurrent(){
-        return getHourCurrent() + ":" +getMinuteCurrent();
+    protected static String getTimeCurrent() {
+        return getDayOfWeek() + ", " + getCurrentMonth() + " " + getCurrentDay() + ", " + getCurrentYear();
     }
 
 }

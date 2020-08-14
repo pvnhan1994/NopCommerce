@@ -4,8 +4,6 @@ import PageObjects.*;
 import commons.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
-import pageUIs.MyAccountPageUIs;
-import pageUIs.WishListPageUIs;
 
 public class id001_withListProduct extends AbstractTest {
     WebDriver driver;
@@ -14,7 +12,7 @@ public class id001_withListProduct extends AbstractTest {
     HomePageObject homePage;
     MyAccountPageObject myAccountPage;
     WishListPageObject wishListPage;
-
+    ProductDetailPageObject productDetailPage;
     String nameProduct = "Lenovo IdeaCentre 600 All-in-One PC";
 
     @Parameters("browser")
@@ -22,27 +20,28 @@ public class id001_withListProduct extends AbstractTest {
     public void beforeMethod(String nameBrowser) {
         driver = openMultiBrowser(nameBrowser);
         mainPage = PageGeneratorManager.getMainPage(driver);
+
         registerPage = mainPage.clickRegisterItem();
         registerPage.registerAccount();
         homePage = registerPage.clickRegisterButton();
-        myAccountPage = homePage.clickToMyAccountItem(driver);
+        myAccountPage = (MyAccountPageObject) homePage.openMultiPageInItemHeader(driver,"ico-account");
         myAccountPage.hoverIntoMenuTopProduct(driver, "Computers");
         myAccountPage.clickIntoMenuTopProduct(driver, "Desktops");
 
         log.info("Step 1: Click open Product Detail");
-        myAccountPage.openProductDetails(nameProduct);
-        String skuProduct = myAccountPage.getTextSkuCode();
-        String nameProduct = myAccountPage.getTextNameProduct();
+        productDetailPage = myAccountPage.openProductDetails(nameProduct);
+        String skuProduct = productDetailPage.getTextSkuCode();
+        String nameProduct = productDetailPage.getInforOverviewProduct("product-name");
         log.info("Step 2: Click wishlist button");
 
-        myAccountPage.clickIntoDynamicButtonWithClass(driver, "button-2 add-to-wishlist-button");
+        productDetailPage.clickIntoDynamicButtonWithClass(driver, "button-2 add-to-wishlist-button");
 
 
         log.info("Step 3: Verify toast msg");
-        verifyEquals("The product has been added to your wishlist", myAccountPage.getTextToastMessageDisplayed(driver));
+        verifyEquals("The product has been added to your wishlist", productDetailPage.getTextToastMessageDisplayed(driver));
 
         log.info("Step 4: Open wishList page");
-        wishListPage = (WishListPageObject) myAccountPage.openMultiPageInFooter(driver, "Wishlist");
+        wishListPage = (WishListPageObject) productDetailPage.openMultiPageInFooter(driver, "Wishlist");
 
         log.info("Step 5: Verify add product success");
         verifyEquals(skuProduct, wishListPage.getTextSkuCodeSuccess(nameProduct));
@@ -70,8 +69,8 @@ public class id001_withListProduct extends AbstractTest {
         wishListPage.clickIntoDynamicButtonWithClass(driver, "button-2 wishlist-add-to-cart-button");
 
         log.info("Step 8: Verify number wishlist and Cart");
-        verifyEquals("(0)", wishListPage.getNumberProduct("wishlist-qty"));
-        verifyEquals("(1)", wishListPage.getNumberProduct("cart-qty"));
+        verifyEquals("(0)", wishListPage.getNumberProduct(driver,"wishlist-qty"));
+        verifyEquals("(1)", wishListPage.getNumberProduct(driver,"cart-qty"));
 
     }
 
@@ -84,7 +83,7 @@ public class id001_withListProduct extends AbstractTest {
         wishListPage.clickIntoDynamicButtonWithClass(driver, "button-2 update-wishlist-button");
 
         log.info("Step 8: Verify message empty is displayed");
-        verifyTrue(wishListPage.isMessageEmptyDisplayed());
+        verifyTrue(wishListPage.isMessageEmptyDisplayed(driver));
     }
 
     @AfterMethod(alwaysRun = true)

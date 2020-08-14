@@ -27,7 +27,7 @@ public class RegisterPageObject extends AbstractPage {
 
     public void registerAccount() {
         inputIntoDynamicTextboxByJS(driver, "FirstName", Constants.FIRST_NAME);
-        inputIntoDynamicTextboxByJS(driver, "LastName", Constants.FIRST_NAME);
+        inputIntoDynamicTextboxByJS(driver, "LastName", Constants.LAST_NAME);
         inputIntoDynamicTextboxByJS(driver, "Email", Constants.EMAIL);
         inputIntoDynamicTextboxByJS(driver, "Password", Constants.PASSWORD);
         inputIntoDynamicTextboxByJS(driver, "ConfirmPassword", Constants.PASSWORD);
