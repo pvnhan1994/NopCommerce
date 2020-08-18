@@ -1,14 +1,13 @@
 package commons;
 
-import PageObjects.HomePageObject;
-import PageObjects.MainPageObject;
-import PageObjects.MyAccountPageObject;
+import customerPageObjects.HomePageObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import pageUIs.*;
+import customerPageUIs.MyAccountPageUIs;
+import customerPageUIs.WishListPageUIs;
 
 import java.util.*;
 import java.util.concurrent.TimeUnit;
@@ -619,13 +618,13 @@ public class AbstractPage {
     }
     // Dropdownlist
     public void selectDynamicDropDown(WebDriver driver, String nameDropdown, String value) {
-        waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
-        selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
+        selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
     }
 
     public void selectDynamicDropDownByID(WebDriver driver, String nameDropdown, String value) {
-        waitForElementVisible(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, nameDropdown);
-        selectItemInDropDown(driver, CustomerInfoUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, nameDropdown);
+        selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
     }
 
     public AbstractPage openMultiPageInFooter(WebDriver driver, String pagename) {

@@ -1,7 +1,7 @@
 package wishList_compare_recentView;
 
-import PageObjects.MainPageObject;
-import PageObjects.ReviewProductPageObject;
+import customerPageObjects.MainPageObject;
+import customerPageObjects.ReviewProductPageObject;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;

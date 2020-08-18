@@ -1,6 +1,6 @@
 package order;
 
-import PageObjects.*;
+import customerPageObjects.*;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;

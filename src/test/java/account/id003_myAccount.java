@@ -1,6 +1,6 @@
 package account;
 
-import PageObjects.*;
+import customerPageObjects.*;
 import commons.AbstractPageUIs;
 import commons.AbstractTest;
 import commons.Constants;
@@ -101,6 +101,7 @@ public class id003_myAccount extends AbstractTest {
         addressPage.inputIntoDynamicTextbox(driver, "Address_PhoneNumber", Address_PhoneNumber);
         addressPage.inputIntoDynamicTextbox(driver, "Address_FaxNumber", Address_FaxNumber);
         addressPage.selectDynamicDropDown(driver, "Address.CountryId", Address_CountryId);
+        addressPage.selectStateProvince("Other");
 
         log.info("Step 4: Click Save btn");
         addressPage.clickIntoDynamicButtonWithClass(driver, "button-1 save-address-button");
@@ -185,17 +186,17 @@ public class id003_myAccount extends AbstractTest {
         closeBrowserAndDriver(driver);
     }
 
-    String Address_FirstName = "Automation";
-    String Address_LastName = "FC";
-    String Address_Email = "nhanpv1994@gmail.com";
-    String Address_Company = "Loote";
-    String Address_City = "Da Nang";
-    String Address_Address1 = "Dia chi 1";
-    String Address_Address2 = "Dia chi 2";
-    String Address_ZipPostalCode = "55000";
-    String Address_PhoneNumber = "0935602450";
-    String Address_FaxNumber = "0987654321";
-    String Address_CountryId = "Viet Nam";
+    private String Address_FirstName = "Automation";
+    private String Address_LastName = "FC";
+    private String Address_Email = "nhanpv1994@gmail.com";
+    private String Address_Company = "Loote";
+    private String Address_City = "Da Nang";
+    private String Address_Address1 = "Dia chi 1";
+    private String Address_Address2 = "Dia chi 2";
+    private String Address_ZipPostalCode = "55000";
+    private String Address_PhoneNumber = "0935602450";
+    private String Address_FaxNumber = "0987654321";
+    private String Address_CountryId = "Viet Nam";
 
 
 }

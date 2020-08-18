@@ -32,6 +32,9 @@ public class AbstractPageUIs {
     public static final String DYNAMIC_INFOR_CART_FOOTER = "//label[contains(text(),'%s')]//parent::td//following-sibling::td";
     public static final String DYNAMIC_CONFIRM_ORDER = "//strong[text()='%s']//parent::div//following-sibling::ul//li[@class='%s']";
 
+    public static final String DYNAMIC_SELECT_DROPDOWN = "//select[@name='%s']";
+
+    public static final String DYNAMIC_SELECT_DROPDOWN_ID = "//select[@id='%s']";
     public static final String DYNAMIC_CHECKBOX = "//input[@id='%s']" ;
     public static final String DYNAMIC_CHECKBOX_WITH_LABEL = "//label[text()='%s']//preceding-sibling::input";
 }

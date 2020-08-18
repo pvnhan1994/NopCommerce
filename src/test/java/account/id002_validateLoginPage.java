@@ -1,8 +1,8 @@
 package account;
 
-import PageObjects.HomePageObject;
-import PageObjects.MainPageObject;
-import PageObjects.LoginPageObject;
+import customerPageObjects.HomePageObject;
+import customerPageObjects.MainPageObject;
+import customerPageObjects.LoginPageObject;
 import commons.AbstractTest;
 import commons.PageGeneratorManager;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +10,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageUIs.LoginPageUI;
+import customerPageUIs.LoginPageUI;
 
 public class id002_validateLoginPage extends AbstractTest {
     WebDriver driver;
@@ -54,7 +54,7 @@ public class id002_validateLoginPage extends AbstractTest {
 
         log.info("Step 3: Error Msg displayed");
         verifyTrue(loginPage.isErrorMessageDisplayed("Login was unsuccessful. Please correct the errors and try again.\n" +
-                "No customer account found"));
+                "No pageUIs.PageObjects.customer account found"));
     }
 
     @Test
@@ -67,7 +67,7 @@ public class id002_validateLoginPage extends AbstractTest {
 
         log.info("Step 3: Error Msg displayed");
         verifyTrue(loginPage.isErrorMessageDisplayed("Login was unsuccessful. Please correct the errors and try again.\n" +
-                "No customer account found"));
+                "No pageUIs.PageObjects.customer account found"));
     }
 
     @Test
@@ -83,7 +83,7 @@ public class id002_validateLoginPage extends AbstractTest {
 
         log.info("Step 4: Error Msg displayed");
         verifyTrue(loginPage.isErrorMessageDisplayed("Login was unsuccessful. Please correct the errors and try again.\n" +
-                "No customer account found"));
+                "No pageUIs.PageObjects.customer account found"));
     }
 
     @Test
