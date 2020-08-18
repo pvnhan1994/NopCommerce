@@ -1,7 +1,6 @@
 package commons;
 
-import PageObjects.*;
-import com.sun.org.apache.xpath.internal.operations.Or;
+import customerPageObjects.*;
 import org.openqa.selenium.WebDriver;
 
 

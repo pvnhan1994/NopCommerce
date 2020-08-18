@@ -1,7 +1,7 @@
 package account;
 
-import PageObjects.MainPageObject;
-import PageObjects.RegisterPageObject;
+import customerPageObjects.MainPageObject;
+import customerPageObjects.RegisterPageObject;
 
 import commons.AbstractTest;
 import commons.Constants;
@@ -24,7 +24,7 @@ public class id001_validateRegisterPage extends AbstractTest {
     }
 
     @Test
-    public void TC01_EmptyData() {
+        public void TC01_EmptyData() {
         log.info("Step 1: Click Register button");
         registerPage.clickRegisterButton();
 

@@ -15,7 +15,7 @@ Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 84.0.4147.105, chrome: {chromedriverVersion: 84.0.4147.30 (48b3e868b4cc0..., userDataDir: C:\Users\Admin\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:50832}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
 Session ID: 368cf964327810e6cfa529ed3f60a3a6"
               >
-<![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //h2[@class='product-title']//a[text()='Apple MacBook Pro 13-inch'] (tried for 20 second(s) with 500 milliseconds interval)
+                    <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.xpath: //h2[@class='product-title']//a[text()='Apple MacBook Pro 13-inch'] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'NHANPV', ip: '192.168.0.111', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
@@ -24,7 +24,7 @@ Session ID: 368cf964327810e6cfa529ed3f60a3a6
   org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
   org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
   commons.AbstractPage.waitForElementVisible(AbstractPage.java:442)
-  PageObjects.ReviewProductPageObject.isProductUndisplayed(ReviewProductPageObject.java:18)
+  customerPageObjects.ReviewProductPageObject.isProductUndisplayed(ReviewProductPageObject.java:18)
   wishList_compare_recentView.id003_reviewProduct.TC003_reviewProduct(id003_reviewProduct.java:60)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -51,7 +51,7 @@ Session ID: 368cf964327810e6cfa529ed3f60a3a6
   com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
   com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:110)
 ]]>
-      </failure>
+                </failure>
 
           </testcase>
   

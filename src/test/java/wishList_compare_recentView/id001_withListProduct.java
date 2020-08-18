@@ -1,6 +1,6 @@
 package wishList_compare_recentView;
 
-import PageObjects.*;
+import customerPageObjects.*;
 import commons.*;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
