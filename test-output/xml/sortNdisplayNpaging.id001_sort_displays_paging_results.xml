@@ -8,12 +8,12 @@
   <properties />
   
   
-            <testcase name="TC006_DisplayWith6ProductPerPaging" time="3.114" classname="sort_display_paging.id001_sort_displays_paging" />
-                <testcase name="TC002_SortZtoA" time="1.785" classname="sort_display_paging.id001_sort_displays_paging" />
-                <testcase name="TC005_DisplayWith3ProductPerPaging" time="2.426" classname="sort_display_paging.id001_sort_displays_paging" />
-                <testcase name="TC001_SortAtoZ" time="1.888" classname="sort_display_paging.id001_sort_displays_paging" />
-                <testcase name="TC004_SortHightoLow" time="1.841" classname="sort_display_paging.id001_sort_displays_paging" />
-                <testcase name="TC007_DisplayWith9ProductPerPaging" time="3.088" classname="sort_display_paging.id001_sort_displays_paging" />
-                <testcase name="TC003_SortLowtoHigh" time="0.912" classname="sort_display_paging.id001_sort_displays_paging" />
+            <testcase name="TC006_DisplayWith6ProductPerPaging" time="3.114" classname="id001_sort_displays_paging" />
+                <testcase name="TC002_SortZtoA" time="1.785" classname="id001_sort_displays_paging" />
+                <testcase name="TC005_DisplayWith3ProductPerPaging" time="2.426" classname="id001_sort_displays_paging" />
+                <testcase name="TC001_SortAtoZ" time="1.888" classname="id001_sort_displays_paging" />
+                <testcase name="TC004_SortHightoLow" time="1.841" classname="id001_sort_displays_paging" />
+                <testcase name="TC007_DisplayWith9ProductPerPaging" time="3.088" classname="id001_sort_displays_paging" />
+                <testcase name="TC003_SortLowtoHigh" time="0.912" classname="id001_sort_displays_paging" />
       
 </testsuite>

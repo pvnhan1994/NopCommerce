@@ -1,12 +1,12 @@
 package commons;
 
+import adminPageUIs.DynamicAdminPageUIs;
 import customerPageObjects.HomePageObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import customerPageUIs.MyAccountPageUIs;
 import customerPageUIs.WishListPageUIs;
 
 import java.util.*;
@@ -199,6 +199,7 @@ public class AbstractPage {
             element.click();
         }
     }
+
 
     public boolean isControlDisplayed(WebDriver driver, String locator) {
         highlightElement(driver, locator);
@@ -575,6 +576,10 @@ public class AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
         clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
     }
+    public void clickIntoDynamicButtonWithID(WebDriver driver, String idButton) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_ID, idButton);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_ID, idButton);
+    }
 
     public void clickIntoDynamicButtonByJS(WebDriver driver, String nameClass) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
@@ -622,9 +627,9 @@ public class AbstractPage {
         selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
     }
 
-    public void selectDynamicDropDownByID(WebDriver driver, String nameDropdown, String value) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, nameDropdown);
-        selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
+    public void selectDynamicDropDownByID(WebDriver driver, String DropdownID, String value) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, DropdownID);
+        selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, DropdownID);
     }
 
     public AbstractPage openMultiPageInFooter(WebDriver driver, String pagename) {
@@ -633,15 +638,15 @@ public class AbstractPage {
 
         switch (pagename) {
             case "Search":
-                return PageGeneratorManager.getSearchPage(driver);
+                return CustomerPageGeneratorManager.getSearchPage(driver);
             case "Recently viewed products":
-                return PageGeneratorManager.getReviewProductPage(driver);
+                return CustomerPageGeneratorManager.getReviewProductPage(driver);
             case "Compare products list":
-                return PageGeneratorManager.getCompareProductListPage(driver);
+                return CustomerPageGeneratorManager.getCompareProductListPage(driver);
             case "Wishlist":
-                return PageGeneratorManager.getWishListPage(driver);
+                return CustomerPageGeneratorManager.getWishListPage(driver);
             default:
-                return PageGeneratorManager.getHomePage(driver);
+                return CustomerPageGeneratorManager.getHomePage(driver);
         }
     }
 
@@ -651,15 +656,15 @@ public class AbstractPage {
 
         switch (pageName) {
             case "Customer info":
-                return PageGeneratorManager.getCustomerInfoPage(driver);
+                return CustomerPageGeneratorManager.getCustomerInfoPage(driver);
             case "Addresses":
-                return PageGeneratorManager.getAddressPage(driver);
+                return CustomerPageGeneratorManager.getAddressPage(driver);
             case "Change password":
-                return PageGeneratorManager.getChangePasswordPage(driver);
+                return CustomerPageGeneratorManager.getChangePasswordPage(driver);
             case "Orders":
-                return PageGeneratorManager.getOrderPage(driver);
+                return CustomerPageGeneratorManager.getOrderPage(driver);
             default:
-                return PageGeneratorManager.getMyAccountPage(driver);
+                return CustomerPageGeneratorManager.getMyAccountPage(driver);
 
         }
     }
@@ -670,13 +675,13 @@ public class AbstractPage {
 
         switch (classNamePage) {
             case "ico-account":
-                return PageGeneratorManager.getMyAccountPage(driver);
+                return CustomerPageGeneratorManager.getMyAccountPage(driver);
             case "ico-logout":
-                return PageGeneratorManager.getMainPage(driver);
+                return CustomerPageGeneratorManager.getMainPage(driver);
             case "ico-wishlist":
-                return PageGeneratorManager.getWishListPage(driver);
+                return CustomerPageGeneratorManager.getWishListPage(driver);
             case "ico-cart":
-                return PageGeneratorManager.getShoppingCartPage(driver);
+                return CustomerPageGeneratorManager.getShoppingCartPage(driver);
             default:
                 return null;
         }
@@ -684,19 +689,19 @@ public class AbstractPage {
 
     // menu bar
     public void hoverIntoMenuTopProduct(WebDriver driver, String nameCategory) {
-        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
-        hoverMouseToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        hoverMouseToElement(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
     }
 
     public void clickIntoMenuTopProduct(WebDriver driver, String nameCategory) {
-        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
-        clickToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
     }
 
     public HomePageObject clickLogoNopCommerce(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.LOGO_NOP);
         clickToElement(driver, AbstractPageUIs.LOGO_NOP);
-        return PageGeneratorManager.getHomePage(driver);
+        return CustomerPageGeneratorManager.getHomePage(driver);
     }
 
 
@@ -751,6 +756,27 @@ public class AbstractPage {
     public String getDynamicInforCartFooter(WebDriver driver,String nameField) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER, nameField);
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER,nameField);
+    }
+
+
+    // Admin
+    public AbstractPage openMultiPageInItemMenuBarMini(WebDriver driver, String nameMenu){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SLIDE_MENUBAR_MINI, nameMenu);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_SLIDE_MENUBAR_MINI, nameMenu);
+
+        switch (nameMenu) {
+            case "Products":
+                return AdminPageGeneratorManager.getProductsPage(driver);
+
+
+            default:
+                return null;
+        }
+    }
+
+    public void clickIntoDynamicMenuBarMini(WebDriver driver, String nameMenu){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SLIDE_MENUBAR_MINI, nameMenu);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_SLIDE_MENUBAR_MINI, nameMenu);
     }
     private WebElement element;
     private List<WebElement> elements;

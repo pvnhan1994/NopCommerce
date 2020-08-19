@@ -1,7 +1,7 @@
 package customerPageObjects;
 
 import commons.AbstractPage;
-import commons.PageGeneratorManager;
+import commons.CustomerPageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import customerPageUIs.MyAccountPageUIs;
 
@@ -25,7 +25,7 @@ public class MyAccountPageObject extends AbstractPage {
     public ProductDetailPageObject openProductDetails(String nameProduct) {
         waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_ADD_TO_CART_PRODUCT_DETAILS, nameProduct);
         clickToElement(driver, MyAccountPageUIs.DYNAMIC_ADD_TO_CART_PRODUCT_DETAILS, nameProduct);
-        return PageGeneratorManager.getProductDetail(driver);
+        return CustomerPageGeneratorManager.getProductDetail(driver);
 
     }
 
