@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="21.399">
+  <properties />
+  
+  
+            <testcase name="TC010_SearchWithRolesAndCompany" time="3.288" classname="admin.id002_Customer_AddNew" />
+                <testcase name="TC009_SearchWithFirstNameAndLastName" time="3.708" classname="admin.id002_Customer_AddNew" />
+                <testcase name="TC008_SearchCustomerWithEmail" time="0.764" classname="admin.id002_Customer_AddNew" />
+                <testcase name="TC011_SearchWithFullData" time="4.311" classname="admin.id002_Customer_AddNew" />
+                <testcase name="TC007_CreateNewCustomer" time="9.328" classname="admin.id002_Customer_AddNew" />
+      
+</testsuite>

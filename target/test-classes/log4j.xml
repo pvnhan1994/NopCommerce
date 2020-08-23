@@ -24,8 +24,13 @@
 			<param name="ConversionPattern" value="%d %-5p %c - %m%n" />
 		</layout>
 	</appender>
-
-	<category name="account">
+	<category name="admin">
+		<priority value="all" />
+		<appender-ref ref="console" />
+		<appender-ref ref="logfile" />
+		<appender-ref ref="testng" />
+	</category>
+	<category name="customer">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />

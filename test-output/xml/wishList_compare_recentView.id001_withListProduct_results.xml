@@ -8,6 +8,6 @@
   <properties />
   
   
-            <testcase name="TC01_AddToWishlist" time="0.910" classname="wishList_compare_recentView.id001_withListProduct" />
+            <testcase name="TC01_AddToWishlist" time="0.910" classname="id001_withListProduct" />
       
 </testsuite>

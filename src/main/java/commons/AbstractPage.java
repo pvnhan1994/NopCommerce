@@ -1,12 +1,12 @@
 package commons;
 
+import adminPageUIs.DynamicAdminPageUIs;
 import customerPageObjects.HomePageObject;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import customerPageUIs.MyAccountPageUIs;
 import customerPageUIs.WishListPageUIs;
 
 import java.util.*;
@@ -76,6 +76,10 @@ public class AbstractPage {
         element.sendKeys(sendKeysValue);
     }
 
+    public void enterOnKeyboard(WebDriver driver, String locator) {
+        element = driver.findElement(By.xpath(locator));
+        element.sendKeys(Keys.ENTER);
+    }
 
     public void selectItemInDropDown(WebDriver driver, String locator, String itemText) {
         element = driver.findElement(By.xpath(locator));
@@ -117,8 +121,9 @@ public class AbstractPage {
         waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(allItemXpath)));
 
         elements = driver.findElements(By.xpath(allItemXpath));
-
+//        System.out.println("Tat ca phan tu trong dropdown =" + elements.size());
         for (WebElement childElement : elements) {
+//            System.out.println("Child gettext: "+ childElement.getText());
             if (childElement.getText().equals(expectedValueItem)) {
                 if (childElement.isDisplayed()) {
                     childElement.click();
@@ -136,7 +141,7 @@ public class AbstractPage {
     public void selectItemInCustomDropdownClickByWebdriver(WebDriver driver, String clickDropdown, String listItem, String expectedItem) throws Exception {
 
         WebElement parentDropdown = driver.findElement(By.xpath(clickDropdown));
-        //javascriptExecutor.executeScript("arguments[0].click();", parentDropdown);
+        highlightElement(driver, clickDropdown);
         parentDropdown.click();
         Thread.sleep(1000);
 
@@ -145,7 +150,6 @@ public class AbstractPage {
         List<WebElement> allItems = driver.findElements(By.xpath(listItem));
 
         for (WebElement items : allItems) {
-
             if (items.getText().equals(expectedItem)) {
 
                 if (items.isDisplayed()) {
@@ -165,6 +169,41 @@ public class AbstractPage {
 
     }
 
+    public void selectMultiItemInDropdown(WebDriver driver, String parentXpath, String allItemXpath, String itemSelected, String[] expectedValueItem) throws Exception {
+        // click vao dropdown tat ca value
+        WebElement parentDropdown = driver.findElement(By.xpath(parentXpath));
+        parentDropdown.click();
+//        javascriptExecutor.executeScript("arguments[0].click();", parentDropdown);
+        // cho value load ra
+        waitExplicit.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(allItemXpath)));
+
+        List<WebElement> allItems = driver.findElements(By.xpath(allItemXpath));
+        System.out.println("Tat ca phan tu trong dropdown =" + allItems.size());
+        // duyet qua het tat ca cac phan tu
+        for (WebElement childElement : allItems) {
+            System.out.println("ChildElementt111: " + childElement.getText());
+
+            for (String item : expectedValueItem) {
+                System.out.println("item: " + item);
+                if (childElement.getText().equals(item)) {
+                    System.out.println("Child gettext: " + childElement.getText());
+                    javascriptExecutor.executeScript("arguments[0].scrollIntoView(true);", childElement);
+                    Thread.sleep(1500);
+
+                    javascriptExecutor.executeScript("arguments[0].click();", childElement);
+                    Thread.sleep(1500);
+
+                    List<WebElement> it = driver.findElements(By.xpath(itemSelected));
+//                    System.out.println("Item selected = " + it.size());
+                    if (expectedValueItem.length == it.size()) {
+                        break;
+                    }
+
+                }
+            }
+        }
+    }
+
     public String getAttributeValue(WebDriver driver, String locator, String attributeName, String... values) {
         locator = String.format(locator, (Object[]) values);
         element = driver.findElement(By.xpath(locator));
@@ -176,6 +215,13 @@ public class AbstractPage {
         highlightElement(driver, locator);
         element = driver.findElement(By.xpath(locator));
         return element.getText();
+    }
+
+    public String getTextElementByJS(WebDriver driver, String locator) {
+        highlightElement(driver, locator);
+        element = driver.findElement(By.xpath(locator));
+        javascriptExecutor = (JavascriptExecutor) driver;
+        return javascriptExecutor.executeScript("return document.documentElement.innerText;").toString();
     }
 
     public int countElementsNumber(WebDriver driver, String locator) {
@@ -199,6 +245,7 @@ public class AbstractPage {
             element.click();
         }
     }
+
 
     public boolean isControlDisplayed(WebDriver driver, String locator) {
         highlightElement(driver, locator);
@@ -576,6 +623,11 @@ public class AbstractPage {
         clickToElement(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
     }
 
+    public void clickIntoDynamicButtonWithID(WebDriver driver, String idButton) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_ID, idButton);
+        clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_ID, idButton);
+    }
+
     public void clickIntoDynamicButtonByJS(WebDriver driver, String nameClass) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
         clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_BUTTON_WITH_CLASS, nameClass);
@@ -607,24 +659,26 @@ public class AbstractPage {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_NAME, name);
         clickToElementByJS(driver, AbstractPageUIs.DYNAMIC_RADIO_CHECKBOX_WITH_NAME, name);
     }
-    public void selectDynamicCheckbox(WebDriver driver,String idCheckbox) {
+
+    public void selectDynamicCheckbox(WebDriver driver, String idCheckbox) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_CHECKBOX, idCheckbox);
         checkToTheCheckbox(driver, AbstractPageUIs.DYNAMIC_CHECKBOX, idCheckbox);
     }
 
-    public void selectDynamicCheckboxWithLabelText(WebDriver driver,String nameCheckbox) {
+    public void selectDynamicCheckboxWithLabelText(WebDriver driver, String nameCheckbox) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_CHECKBOX_WITH_LABEL, nameCheckbox);
         checkToTheCheckbox(driver, AbstractPageUIs.DYNAMIC_CHECKBOX_WITH_LABEL, nameCheckbox);
     }
+
     // Dropdownlist
     public void selectDynamicDropDown(WebDriver driver, String nameDropdown, String value) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
         selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN, value, nameDropdown);
     }
 
-    public void selectDynamicDropDownByID(WebDriver driver, String nameDropdown, String value) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, nameDropdown);
-        selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, nameDropdown);
+    public void selectDynamicDropDownByID(WebDriver driver, String DropdownID, String value) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, DropdownID);
+        selectItemInDropDown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, value, DropdownID);
     }
 
     public AbstractPage openMultiPageInFooter(WebDriver driver, String pagename) {
@@ -633,15 +687,15 @@ public class AbstractPage {
 
         switch (pagename) {
             case "Search":
-                return PageGeneratorManager.getSearchPage(driver);
+                return CustomerPageGeneratorManager.getSearchPage(driver);
             case "Recently viewed products":
-                return PageGeneratorManager.getReviewProductPage(driver);
+                return CustomerPageGeneratorManager.getReviewProductPage(driver);
             case "Compare products list":
-                return PageGeneratorManager.getCompareProductListPage(driver);
+                return CustomerPageGeneratorManager.getCompareProductListPage(driver);
             case "Wishlist":
-                return PageGeneratorManager.getWishListPage(driver);
+                return CustomerPageGeneratorManager.getWishListPage(driver);
             default:
-                return PageGeneratorManager.getHomePage(driver);
+                return CustomerPageGeneratorManager.getHomePage(driver);
         }
     }
 
@@ -651,15 +705,15 @@ public class AbstractPage {
 
         switch (pageName) {
             case "Customer info":
-                return PageGeneratorManager.getCustomerInfoPage(driver);
+                return CustomerPageGeneratorManager.getCustomerInfoPage(driver);
             case "Addresses":
-                return PageGeneratorManager.getAddressPage(driver);
+                return CustomerPageGeneratorManager.getAddressPage(driver);
             case "Change password":
-                return PageGeneratorManager.getChangePasswordPage(driver);
+                return CustomerPageGeneratorManager.getChangePasswordPage(driver);
             case "Orders":
-                return PageGeneratorManager.getOrderPage(driver);
+                return CustomerPageGeneratorManager.getOrderPage(driver);
             default:
-                return PageGeneratorManager.getMyAccountPage(driver);
+                return CustomerPageGeneratorManager.getMyAccountPage(driver);
 
         }
     }
@@ -670,13 +724,13 @@ public class AbstractPage {
 
         switch (classNamePage) {
             case "ico-account":
-                return PageGeneratorManager.getMyAccountPage(driver);
+                return CustomerPageGeneratorManager.getMyAccountPage(driver);
             case "ico-logout":
-                return PageGeneratorManager.getMainPage(driver);
+                return CustomerPageGeneratorManager.getMainPage(driver);
             case "ico-wishlist":
-                return PageGeneratorManager.getWishListPage(driver);
+                return CustomerPageGeneratorManager.getWishListPage(driver);
             case "ico-cart":
-                return PageGeneratorManager.getShoppingCartPage(driver);
+                return CustomerPageGeneratorManager.getShoppingCartPage(driver);
             default:
                 return null;
         }
@@ -684,19 +738,19 @@ public class AbstractPage {
 
     // menu bar
     public void hoverIntoMenuTopProduct(WebDriver driver, String nameCategory) {
-        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
-        hoverMouseToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        hoverMouseToElement(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
     }
 
     public void clickIntoMenuTopProduct(WebDriver driver, String nameCategory) {
-        waitForElementVisible(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
-        clickToElement(driver, MyAccountPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_MENU_TOP_PRODDUCT, nameCategory);
     }
 
     public HomePageObject clickLogoNopCommerce(WebDriver driver) {
         waitForElementVisible(driver, AbstractPageUIs.LOGO_NOP);
         clickToElement(driver, AbstractPageUIs.LOGO_NOP);
-        return PageGeneratorManager.getHomePage(driver);
+        return CustomerPageGeneratorManager.getHomePage(driver);
     }
 
 
@@ -743,15 +797,48 @@ public class AbstractPage {
 
     }
 
-    public String getDynamicInfoTableData(WebDriver driver,String className, String tagName) {
+    public String getDynamicInfoTableData(WebDriver driver, String className, String tagName) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_INFOR_TABLE_DATA, className, tagName);
         return getTextElement(driver, AbstractPageUIs.DYNAMIC_INFOR_TABLE_DATA, className, tagName);
     }
 
-    public String getDynamicInforCartFooter(WebDriver driver,String nameField) {
+    public String getDynamicInforCartFooter(WebDriver driver, String nameField) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER, nameField);
-        return getTextElement(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER,nameField);
+        return getTextElement(driver, AbstractPageUIs.DYNAMIC_INFOR_CART_FOOTER, nameField);
     }
+
+
+    // Admin
+    public AbstractPage openMultiPageInItemSubMenuBarMini(WebDriver driver, String nameMenu) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SUB_MENUBAR_MINI, nameMenu);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_SUB_MENUBAR_MINI, nameMenu);
+
+        switch (nameMenu) {
+            case "Products":
+                return AdminPageGeneratorManager.getProductsPage(driver);
+            case "Customers":
+                return AdminPageGeneratorManager.getCustomerPage(driver);
+
+            default:
+                return null;
+        }
+    }
+
+    public void clickIntoDynamicMenuBarMini(WebDriver driver, String nameMenu) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SLIDE_MENUBAR_MINI, nameMenu);
+        clickToElement(driver, AbstractPageUIs.DYNAMIC_SLIDE_MENUBAR_MINI, nameMenu);
+    }
+
+    public String getAttributeInTextbox(WebDriver driver, String idField, String nameAttribue) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, idField);
+        return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, "value", idField);
+    }
+
+    public String getAttributeInRadio(WebDriver driver, String nameField, String idRadio, String nameAttribue) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_ADMIN);
+        return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_RADIO_ADMIN, idRadio, nameAttribue, nameField);
+    }
+
     private WebElement element;
     private List<WebElement> elements;
     private Select select;

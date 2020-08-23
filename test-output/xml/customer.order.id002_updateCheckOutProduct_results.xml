@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Run on Chrome"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="27.922">
+  <properties />
+  
+  
+            <testcase name="TC06_" time="27.922" classname="customer.order.id002_updateCheckOutProduct" />
+      
+</testsuite>

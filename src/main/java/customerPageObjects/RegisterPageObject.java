@@ -2,7 +2,7 @@ package customerPageObjects;
 
 import commons.AbstractPage;
 import commons.Constants;
-import commons.PageGeneratorManager;
+import commons.CustomerPageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import customerPageUIs.RegisterPageUI;
 
@@ -17,7 +17,7 @@ public class RegisterPageObject extends AbstractPage {
     public HomePageObject clickRegisterButton() {
         waitForElementVisible(driver, RegisterPageUI.REGISTER_BTN);
         clickToElementByJS(driver, RegisterPageUI.REGISTER_BTN);
-        return PageGeneratorManager.getHomePage(driver);
+        return CustomerPageGeneratorManager.getHomePage(driver);
     }
 
     public boolean isMessageSuccessDisplayed(String value) {

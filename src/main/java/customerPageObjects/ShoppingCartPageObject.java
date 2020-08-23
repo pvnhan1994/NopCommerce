@@ -1,7 +1,7 @@
 package customerPageObjects;
 
 import commons.AbstractPage;
-import commons.PageGeneratorManager;
+import commons.CustomerPageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import customerPageUIs.CheckOutPagetUIs;
 import customerPageUIs.ShoppingCartPageUIs;
@@ -16,7 +16,7 @@ public class ShoppingCartPageObject extends AbstractPage {
     public ProductDetailPageObject clickEditItem() {
         waitForElementVisible(driver, ShoppingCartPageUIs.EDIT_ITEM);
         clickToElementByJS(driver, ShoppingCartPageUIs.EDIT_ITEM);
-        return PageGeneratorManager.getProductDetail(driver);
+        return CustomerPageGeneratorManager.getProductDetail(driver);
     }
 
     public void clickRemoveProductCheckBox() {
@@ -55,6 +55,6 @@ public class ShoppingCartPageObject extends AbstractPage {
     public CheckOutPageObject clickCheckOutButton() {
         waitForElementVisible(driver, CheckOutPagetUIs.CHECK_OUT_BUTTON);
         clickToElementByJS(driver, CheckOutPagetUIs.CHECK_OUT_BUTTON);
-        return PageGeneratorManager.getCheckOutPage(driver);
+        return CustomerPageGeneratorManager.getCheckOutPage(driver);
     }
 }

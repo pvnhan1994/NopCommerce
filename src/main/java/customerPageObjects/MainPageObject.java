@@ -1,7 +1,7 @@
 package customerPageObjects;
 
 import commons.AbstractPage;
-import commons.PageGeneratorManager;
+import commons.CustomerPageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import customerPageUIs.MainPageUI;
 import customerPageUIs.MyAccountPageUIs;
@@ -16,13 +16,13 @@ public class MainPageObject extends AbstractPage {
     public RegisterPageObject clickRegisterItem() {
         waitForElementVisible(driver, MainPageUI.REGISTER_ITEM);
         clickToElement(driver, MainPageUI.REGISTER_ITEM);
-        return PageGeneratorManager.getRegisterPage(driver);
+        return CustomerPageGeneratorManager.getRegisterPage(driver);
     }
 
     public LoginPageObject clickLoginItem() {
         waitForElementVisible(driver, MainPageUI.LOGIN_ITEM);
         clickToElement(driver, MainPageUI.LOGIN_ITEM);
-        return PageGeneratorManager.getLoginPage(driver);
+        return CustomerPageGeneratorManager.getLoginPage(driver);
 
     }
 

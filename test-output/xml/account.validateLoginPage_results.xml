@@ -8,11 +8,11 @@
   <properties />
   
   
-            <testcase name="TC01_EmptyData" time="0.454" classname="account.id002_validateLoginPage" />
-                <testcase name="TC05_EmailRegisteredAndIncorrectPassword" time="2.502" classname="account.id002_validateLoginPage" />
-                <testcase name="TC02_InvalidEmail" time="0.556" classname="account.id002_validateLoginPage" />
-                <testcase name="TC03_EmailUnregister" time="2.191" classname="account.id002_validateLoginPage" />
-                <testcase name="TC06_EmailRegisteredAndCorrectPassword" time="2.001" classname="account.id002_validateLoginPage" />
-                <testcase name="TC04_EmailRegisteredAndEmptyPassword" time="1.291" classname="account.id002_validateLoginPage" />
+            <testcase name="TC01_EmptyData" time="0.454" classname="id002_validateLoginPage" />
+                <testcase name="TC05_EmailRegisteredAndIncorrectPassword" time="2.502" classname="id002_validateLoginPage" />
+                <testcase name="TC02_InvalidEmail" time="0.556" classname="id002_validateLoginPage" />
+                <testcase name="TC03_EmailUnregister" time="2.191" classname="id002_validateLoginPage" />
+                <testcase name="TC06_EmailRegisteredAndCorrectPassword" time="2.001" classname="id002_validateLoginPage" />
+                <testcase name="TC04_EmailRegisteredAndEmptyPassword" time="1.291" classname="id002_validateLoginPage" />
       
 </testsuite>

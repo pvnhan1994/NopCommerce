@@ -8,7 +8,7 @@
   <properties />
   
   
-            <testcase name="TC01_CustomerInfo" time="7.108" classname="account.id003_myAccount" />
-                <testcase name="TC02_AddAddress" time="10.385" classname="account.id003_myAccount" />
+            <testcase name="TC01_CustomerInfo" time="7.108" classname="id003_myAccount" />
+                <testcase name="TC02_AddAddress" time="10.385" classname="id003_myAccount" />
       
 </testsuite>

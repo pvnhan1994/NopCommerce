@@ -8,6 +8,6 @@
   <properties />
   
   
-            <testcase name="TC06_" time="28.254" classname="order.id002_updateCheckOutProduct" />
+            <testcase name="TC06_" time="28.254" classname="id002_updateCheckOutProduct" />
       
 </testsuite>

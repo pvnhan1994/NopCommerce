@@ -1,7 +1,7 @@
 package customerPageObjects;
 
 import commons.AbstractPage;
-import commons.PageGeneratorManager;
+import commons.CustomerPageGeneratorManager;
 import org.openqa.selenium.WebDriver;
 import customerPageUIs.LoginPageUI;
 
@@ -17,7 +17,7 @@ public class LoginPageObject extends AbstractPage {
     public HomePageObject clickToLoginButton() {
         waitForElementVisible(driver, LoginPageUI.LOGIN_BUTTON);
         clickToElementByJS(driver, LoginPageUI.LOGIN_BUTTON);
-        return PageGeneratorManager.getHomePage(driver);
+        return CustomerPageGeneratorManager.getHomePage(driver);
     }
 
     public boolean isErrorMessageDisplayed(String errorMsg) {

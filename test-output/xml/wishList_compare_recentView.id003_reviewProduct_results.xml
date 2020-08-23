@@ -6,7 +6,7 @@
            skipped="0"
            time="47.216">
   <properties />
-            <testcase name="TC003_reviewProduct" time="47.216" classname="wishList_compare_recentView.id003_reviewProduct">
+            <testcase name="TC003_reviewProduct" time="47.216" classname="id003_reviewProduct">
                 <failure type="org.openqa.selenium.TimeoutException"
                   message="Expected condition failed: waiting for visibility of all elements located by By.xpath: //h2[@class=&apos;product-title&apos;]//a[text()=&apos;Apple MacBook Pro 13-inch&apos;] (tried for 20 second(s) with 500 milliseconds interval)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
@@ -25,7 +25,7 @@ Session ID: 368cf964327810e6cfa529ed3f60a3a6
   org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
   commons.AbstractPage.waitForElementVisible(AbstractPage.java:442)
   customerPageObjects.ReviewProductPageObject.isProductUndisplayed(ReviewProductPageObject.java:18)
-  wishList_compare_recentView.id003_reviewProduct.TC003_reviewProduct(id003_reviewProduct.java:60)
+  id003_reviewProduct.TC003_reviewProduct(id003_reviewProduct.java:60)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
   sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
