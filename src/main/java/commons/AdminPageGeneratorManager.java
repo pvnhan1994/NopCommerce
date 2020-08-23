@@ -1,5 +1,6 @@
 package commons;
 
+import adminPageObjects.CustomersPageObject;
 import adminPageObjects.LoginPageObject;
 import adminPageObjects.ProductsPageObject;
 import adminPageObjects.DashboardPageObject;
@@ -17,5 +18,8 @@ public class AdminPageGeneratorManager {
 
     public static LoginPageObject getLoginPage(WebDriver driver){
         return new LoginPageObject(driver);
+    }
+    public static CustomersPageObject getCustomerPage(WebDriver driver){
+        return new CustomersPageObject(driver);
     }
 }

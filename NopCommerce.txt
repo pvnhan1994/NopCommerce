@@ -1,49 +1,62 @@
-2020-08-19 22:11:44,507 INFO  admin.id001_searchProduct - Step 1: Click Catalog menu
-2020-08-19 22:11:44,792 INFO  admin.id001_searchProduct - Step 2: Click Products menu
-2020-08-19 22:11:46,937 INFO  admin.id001_searchProduct - Step 3: Check expand/collapse Search component
-2020-08-19 22:11:48,990 INFO  admin.id001_searchProduct - Step 3: Input Product name into Search field
-2020-08-19 22:11:49,385 INFO  admin.id001_searchProduct - Step 4: Click Search button
-2020-08-19 22:11:49,678 INFO  admin.id001_searchProduct - Step 5: Verify 1 product displays in table
-2020-08-19 22:11:50,116 INFO  admin.id001_searchProduct - Compare value = true
-2020-08-19 22:11:50,116 INFO  admin.id001_searchProduct - ===PASSED===
-2020-08-19 22:11:50,118 INFO  admin.id001_searchProduct - Step : Check expand/collapse Search component
-2020-08-19 22:11:52,165 INFO  admin.id001_searchProduct - Step 1: Input Product name into Search field
-2020-08-19 22:11:52,528 INFO  admin.id001_searchProduct - Step 2: Select value in Search Category dropdown
-2020-08-19 22:11:52,807 INFO  admin.id001_searchProduct - Step 3: Uncheck to the Search SubCategories
-2020-08-19 22:11:52,928 INFO  admin.id001_searchProduct - Step 4: Click Search button
-2020-08-19 22:11:53,178 INFO  admin.id001_searchProduct - Step 5: Verify message no data displayed
-2020-08-19 22:11:53,789 INFO  admin.id001_searchProduct - ===PASSED==
-2020-08-19 22:11:53,789 INFO  admin.id001_searchProduct - Step : Check expand/collapse Search component
-2020-08-19 22:11:55,830 INFO  admin.id001_searchProduct - Step 1: Input Product name into Search field
-2020-08-19 22:11:56,198 INFO  admin.id001_searchProduct - Step 2: Select value in Search Category dropdown
-2020-08-19 22:11:56,447 INFO  admin.id001_searchProduct - Step 3: Check to the Search SubCategories
-2020-08-19 22:11:56,518 INFO  admin.id001_searchProduct - Step 4: Click Search button
-2020-08-19 22:11:56,766 INFO  admin.id001_searchProduct - Step 5: Verify 1 product displays in table
-2020-08-19 22:11:57,210 INFO  admin.id001_searchProduct - Compare value = true
-2020-08-19 22:11:57,210 INFO  admin.id001_searchProduct - ===PASSED===
-2020-08-19 22:11:57,210 INFO  admin.id001_searchProduct - Step : Check expand/collapse Search component
-2020-08-19 22:11:59,268 INFO  admin.id001_searchProduct - Step 1: Input Product name into Search field
-2020-08-19 22:11:59,631 INFO  admin.id001_searchProduct - Step 2: Select value in Search Category dropdown
-2020-08-19 22:11:59,911 INFO  admin.id001_searchProduct - Step 3: Uncheck to the Search SubCategories
-2020-08-19 22:11:59,995 INFO  admin.id001_searchProduct - Step 4: Click Search button
-2020-08-19 22:12:00,256 INFO  admin.id001_searchProduct - Step 5: Verify 1 product displays in table
-2020-08-19 22:12:00,308 INFO  admin.id001_searchProduct - Compare value = true
-2020-08-19 22:12:00,308 INFO  admin.id001_searchProduct - ===PASSED===
-2020-08-19 22:12:00,308 INFO  admin.id001_searchProduct - Step : Check expand/collapse Search component
-2020-08-19 22:12:02,390 INFO  admin.id001_searchProduct - Step 1: Input Product name into Search field
-2020-08-19 22:12:02,745 INFO  admin.id001_searchProduct - Step 2: Select value in Search Category dropdown
-2020-08-19 22:12:03,028 INFO  admin.id001_searchProduct - Step 3: Uncheck to the Search SubCategories
-2020-08-19 22:12:03,134 INFO  admin.id001_searchProduct - Step 4: Select value in Search Category dropdown
-2020-08-19 22:12:03,400 INFO  admin.id001_searchProduct - Step 5: Click Search button
-2020-08-19 22:12:03,697 INFO  admin.id001_searchProduct - Step 6: Verify message no data displayed
-2020-08-19 22:12:04,250 INFO  admin.id001_searchProduct - ===PASSED==
-2020-08-19 22:12:04,250 INFO  admin.id001_searchProduct - Step : Check expand/collapse Search component
-2020-08-19 22:12:06,296 INFO  admin.id001_searchProduct - Step 1: Input Product SKU into SKU textbox
-2020-08-19 22:12:06,628 INFO  admin.id001_searchProduct - Step 2: Click into Go SKU
-2020-08-19 22:12:09,071 INFO  admin.id001_searchProduct - Step 3: verify
-2020-08-19 22:12:09,132 INFO  admin.id001_searchProduct - Actual = Lenovo IdeaCentre 600 All-in-One PC
-2020-08-19 22:12:09,132 INFO  admin.id001_searchProduct - Expected = Lenovo IdeaCentre 600 All-in-One PC
-2020-08-19 22:12:09,132 INFO  admin.id001_searchProduct - Compare value = true
-2020-08-19 22:12:09,132 INFO  admin.id001_searchProduct - ===PASSED===
-2020-08-19 22:12:09,132 INFO  admin.id001_searchProduct - OS name = windows 10
-2020-08-19 22:12:09,841 INFO  admin.id001_searchProduct - ---------- QUIT BROWSER SUCCESS ----------
+2020-08-23 23:29:50,834 INFO  admin.id002_Customer_AddNew - Step 1: Click Customer menu
+2020-08-23 23:29:51,157 INFO  admin.id002_Customer_AddNew - Step 2: Click Products menu
+2020-08-23 23:29:53,284 INFO  admin.id002_Customer_AddNew - Step 3: Click Into Add New Button
+2020-08-23 23:29:54,525 INFO  admin.id002_Customer_AddNew - Step 4: Input valid data into all the fields
+2020-08-23 23:29:59,959 INFO  admin.id002_Customer_AddNew - Step 5: Click Save Continute button 
+2020-08-23 23:30:01,599 INFO  admin.id002_Customer_AddNew - Step 6: Verify toast msg displayed
+2020-08-23 23:30:01,840 INFO  admin.id002_Customer_AddNew - Actual = The new customer has been added successfully.
+2020-08-23 23:30:01,840 INFO  admin.id002_Customer_AddNew - Expected = The new customer has been added successfully.
+2020-08-23 23:30:01,840 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:01,840 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:01,841 INFO  admin.id002_Customer_AddNew - Step 7: Verify infor displays correct
+2020-08-23 23:30:01,910 INFO  admin.id002_Customer_AddNew - Actual = binvnese51117@gmail.com
+2020-08-23 23:30:01,911 INFO  admin.id002_Customer_AddNew - Expected = binvnese51117@gmail.com
+2020-08-23 23:30:01,911 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:01,911 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:01,972 INFO  admin.id002_Customer_AddNew - Actual = Nhan
+2020-08-23 23:30:01,972 INFO  admin.id002_Customer_AddNew - Expected = Nhan
+2020-08-23 23:30:01,973 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:01,973 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:02,035 INFO  admin.id002_Customer_AddNew - Actual = Nhan
+2020-08-23 23:30:02,035 INFO  admin.id002_Customer_AddNew - Expected = Nhan
+2020-08-23 23:30:02,035 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:02,035 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:02,097 INFO  admin.id002_Customer_AddNew - Actual = 11/11/2000
+2020-08-23 23:30:02,097 INFO  admin.id002_Customer_AddNew - Expected = 11/11/2000
+2020-08-23 23:30:02,097 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:02,097 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:02,161 INFO  admin.id002_Customer_AddNew - Actual = JSC Company
+2020-08-23 23:30:02,161 INFO  admin.id002_Customer_AddNew - Expected = JSC Company
+2020-08-23 23:30:02,161 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:02,161 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:02,387 INFO  admin.id002_Customer_AddNew - ===PASSED==
+2020-08-23 23:30:02,610 INFO  admin.id002_Customer_AddNew - Actual = Registered
+2020-08-23 23:30:02,610 INFO  admin.id002_Customer_AddNew - Expected = Registered
+2020-08-23 23:30:02,610 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:02,610 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:02,611 INFO  admin.id002_Customer_AddNew - Step 2: Click Products menu
+2020-08-23 23:30:03,758 INFO  admin.id002_Customer_AddNew - Step 3: Input data into Email textbox
+2020-08-23 23:30:04,184 INFO  admin.id002_Customer_AddNew - Step 4: Click Search button
+2020-08-23 23:30:04,467 INFO  admin.id002_Customer_AddNew - Step 5: Verify 1 customer displays in table
+2020-08-23 23:30:04,522 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:04,522 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:04,523 INFO  admin.id002_Customer_AddNew - Step 2: Click Products menu
+2020-08-23 23:30:05,625 INFO  admin.id002_Customer_AddNew - Step 3: Input data into First Name And Last Name
+2020-08-23 23:30:09,031 INFO  admin.id002_Customer_AddNew - Step 4: Click Search button
+2020-08-23 23:30:09,274 INFO  admin.id002_Customer_AddNew - Step 5: Verify 1 customer displays in table
+2020-08-23 23:30:09,332 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:09,333 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:09,333 INFO  admin.id002_Customer_AddNew - Step 2: Click Products menu
+2020-08-23 23:30:10,450 INFO  admin.id002_Customer_AddNew - Step 3: Input data into Roles And Company
+2020-08-23 23:30:13,436 INFO  admin.id002_Customer_AddNew - Step 4: Click Search button
+2020-08-23 23:30:13,679 INFO  admin.id002_Customer_AddNew - Step 5: Verify 1 customer displays in table
+2020-08-23 23:30:13,738 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:13,738 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:13,738 INFO  admin.id002_Customer_AddNew - Step 2: Click Products menu
+2020-08-23 23:30:14,801 INFO  admin.id002_Customer_AddNew - Step 3: Input data into all the fields
+2020-08-23 23:30:18,810 INFO  admin.id002_Customer_AddNew - Step 4: Click Search button
+2020-08-23 23:30:19,051 INFO  admin.id002_Customer_AddNew - Step 5: Verify 1 customer displays in table
+2020-08-23 23:30:19,111 INFO  admin.id002_Customer_AddNew - Compare value = true
+2020-08-23 23:30:19,112 INFO  admin.id002_Customer_AddNew - ===PASSED===
+2020-08-23 23:30:19,112 INFO  admin.id002_Customer_AddNew - OS name = windows 10
+2020-08-23 23:30:19,824 INFO  admin.id002_Customer_AddNew - ---------- QUIT BROWSER SUCCESS ----------

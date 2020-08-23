@@ -12,7 +12,8 @@
         <parameter name="browser" value="chrome"></parameter>
         <classes>
 
-            <class name="admin.admin"/>
+            <class name="admin.id002_Customer_AddNew"/>
+
 
         </classes>
     </test>

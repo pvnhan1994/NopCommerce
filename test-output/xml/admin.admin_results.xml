@@ -8,11 +8,11 @@
   <properties />
   
   
-            <testcase name="TC01_SearchWithProductName" time="5.611" classname="admin.id001_searchProduct" />
-                <testcase name="TC02_SearchWithProductNameAndParentCategoryAndUnchecked" time="3.671" classname="admin.id001_searchProduct" />
-                <testcase name="TC04_SearchWithProductNameAndChildCategory" time="3.098" classname="admin.id001_searchProduct" />
-                <testcase name="TC05_SearchWithProductNameAndManufacturer" time="3.942" classname="admin.id001_searchProduct" />
-                <testcase name="TC06_GoDirectlyToProductSKU" time="4.882" classname="admin.id001_searchProduct" />
-                <testcase name="TC03_SearchWithProductNameAndParentCategoryAndCheck" time="3.421" classname="admin.id001_searchProduct" />
+            <testcase name="TC01_SearchWithProductName" time="5.611" classname="admin.id001_Product_Search" />
+                <testcase name="TC02_SearchWithProductNameAndParentCategoryAndUnchecked" time="3.671" classname="admin.id001_Product_Search" />
+                <testcase name="TC04_SearchWithProductNameAndChildCategory" time="3.098" classname="admin.id001_Product_Search" />
+                <testcase name="TC05_SearchWithProductNameAndManufacturer" time="3.942" classname="admin.id001_Product_Search" />
+                <testcase name="TC06_GoDirectlyToProductSKU" time="4.882" classname="admin.id001_Product_Search" />
+                <testcase name="TC03_SearchWithProductNameAndParentCategoryAndCheck" time="3.421" classname="admin.id001_Product_Search" />
       
 </testsuite>

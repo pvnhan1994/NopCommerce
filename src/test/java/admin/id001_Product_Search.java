@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class id001_searchProduct extends AbstractTest {
+public class id001_Product_Search extends AbstractTest {
     WebDriver driver;
     DashboardPageObject dashboardPage;
     ProductsPageObject productsPage;
@@ -32,7 +32,7 @@ public class id001_searchProduct extends AbstractTest {
         dashboardPage.clickIntoDynamicMenuBarMini(driver, "Catalog");
 
         log.info("Step 2: Click Products menu");
-        productsPage = (ProductsPageObject) dashboardPage.openMultiPageInItemMenuBarMini(driver, "Products");
+        productsPage = (ProductsPageObject) dashboardPage.openMultiPageInItemSubMenuBarMini(driver, "Products");
 
     }
 
@@ -151,7 +151,7 @@ public class id001_searchProduct extends AbstractTest {
         productsPage.clickIntoDynamicButtonWithID(driver, "go-to-product-by-sku");
 
         log.info("Step 3: verify ");
-        verifyEquals(ProductName, productsPage.getNameProductInDisplayed("Name"));
+        verifyEquals(ProductName, productsPage.getAttributeInTextbox(driver,"Name","value"));
     }
 
     @AfterClass(alwaysRun = true)

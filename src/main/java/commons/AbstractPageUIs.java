@@ -39,5 +39,8 @@ public class AbstractPageUIs {
 
 
     //Admin
-    public static final String DYNAMIC_SLIDE_MENUBAR_MINI = "//ul[@class='sidebar-menu tree']//span[text()='%s']";
+    public static final String DYNAMIC_SLIDE_MENUBAR_MINI = "//li[@class='treeview']/a/span[text()='%s']";
+    public static final String DYNAMIC_SUB_MENUBAR_MINI = "//ul[@class='sidebar-menu tree']//ul//span[text()='%s']";
+    public static final String DYNAMIC_TEXTBOX_ADMIN = "//label[text()='%s']/parent::div/parent::div/parent::div/div//input";
+    public static final String DYNAMIC_RADIO_ADMIN = "//label[text()='%s']/parent::div/parent::div/parent::div/div//input[@id='%s']";
 }
