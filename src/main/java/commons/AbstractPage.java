@@ -406,6 +406,9 @@ public class AbstractPage {
         element.sendKeys(Keys.DELETE);
         javascriptExecutor = (JavascriptExecutor) driver;
         javascriptExecutor.executeScript("arguments[0].setAttribute('value', '" + value + "')", element);
+//        JavascriptExecutor jse = (JavascriptExecutor) driver;
+//
+//        jse.executeScript("document.getElementById(‘email').value=“abc.efg@xyz.com”);
     }
 
 
@@ -837,6 +840,14 @@ public class AbstractPage {
     public String getAttributeInRadio(WebDriver driver, String nameField, String idRadio, String nameAttribue) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_RADIO_ADMIN);
         return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_RADIO_ADMIN, idRadio, nameAttribue, nameField);
+    }
+    public String getDynamicAttribueTextboxValue(WebDriver driver, String textboxID, String attributeName) {
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxID);
+        return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, attributeName, textboxID);
+    }
+    public String getFirstValueSelectedInDropDown(WebDriver driver, String idDropdown){
+        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, idDropdown);
+        return  getFirstSelectedDropdown(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN_ID, idDropdown);
     }
 
     private WebElement element;

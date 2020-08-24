@@ -19,10 +19,7 @@ public class CustomerInfoPageObject extends AbstractPage {
         clickToElement(driver, CustomerInfoUIs.SAVE_BUTTON);
     }
 
-    public String getDynamicAttribueTextboxValue(WebDriver driver, String textboxID, String attributeName) {
-        waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, textboxID);
-        return getAttributeValue(driver, AbstractPageUIs.DYNAMIC_TEXTBOX_WITH_ID, attributeName, textboxID);
-    }
+
 
     public String getTextDOBDropdown(WebDriver driver, String nameDropdown) {
         waitForElementVisible(driver, AbstractPageUIs.DYNAMIC_SELECT_DROPDOWN, nameDropdown);
