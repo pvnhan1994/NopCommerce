@@ -1,5 +1,8 @@
 package commons;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 public class Constants extends  AbstractTest {
     public static final int LONG_TIMEOUT = 10;
     public static final int SHORT_TIMEOUT = 2;

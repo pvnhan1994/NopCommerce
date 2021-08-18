@@ -137,7 +137,13 @@ public class AbstractPage {
             }
         }
     }
+    public void dsadsa() {
+        String a = " dsadsa";
+        String b = "dsadsa";
+        if (!a.contentEquals(b)) {
 
+        }
+    }
     public void selectItemInCustomDropdownClickByWebdriver(WebDriver driver, String clickDropdown, String listItem, String expectedItem) throws Exception {
 
         WebElement parentDropdown = driver.findElement(By.xpath(clickDropdown));
@@ -459,6 +465,7 @@ public class AbstractPage {
         waitExplicit = new WebDriverWait(driver, longTimeOut);
         byLocator = By.xpath(locator);
         waitExplicit.until(ExpectedConditions.presenceOfElementLocated(byLocator));
+
     }
 
     public void waitForElementVisible(WebDriver driver, String locator) {
